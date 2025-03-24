@@ -1,0 +1,13 @@
+# Allow all crawlers
+User-agent: *
+Disallow: /private/
+Disallow: /secret/
+Allow: /public/
+
+# Block specific bot from crawling a page
+User-agent: BadBot
+Disallow: /
+
+# Allow Googlebot to access everything
+User-agent: Googlebot
+Disallow:

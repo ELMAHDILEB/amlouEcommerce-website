@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --colorBody: #f6f4f0;
+  --blackColor: black;
+  --primary: #4da0a9;
+  --cardColor:#dcdadd;
+  --font-poppins: "Poppins", sans-serif;
+}
+
+.darkMode {
+  --colorBody: #2c2c2c;
+  --blackColor: white;
+  --cardColor:#333333;
+}
+
+@theme {
+  --font-xander: "Xander", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  /* --rotateAnim: rotateAnim 2000ms forwards infinite; */
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(./fonts/Poppins.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Xander";
+  src: url(./fonts/Xander.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  body {
+    background-color: var(--colorBody);
+    color: var(--blackColor);
+  }
+}
+
+@layer components {
+  .navLinks {
+    @apply absolute top-20 left-0 z-[1000] w-full py-10 bg-[var(--colorBody)]  [clip-path:polygon(0_0,100%_0,100%_0,0_0)]   md:static md:w-fit md:bg-transparent md:[clip-path:none]   transition-all duration-1500 ease-in-out;
+  }
+
+  .navLinks.open {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .focus{
+    @apply absolute bottom-0 z-[2]  w-full  py-1 md:py-5  flex justify-end items-center flex-col  gap-4 md:gap-10  [clip-path:polygon(0_0,100%_0,100%_0,0_0)] transition-all duration-1500 ease-in-out;
+
+  }
+  .focus.open{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    /* clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); */
+
+
+  }
+}
+
+/* @keyframes rotateAnim {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
