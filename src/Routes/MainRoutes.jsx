@@ -3,8 +3,9 @@ import cashews from "../assets/cashews.png";
 import loz from "../assets/loz.png";
 import pistach from "../assets/pistach.png";
 import pistach1 from "../assets/pistach1.png";
-import cajou1 from "../assets/cajou1.webp"
-import amandes1 from "../assets/amandes1.webp"
+import cajou1 from "../assets/cajou1.webp";
+import amandes1 from "../assets/amandes1.webp";
+import amlouBloz from "../assets/amlouBloz.svg";
 const Home = lazy(() => import("../pages/Home"));
 const Products = lazy(() => import("../pages/Products"));
 const About = lazy(() => import("../pages/About"));
@@ -41,6 +42,8 @@ export const links = [
   ]
   
 
-  // export const popularProducts = [
-  //   {title:, src:, alt: }
-  // ]
+  export const discoverCard = [
+    {srcImg:amandes1, alt: "amandes", title:"Noix De Cajou Grillées",className:"w-full h-full md:grid-col-2 md:row-span-2 overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[5px] relative font-poppins"},
+    {srcImg:cajou1, alt: "cajou1", title:"Noix De Cajou Grillées",className:"w-full  md:grid-col-1   overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[5px] relative font-poppins"},
+    {srcImg:amlouBloz, alt: "amlouBloz", title:"Noix De Cajou Grillées",className:"w-full  md:grid-col-1   overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[5px] relative font-poppins"}
+  ]
