@@ -23,15 +23,15 @@ function discoverCards() {
     }
 
     return (
-        <section className='w-full h-[80dvh]  flex flex-col  items-center justify-start gap-10 py-10 ' >
+        <section className='w-full h-screen md:h-[80dvh]  flex flex-col  items-center justify-start gap-10 py-10 ' >
       
 
-            <div className="w-full h-full md:h-[500px] grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="w-[90%] md:w-full h-full md:h-[500px] grid grid-cols-1 md:grid-cols-2 gap-4">
             {
               
                 discoverCard.map((card, index)=>{
                     const {srcImg, alt, title, className} = card;
-                    return  <div
+                    return  <article
                     className={className}
                     onMouseOver={() => handleFocus(index)}
                     onMouseOut={() => handleOut(index)}
@@ -44,7 +44,7 @@ function discoverCards() {
                     />
 
                     <div
-                        className={`focus ${isFocus[index] ? "open" : ""} h-[40px] md:h-[80px] w-fit  flex flex-row  items-center justify-center  rounded-[5px] px-2 md:px-4 transition-all duration-500`}
+                        className={`focus ${isFocus[index] ? "open" : ""} h-[40px] md:h-[80px] w-fit  flex flex-row  items-center  justify-center  rounded-[5px] px-2 md:px-4 transition-all duration-500`}
                         style={{
                             backgroundColor: "rgba(255, 255, 255, 0.2)",
                             backdropFilter: "blur(5px)",
@@ -64,28 +64,7 @@ function discoverCards() {
                             <MdShoppingCartCheckout className="text-[15px] md:text-xl font-bold text-white"  />
                         </button>
                     </div>
-                    {/* <div
-                        className={`focus ${isFocus[index] ? "open" : "open"} h-[80px] md:h-[150px] w-[80%]  flex flex-row  items-center justify-center p-4 rounded-[5px] transition-all duration-500`}
-                        style={{
-                            backgroundColor: "rgba(255, 255, 255, 0.2)",
-                            backdropFilter: "blur(5px)",
-                            WebkitBackdropFilter: "blur(5px)",
-                        }}
-                    >
-                        <h1
-                            className="uppercase font-bold text-center text-black"
-                            style={{ fontSize: "clamp(15px,1vw,25px)" }}
-                        >
-                           {title}
-                        </h1>
-                        <button
-                            className="cursor-pointer bg-[var(--primary)] px-4 md:px-6 py-2 md:py-3 rounded-2xl flex items-center justify-center mt-3"
-                            aria-label="buttonCart"
-                        >
-                            <MdShoppingCartCheckout className="text-xl md:text-3xl font-bold text-white"  />
-                        </button>
-                    </div> */}
-                </div>
+                </article>
 
                 })
             }
