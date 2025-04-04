@@ -2,6 +2,7 @@ import { memo} from 'react'
 import { NavLink } from "react-router-dom";
 import WrapperResponsiveImage from '../components/WrapperResponsiveImage';
 import DiscoverCards from '../components/DiscoverCards.jsx';
+import WhyChooseMe from '../components/WhyChooseMe.jsx';
 
 
 const Home = memo(() => {
@@ -22,6 +23,7 @@ const Home = memo(() => {
         </main>
       </section>
       <DiscoverCards/>
+      <WhyChooseMe/>
     </>
 
   )

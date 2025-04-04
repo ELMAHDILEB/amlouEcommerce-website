@@ -1,4 +1,5 @@
 import { lazy } from "react";
+import { LuLeaf, LuHandCoins , LuFlaskConical, LuTruck, LuUsersRound } from "react-icons/lu";
 import cashews from "../assets/cashews.png";
 import loz from "../assets/loz.png";
 import pistach from "../assets/pistach.png";
@@ -46,4 +47,12 @@ export const links = [
     {srcImg:amandes1, alt: "amandes", title:"Noix De Cajou Grillées",className:"w-full h-full md:grid-col-2 md:row-span-2 overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[5px] relative font-poppins"},
     {srcImg:cajou1, alt: "cajou1", title:"Noix De Cajou Grillées",className:"w-full  md:grid-col-1   overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[5px] relative font-poppins"},
     {srcImg:amlouBloz, alt: "amlouBloz", title:"Noix De Cajou Grillées",className:"w-full  md:grid-col-1   overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[5px] relative font-poppins"}
+  ]
+
+  export const accordions = [
+    {icon:<LuLeaf/>,title:"High quality",description:"We use only 100% natural almonds and honey to prepare our organic amlou" },
+    {icon:<LuHandCoins/>,title:"Affordable Price",description:"The best quality at the most affordable price." },
+    {icon:<LuFlaskConical/>,title:"No Preservatives",description:"100% natural and free of any chemicals." },
+    {icon:<LuTruck/>,title:"Fast Delivery",description:"We deliver your order within 48 hours anywhere in Morocco." },
+    {icon:<LuUsersRound/>,title:"Customer trust",description:"Excellent reviews from our customers all over Morocco" },
   ]
