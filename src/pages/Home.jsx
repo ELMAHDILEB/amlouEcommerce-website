@@ -16,7 +16,7 @@ const Home = memo(() => {
               <h1 className='text-center '>Your Destination for <span className='text-[var(--primary)] font-xander tracking-[10px]'>Organic & Natural</span> Food </h1>
             </div>
           </div>
-          <NavLink to="/products" className='px-10 py-3 bg-[var(--primary)] rounded-[30px] font-medium uppercase dark:text-[var(--colorBody)] text-white' data-discover="true" aria-label="Products page">
+          <NavLink to="/products" className='px-10 py-3 bg-[var(--primary)] rounded-[30px] font-medium uppercase text-black ' data-discover="true" aria-label="Products page">
             See More
           </NavLink>
         </main>

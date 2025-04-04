@@ -1,9 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --colorBody: #f6f4f0;
+  --colorBody: #f2f2f2;
+  /* --colorBody: #f6f4f0; */
   --blackColor: black;
-  --primary: #2b595e;
+  --primary: #7C8C03;
+  /* --primary: #2b595e; */
   --cardColor:#dcdadd;
   --font-poppins: "Poppins", sans-serif;
 }
@@ -12,7 +14,7 @@
   --colorBody: #2c2c2c;
   --blackColor: white;
   --cardColor:#333333;
-  --primary:#60c8d3;
+  /* --primary:#60c8d3; */
 }
 
 @theme {

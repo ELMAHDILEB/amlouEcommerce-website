@@ -61,7 +61,7 @@ function discoverCards() {
                             className="cursor-pointer rounded-full w-[25px] md:w-[50px] h-[25px] md:h-[50px] bg-[var(--primary)] flex items-center justify-center"
                             aria-label="buttonCart"
                         >
-                            <MdShoppingCartCheckout className="text-[15px] md:text-xl font-bold text-white"  />
+                            <MdShoppingCartCheckout className="text-[15px] md:text-xl font-bold text-black dark:text-white"  />
                         </button>
                     </div>
                 </article>
