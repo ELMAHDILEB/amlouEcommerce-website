@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
   --colorBody: #f2f2f2;
@@ -20,6 +21,7 @@
 @theme {
   --font-xander: "Xander", sans-serif;
   --font-poppins: "Poppins", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
   /* --rotateAnim: rotateAnim 2000ms forwards infinite; */
 }
 
@@ -36,6 +38,9 @@
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
 }
 
 @layer base {
@@ -63,11 +68,13 @@
   }
 }
 
-/* @keyframes rotateAnim {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-} */
+.toggle {
+  @apply text-[1em] overflow-hidden transition-all duration-[1500ms] ease-in-out max-h-0;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+}
+
+.toggle.open {
+  @apply max-h-[500px] pt-[12px] text-center font-normal;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+

@@ -1,25 +1,36 @@
+import { useState } from "react";
 import { TbSquareRoundedArrowRightFilled } from "react-icons/tb";
-import {accordions}  from  "../Routes/MainRoutes.jsx";
+import { accordions } from "../Routes/MainRoutes.jsx";
 
-const WhyChooseMe = ()=> {
+const WhyChooseMe = () => {
+  const [toggle, setToggle] = useState(null);
+
+  const handleToggle = (index) => {
+    setToggle(prevToggle => prevToggle === index ? null : index);
+  }
   return (
-    <section>
-       <h1>Why Choose Me</h1>
-     
-       <section>
-       {
-            accordions.map((accordions)=>{
-                const {icon,title,description} = accordions;
+    <section className="w-full  flex flex-col items-center justify-center gap-10 p-4  mx-auto my-0 font-montserrat">
+      <h1 className="tracking-[5px] font-black text-[var(--primary)] leading-[50px]" style={{fontSize: "clamp(25px, 4vw, 50px)"}}>Why Choose Me</h1>
+      <section className="w-full  xl:w-[60%]  flex flex-col space-y-5">
+        {
+          accordions.map((accordion, index) => {
+            const { icon, title, description } = accordion;
 
-              return  <article key={Math.floor(Math.random() * 100 - 1) }>
-                       <p>{icon}</p>
-                       <h1>{title}</h1>
-                       <p>{description}</p>
-                </article>
-                 {/* <TbSquareRoundedArrowRightFilled/> */}
-            })
+            return <article key={index * 4} className="px-2 py-3 flex flex-col items-center bg-[var(--cardColor)] rounded-2xl">
+              <div className="w-full flex items-center justify-between">
+                <div className="w-full flex items-center gap-0 md:gap-10">
+                  <p className="text-[1.5em] md:text-[2em] text-[var(--primary)]">{icon}</p>
+                  <h1 className="w-full text-center md:text-start text-[1.1em]  font-extrabold capitalize tracking-[1px] leading-10" >{title}</h1></div>
+                <TbSquareRoundedArrowRightFilled className={`text-[1.5em] md:text-[2em] text-[var(--primary)] cursor-pointer transition-transform duration-500 ${toggle === index ? "rotate-90" : "rotate-0"
+                  }`} onClick={() => handleToggle(index)} />
+              </div>
+
+              <p className={`toggle ${toggle === index ? "open" : ""}`} style={{fontSize:"clamp(14px,1vw,18px)"}}>{description}</p>
+            </article>
+
+          })
         }
-       </section>
+      </section>
     </section>
   )
 }
