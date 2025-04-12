@@ -44,9 +44,9 @@ export const links = [
   
 
   export const discoverCard = [
-    {srcImg:amandes1, alt: "amandes", title:"Noix De Cajou Grillées",className:"w-full h-full md:grid-col-2 md:row-span-2 overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[5px] relative font-poppins"},
-    {srcImg:cajou1, alt: "cajou1", title:"Noix De Cajou Grillées",className:"w-full  md:grid-col-1   overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[5px] relative font-poppins"},
-    {srcImg:amlouBloz, alt: "amlouBloz", title:"Noix De Cajou Grillées",className:"w-full  md:grid-col-1   overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[5px] relative font-poppins"}
+    {srcImg:amandes1, alt: "amandes", title:"Noix De Cajou Grillées",className:"w-full h-full md:grid-col-2 md:row-span-2 overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[5px] relative"},
+    {srcImg:cajou1, alt: "cajou1", title:"Noix De Cajou Grillées",className:"w-full  md:grid-col-1   overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[5px] relative"},
+    {srcImg:amlouBloz, alt: "amlouBloz", title:"Noix De Cajou Grillées",className:"w-full  md:grid-col-1   overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[5px] relative"}
   ]
 
   export const accordions = [

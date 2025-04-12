@@ -1,20 +1,20 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   --colorBody: #f2f2f2;
   /* --colorBody: #f6f4f0; */
   --blackColor: black;
-  --primary: #7C8C03;
+  --primary: #7c8c03;
   /* --primary: #2b595e; */
-  --cardColor:#dcdadd;
+  --cardColor: #dcdadd;
   --font-poppins: "Poppins", sans-serif;
 }
 
 .darkMode {
   --colorBody: #2c2c2c;
   --blackColor: white;
-  --cardColor:#333333;
+  --cardColor: #333333;
   /* --primary:#60c8d3; */
 }
 
@@ -41,6 +41,10 @@
 }
 @font-face {
   font-family: "Montserrat";
+  src: url(./fonts/Montserrat.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @layer base {
@@ -58,13 +62,11 @@
   .navLinks.open {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
-  .focus{
+  .focus {
     @apply absolute bottom-0 z-[2]  w-full  py-1 md:py-5  flex justify-end items-center flex-col  gap-4 md:gap-10  [clip-path:polygon(0_100%,100%_100%,100%_100%,0_100%)] transition-all duration-1500 ease-in-out;
-
   }
-  .focus.open{
+  .focus.open {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-
   }
 }
 
@@ -77,4 +79,3 @@
   @apply max-h-[500px] pt-[12px] text-center font-normal;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
-
