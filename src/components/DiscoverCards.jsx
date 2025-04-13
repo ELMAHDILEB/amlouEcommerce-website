@@ -26,7 +26,7 @@ function discoverCards() {
         <section className='w-full h-screen md:h-[80dvh]  flex flex-col  items-center justify-start gap-10 py-10 ' >
       
 
-            <div className="w-[90%] md:w-full h-full md:h-[500px] grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="w-[90%] md:w-full h-full  grid grid-cols-1 md:grid-cols-2 gap-4">
             {
               
                 discoverCard.map((card, index)=>{
