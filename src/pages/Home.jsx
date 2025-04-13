@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import WrapperResponsiveImage from '../components/WrapperResponsiveImage';
 import DiscoverCards from '../components/DiscoverCards.jsx';
 import WhyChooseMe from '../components/WhyChooseMe.jsx';
+import FeaturedProducts from '../components/FeaturedProducts.jsx';
 
 
 const Home = memo(() => {
@@ -24,6 +25,7 @@ const Home = memo(() => {
       </section>
       <DiscoverCards/>
       <WhyChooseMe/>
+      <FeaturedProducts/>
     </>
 
   )

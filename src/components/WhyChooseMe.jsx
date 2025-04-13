@@ -9,8 +9,8 @@ const WhyChooseMe = () => {
     setToggle(prevToggle => prevToggle === index ? null : index);
   }
   return (
-    <section className="w-full  flex flex-col items-center justify-center gap-10 p-4  mx-auto my-0 font-montserrat">
-      <h1 className="break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[32px]" style={{fontSize: "clamp(25px, 4vw, 50px)"}}>Why Choose Me</h1>
+    <section className="w-full flex flex-col items-center justify-center gap-10 p-4 mx-auto my-0 font-montserrat">
+      <h1 className="break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[32px]" style={{fontSize: "clamp(20px, 4vw, 50px)"}}>Why Choose Me</h1>
       <section className="w-full  xl:w-[60%]  flex flex-col space-y-5">
         {
           accordions.map((accordion, index) => {
