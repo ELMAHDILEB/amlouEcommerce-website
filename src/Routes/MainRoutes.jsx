@@ -12,6 +12,14 @@ import  amlouAmandes from "../assets/productsImg/amlouAmandes.png";
 import amandesRomarin from "../assets/productsImg/amandes-romarin.png";
 import noixCajouTruffeBio from "../assets/productsImg/noix-de-cajou-truffe-bio.png";
 
+import men1 from "../assets/testimonialsPicture/men-1.jpg";
+import men2 from "../assets/testimonialsPicture/men-2.jpg";
+import men3 from "../assets/testimonialsPicture/men-3.jpg";
+import women1 from "../assets/testimonialsPicture/women-1.jpg";
+import women2 from "../assets/testimonialsPicture/women-2.jpg";
+import women3 from "../assets/testimonialsPicture/women-3.jpg";
+
+
 const Home = lazy(() => import("../pages/Home"));
 const Products = lazy(() => import("../pages/Products"));
 const About = lazy(() => import("../pages/About"));
@@ -49,9 +57,9 @@ export const links = [
   
 
   export const discoverCard = [
-    {srcImg:amandes1, alt: "amandes", title:"Noix De Cajou Grillées",className:"w-full h-full md:grid-col-2 md:row-span-2 overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[5px] relative"},
-    {srcImg:cajou1, alt: "cajou1", title:"Noix De Cajou Grillées",className:"w-full  md:grid-col-1   overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[5px] relative"},
-    {srcImg:amlouBloz, alt: "amlouBloz", title:"Noix De Cajou Grillées",className:"w-full  md:grid-col-1   overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[5px] relative"}
+    {srcImg:amandes1, alt: "amandes", title:"Noix De Cajou Grillées",className:"w-full h-full md:grid-col-2 md:row-span-2 overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[15px] relative"},
+    {srcImg:cajou1, alt: "cajou1", title:"Noix De Cajou Grillées",className:"w-full  md:grid-col-1   overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[15px] relative"},
+    {srcImg:amlouBloz, alt: "amlouBloz", title:"Noix De Cajou Grillées",className:"w-full  md:grid-col-1   overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[15px] relative"}
   ]
 
   export const accordions = [
@@ -69,24 +77,36 @@ export const links = [
   ]
 
   export const testimonials = [
-    {
-      id: 1,
-      text: "خدمة رائعة جدًا! سعدت جدًا بالتعامل معكم.",
-      author: "أحمد محمد"
-    },
-    {
-      id: 2,
-      text: "تجربة ممتازة من البداية للنهاية.",
-      author: "سارة علي"
-    },
-    {
-      id: 3,
-      text: "سريع في التنفيذ ونتائج رائعة.",
-      author: "ياسر خالد"
-    },
-    {
-      id: 4,
-      text: "أنصح بالتعامل معهم بدون تردد.",
-      author: "ليلى حسن"
-    }
+    
+      {
+        text: "Excellent products! The taste is incredibly fresh, and the flavor is amazing. I loved the almonds and pistachios, highly recommend.",
+        author: "Sarah Benjelloun",
+        imgSrc:women1,
+      },
+      {
+        text: "One of the best products I've tried! Great quality and delicious taste. I'll definitely buy again.",
+        author: "Ahmed El Amrani",
+        imgSrc:men1,
+      },
+      {
+        text: "The pistachios and cashews were incredibly fresh, and I could really taste the difference in quality. I always buy from this store.",
+        author: "Youssef Boudra",
+        imgSrc:men2,
+      },
+      {
+        text: "I bought the almonds, and they were fantastic! Natural taste and rich flavor. I'll be adding them to my regular diet.",
+        author: "Kenza El Khatib",
+        imgSrc:women2,
+      },
+      {
+        text: "High-quality products! The cashews and almonds were light and fresh. I'm really happy with my purchase.",
+        author: "Mouad Chahbi",
+        imgSrc: men3,
+      },
+      {
+        text: "I tried the almonds and cashews, and the taste is unbelievable! The service was great too. I'll definitely recommend it to my friends and family.",
+        author: "Laila Sahraoui",
+        imgSrc: women3,
+      }
+ 
   ];
