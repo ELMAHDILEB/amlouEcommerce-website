@@ -26,15 +26,14 @@ function TestimonialsCarousel() {
                     testimonials.map((item, index) => {
                         const { text, author, imgSrc } = item;
                         return (
-                            <SwiperSlide key={index} className=''>
-                                {/* <article className="w-full h-[22em] p-6 bg-[var(--cardColor)] rounded-lg shadow flex flex-col  items-center justify-between gap-4 text-center "> */}
-                                <article className="w-full h-[22em] relative p-6   rounded-lg shadow flex flex-col  items-center justify-between gap-4 text-center cursor-pointer">
+                            <SwiperSlide key={index} >
+                                <article className="w-full h-[22em] relative p-6   rounded-[15px] shadow flex flex-col  items-center justify-between gap-4 text-center cursor-pointer overflow-hidden">
                                     <div
                                         className="w-full h-full  absolute top-0 left-0 -z-10 opacity-[40%] bg-cover bg-center"
                                         style={{ backgroundImage: `url(${bg})`, backgroundRepeat: 'no-repeat' }}
                                     ></div>
                                     <p className="  italic">"{text}"</p>
-                                    <div className='w-[100px] h-[100px] rounded-[50%] flex items-center justify-center overflow-hidden bg-red-100'>
+                                    <div className='w-[100px] h-[100px] rounded-[50%] flex items-center justify-center overflow-hidden bg-slate-100'>
                                         <img className='w-full h-full object-cover grayscale hover:grayscale-0 transition duration-300' src={imgSrc} alt={author} />
                                     </div>
                                     <h3 className="text-[#b6ce04] font-bold">{author}</h3>

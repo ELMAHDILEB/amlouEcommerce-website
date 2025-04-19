@@ -19,7 +19,7 @@
 }
 
 @theme {
-  --font-xander: "Xander", sans-serif;
+  --font-lobster: "Lobster", sans-serif;
   --font-poppins: "Poppins", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
   /* --rotateAnim: rotateAnim 2000ms forwards infinite; */
@@ -33,8 +33,8 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Xander";
-  src: url(./fonts/Xander.ttf) format("truetype");
+  font-family: "Lobster";
+  src: url(./fonts/Lobster.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;

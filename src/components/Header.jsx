@@ -45,7 +45,7 @@ const Header = memo(() =>{
 
       <NavLink to="/" className='flex items-center gap-2 text-2xl '>
         <ImLeaf className='text-bold text-[var(--primary)]'  data-discover="true" aria-label="Logo"/>
-        <h1 className='uppercase md:text-2xl text-[0.80em] font-xander tracking-[4px]'>Amlou Ino</h1>
+        <h1 className='uppercase md:text-2xl text-[0.80em] font-lobster tracking-[4px]'>Amlou Ino</h1>
       </NavLink>
 
       <nav className={`navLinks ${openNav ? "open" : ""} `}>
