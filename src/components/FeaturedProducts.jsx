@@ -4,7 +4,7 @@ import {FeaProducts} from "../Routes/MainRoutes";
 const FeaturedProducts = () => {
   return (
     <section className="w-full flex flex-col items-center justify-center gap-10 p-4 mx-auto my-0 font-montserrat">
-      <h1 className="break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[32px]" style={{ fontSize: "clamp(20px, 4vw, 50px)" }}>Featured Products</h1>
+      <h1 className="break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[32px] text-center" style={{ fontSize: "clamp(20px, 4vw, 50px)" }}>Featured Products</h1>
       <section className="w-full h-fit grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center">
   {
     FeaProducts.map((item, index) => {

@@ -5,6 +5,8 @@ import DiscoverCards from '../components/DiscoverCards.jsx';
 import WhyChooseMe from '../components/WhyChooseMe.jsx';
 import FeaturedProducts from '../components/FeaturedProducts.jsx';
 import Testimonials from '../components/Testimonials.jsx';
+import NewsLetter from '../components/newsLetter.jsx';
+
 
 
 const Home = memo(() => {
@@ -28,6 +30,7 @@ const Home = memo(() => {
       <WhyChooseMe/>
       <FeaturedProducts/>
       <Testimonials/>
+      <NewsLetter/>
     </>
 
   )
