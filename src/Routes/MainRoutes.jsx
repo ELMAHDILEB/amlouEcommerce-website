@@ -7,6 +7,11 @@ import pistach1 from "../assets/pistach1.png";
 import cajou1 from "../assets/cajou1.webp";
 import amandes1 from "../assets/amandes1.webp";
 import amlouBloz from "../assets/amlouBloz.svg";
+
+import  amlouAmandes from "../assets/productsImg/amlouAmandes.png";
+import amandesRomarin from "../assets/productsImg/amandes-romarin.png";
+import noixCajouTruffeBio from "../assets/productsImg/noix-de-cajou-truffe-bio.png";
+
 const Home = lazy(() => import("../pages/Home"));
 const Products = lazy(() => import("../pages/Products"));
 const About = lazy(() => import("../pages/About"));
@@ -56,3 +61,32 @@ export const links = [
     {icon:<LuTruck/>,title:"Fast Delivery",description:"We deliver your order within 48 hours anywhere in Morocco." },
     {icon:<LuUsersRound/>,title:"Customer trust",description:"Excellent reviews from our customers all over Morocco" },
   ]
+
+  export const FeaProducts = [
+    {imgSrc:amandesRomarin, title:"amandes romarin", price:"80"},
+    {imgSrc:amlouAmandes, title:"Amlou d’amandes 1 kg", price:"120"},
+    {imgSrc:noixCajouTruffeBio, title:"noix de cajou truffe-bio", price:"45"},
+  ]
+
+  export const testimonials = [
+    {
+      id: 1,
+      text: "خدمة رائعة جدًا! سعدت جدًا بالتعامل معكم.",
+      author: "أحمد محمد"
+    },
+    {
+      id: 2,
+      text: "تجربة ممتازة من البداية للنهاية.",
+      author: "سارة علي"
+    },
+    {
+      id: 3,
+      text: "سريع في التنفيذ ونتائج رائعة.",
+      author: "ياسر خالد"
+    },
+    {
+      id: 4,
+      text: "أنصح بالتعامل معهم بدون تردد.",
+      author: "ليلى حسن"
+    }
+  ];

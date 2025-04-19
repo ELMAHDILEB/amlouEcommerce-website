@@ -4,6 +4,7 @@ import WrapperResponsiveImage from '../components/WrapperResponsiveImage';
 import DiscoverCards from '../components/DiscoverCards.jsx';
 import WhyChooseMe from '../components/WhyChooseMe.jsx';
 import FeaturedProducts from '../components/FeaturedProducts.jsx';
+import Testimonials from '../components/Testimonials.jsx';
 
 
 const Home = memo(() => {
@@ -26,6 +27,7 @@ const Home = memo(() => {
       <DiscoverCards/>
       <WhyChooseMe/>
       <FeaturedProducts/>
+      <Testimonials/>
     </>
 
   )
