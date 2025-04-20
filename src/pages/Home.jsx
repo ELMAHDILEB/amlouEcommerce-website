@@ -5,7 +5,7 @@ import DiscoverCards from '../components/DiscoverCards.jsx';
 import WhyChooseUs from '../components/WhyChooseUs.jsx';
 import FeaturedProducts from '../components/FeaturedProducts.jsx';
 import Testimonials from '../components/Testimonials.jsx';
-import Newsletter from '../components/Newsletter.jsx';
+import Newsletter from '../components/News.jsx';
 import Footer from '../components/Footer.jsx';
 
 
