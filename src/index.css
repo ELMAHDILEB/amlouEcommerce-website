@@ -71,14 +71,11 @@
 }
 
 .toggle {
-  @apply text-[1em] overflow-hidden transition-all duration-[1500ms] ease-in-out max-h-0;
+  @apply text-[1em] overflow-hidden transition-all duration-[1000ms] ease-in-out max-h-0;
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
 }
 
 .toggle.open {
   @apply max-h-[500px] pt-[12px] text-center font-normal;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-.hoverCard{
-  
 }

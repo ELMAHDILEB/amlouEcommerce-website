@@ -14,7 +14,7 @@ const Home = memo(() => {
 
   return (
     <>
-      <section className='relative w-full  px-4 md:px-0  mx-auto my-0'>
+      <section className='relative w-full  px-4 md:px-0  mx-auto my-0 '>
         <main className='w-full h-full flex flex-col items-center justify-around'>
           <div className=' w-full flex items-center  justify-evenly  flex-col md:flex-row'>
             <WrapperResponsiveImage />
