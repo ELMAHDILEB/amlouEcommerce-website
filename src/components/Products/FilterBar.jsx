@@ -79,9 +79,15 @@ const FilterBar = () => {
 
 
 
-      <label className="flex flex-col gap-4">
+      <label className="flex flex-col gap-4 h-fit">
         <span className="font-medium">Price Range</span>
         <input type="range" min="0" max="100"  className="progress"/>
+        <div className="w-full flex flex-row justify-between gap-5">
+        <span>0$</span>
+        <span>-</span>
+        <span>200$</span>
+        </div>
+         
       </label>
 
 
