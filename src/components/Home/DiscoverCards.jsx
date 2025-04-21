@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MdShoppingCartCheckout } from "react-icons/md";
-import {discoverCard} from "../Routes/MainRoutes"
+import {discoverCard} from "../../Routes/MainRoutes"
 
 
 

@@ -44,8 +44,8 @@ const Header = memo(() =>{
     <header className='sticky z-[10000000] w-full  h-20 mx-auto my-0 flex items-center justify-between px-4 md:px-0 '>
 
       <NavLink to="/" className='flex items-center gap-2 text-2xl '>
-        <ImLeaf className='text-bold text-[var(--primary)]'  data-discover="true" aria-label="Logo"/>
-        <h1 className='uppercase md:text-2xl text-[0.80em] font-lobster tracking-[4px]'>Amlou Ino</h1>
+        <ImLeaf className='text-bold text-[var(--primary)] text-[12px] md:text-[24px]'  data-discover="true" aria-label="Logo"/>
+        <h1 className='uppercase text-[12px] md:text-[20px] font-lobster tracking-[4px]'>Amlou Ino</h1>
       </NavLink>
 
       <nav className={`navLinks ${openNav ? "open" : ""} `}>

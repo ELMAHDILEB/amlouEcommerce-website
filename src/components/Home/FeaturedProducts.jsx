@@ -1,5 +1,5 @@
 import  {NavLink} from "react-router-dom"
-import {FeaProducts} from "../Routes/MainRoutes";
+import {FeaProducts} from "../../Routes/MainRoutes";
 
 const FeaturedProducts = () => {
   return (

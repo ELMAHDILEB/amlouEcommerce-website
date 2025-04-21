@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { TbSquareRoundedArrowRightFilled } from "react-icons/tb";
-import { accordions } from "../Routes/MainRoutes.jsx";
+import { accordions } from "../../Routes/MainRoutes.jsx";
 
 const WhyChooseUs = () => {
   const [toggle, setToggle] = useState(null);

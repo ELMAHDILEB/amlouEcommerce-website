@@ -1,8 +1,8 @@
 import {memo} from "react"
-import img1Webp2000 from '../assets/img1/img1_w_2000.webp';
-import img1Webp1268 from '../assets/img1/img1_w_1268.webp';
-import img1Webp882 from '../assets/img1/img1_w_882.webp';
-import img1Png from '../assets/img1/img1.webp';
+import img1Webp2000 from '../../assets/img1/img1_w_2000.webp';
+import img1Webp1268 from '../../assets/img1/img1_w_1268.webp';
+import img1Webp882 from '../../assets/img1/img1_w_882.webp';
+import img1Png from '../../assets/img1/img1.webp';
 
 const ResponsiveImage =  memo(() =>{
 

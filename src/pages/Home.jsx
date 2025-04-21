@@ -1,11 +1,11 @@
 import { memo} from 'react'
 import { NavLink } from "react-router-dom";
-import WrapperResponsiveImage from '../components/WrapperResponsiveImage';
-import DiscoverCards from '../components/DiscoverCards.jsx';
-import WhyChooseUs from '../components/WhyChooseUs.jsx';
-import FeaturedProducts from '../components/FeaturedProducts.jsx';
-import Testimonials from '../components/Testimonials.jsx';
-import Newsletter from '../components/News.jsx';
+import WrapperResponsiveImage from '../components/Home/WrapperResponsiveImage.jsx';
+import DiscoverCards from '../components/Home/DiscoverCards.jsx';
+import WhyChooseUs from '../components/Home/WhyChooseUs.jsx';
+import FeaturedProducts from '../components/Home/FeaturedProducts.jsx';
+import Testimonials from '../components/Home/Testimonials.jsx';
+import Newsletter from '../components/Home/News.jsx';
 import Footer from '../components/Footer.jsx';
 
 

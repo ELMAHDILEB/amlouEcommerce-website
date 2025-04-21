@@ -79,3 +79,41 @@
   @apply max-h-[500px] pt-[12px] text-center font-normal;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
+.dropDown{
+  @apply w-full bg-[var(--cardColor)] py-5 pl-5 mt-3  z-[1000]  flex flex-col items-start gap-5 absolute left-0  rounded-[10px] transition-all duration-[1500ms] ease-in-out;
+  clip-path: polygon(100% 0, 100% 0, 0 0, 0 0);
+}
+.dropDown.open{
+  @apply max-h-fit;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+}
+
+
+.progress::-moz-range-progress {
+  background-color: #22c55e; /* green-500 */
+  height: 6px;
+}
+
+.progress::-moz-range-track {
+  background-color: #444e61; /* gray-200 */
+  height: 6px;
+}
+
+
+.progress::-webkit-slider-runnable-track {
+  background-color: #15a156;
+  height: 6px;
+  border-radius: 5px;
+}
+
+.progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #22c55e;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-top: -5px;
+  cursor: pointer;
+  border: none;
+}
