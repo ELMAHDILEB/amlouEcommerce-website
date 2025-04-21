@@ -5,8 +5,8 @@ const Footer = () => {
         <footer className='w-full p-4 mx-auto my-0 "'>
 
             <section className='  w-full h-fit grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 place-items-between font-montserrat'>
-                <div className='w-full h-fit   flex flex-col items-center gap-10  p-5'>
-                    <h1 className="text-[var(--primary)] text-2xl font-extrabold">Amlou Inou.</h1>
+                <div className='w-full h-fit   flex flex-col items-center gap-10  p-5 '>
+                    <h1 className="text-[var(--primary)] text-2xl font-extrabold ">Amlou Inou.</h1>
 
                     <div className='flex flex-col items-center gap-6 text-start'>
                         <p className='font-normal capitalize'>your destination for organic & naturel food</p>
@@ -31,8 +31,8 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className='w-full h-fit   flex flex-col  items-center gap-10  p-5'>
-                    <h1 className="text-[var(--primary)] text-2xl font-semibold">Follow Us</h1>
+                <div className='w-full h-fit   flex flex-col  items-center gap-10  p-5 '>
+                    <h1 className="text-[var(--primary)] text-2xl font-semibold ">Follow Us</h1>
                     <nav>
                         <ul className='flex flex-col items-start gap-5'>
                             <li><a href=''>INSTAGRAM</a></li>
@@ -42,8 +42,8 @@ const Footer = () => {
                         </ul>
                     </nav>
                 </div>
-                <div className='w-full h-fit   flex flex-col  items-center gap-10  p-5'>
-                    <h1 className="text-[var(--primary)] text-2xl font-semibold">Quick links</h1>
+                <div className='w-full h-fit   flex flex-col  items-center gap-10  p-5 '>
+                    <h1 className="text-[var(--primary)] text-2xl font-semibold ">Quick links</h1>
 
                     <nav>
                         <ul className='flex flex-col items-start gap-5'>

@@ -27,7 +27,7 @@ function TestimonialsCarousel() {
                         const { text, author, imgSrc } = item;
                         return (
                             <SwiperSlide key={index} >
-                                <article className="w-full h-[22em] relative p-6   rounded-[15px] shadow flex flex-col  items-center justify-between gap-4 text-center cursor-pointer overflow-hidden">
+                                <article className="w-full h-[22em] relative p-6   rounded-[15px] shadow flex flex-col  items-center justify-between gap-4 text-center cursor-pointer overflow-hidden font-montserrat">
                                     <div
                                         className="w-full h-full  absolute top-0 left-0 -z-10 opacity-[40%] bg-cover bg-center"
                                         style={{ backgroundImage: `url(${bg})`, backgroundRepeat: 'no-repeat' }}
