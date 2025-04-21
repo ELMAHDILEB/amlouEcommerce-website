@@ -9,7 +9,7 @@ const Footer = () => {
                     <h1 className="text-[var(--primary)] text-2xl font-extrabold ">Amlou Inou.</h1>
 
                     <div className='flex flex-col items-center gap-6 text-start'>
-                        <p className='font-normal capitalize'>your destination for organic & naturel food</p>
+                        <p className='font-bold capitalize text-center lg:text-start '>your destination for organic & naturel food</p>
                         <div className='w-full h-fit flex flex-col items-center lg:items-start gap-5 '>
                             <div className='flex items-center gap-4'>
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">

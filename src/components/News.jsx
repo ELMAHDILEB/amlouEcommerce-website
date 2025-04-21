@@ -4,7 +4,7 @@ const News = () => {
             <div className="text-center flex flex-col gap-10">
                 <h1 className='break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[32px]' style={{ fontSize: "clamp(20px, 4vw, 50px)" }}>our newsletter</h1>
                 <h1 className="capitalize font-medium text-2xl  font-montserrat">Join our community of organic lovers</h1>
-                <p className="capitalize font-bold font-montserrat" style={{ fontSize: "clamp(17px, 2vw, 50px)" }}>Subscribe to receive <span className="text-[var(--primary)]">exclusive offers, recipes and tips</span></p>
+                <p className="capitalize font-bold font-montserrat" style={{ fontSize: "clamp(17px, 2vw, 50px)" }}>Subscribe to receive <span className="text-[var(--primary)]">exclusive offers, recipes and tips</span>.</p>
             </div>
 
             <div className='flex items-center'>
