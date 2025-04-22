@@ -79,41 +79,91 @@
   @apply max-h-[500px] pt-[12px] text-center font-normal;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
-.dropDown{
-  @apply w-full bg-[var(--cardColor)] py-5 pl-5 mt-3  z-[1000]  flex flex-col items-start gap-5 absolute left-0  rounded-[10px] transition-all duration-[1500ms] ease-in-out;
+.dropDown {
+  @apply w-full bg-[var(--cardColor)]  py-5 pl-5 mt-3 z-[1000]  absolute left-0 rounded-[10px];
   clip-path: polygon(100% 0, 100% 0, 0 0, 0 0);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: clip-path 500ms ease-in-out, opacity 300ms ease, transform 300ms ease;
 }
-.dropDown.open{
+
+.dropDown.open {
   @apply max-h-fit;
   clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
-.progress::-moz-range-progress {
-  background-color: #22c55e; /* green-500 */
-  height: 6px;
-}
-
-.progress::-moz-range-track {
-  background-color: #444e61; /* gray-200 */
-  height: 6px;
-}
-
-
-.progress::-webkit-slider-runnable-track {
-  background-color: #15a156;
-  height: 6px;
+/* .progress{
+  outline: none;
+  border:none;
   border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-appearance: none;
+  background: linear-gradient(90deg brown 60%, white 60%);
+  width: 100%;
+  height: 10px;
+  opacity:0.7;
+  transition: opacity 0.7s;
+  -webkit-transition: opacity 0.7s;
+  -moz-transition: opacity 0.7s;
+  -ms-transition: opacity 0.7s;
+  -o-transition: opacity 0.7s;
 }
+.progress:hover{
+  opacity: 1;
+}
+.progress::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background: var(--cardColor);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.progress::-moz-range-thumb{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background: var(--cardColor);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+} */
+
+
+.progress {
+  @apply w-full h-2 rounded-full opacity-70 transition-opacity duration-700 hover:opacity-100;
+  background: linear-gradient(90deg, brown 60%, white 60%);
+}
+
 
 .progress::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  background-color: #22c55e;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  margin-top: -5px;
-  cursor: pointer;
-  border: none;
+  background: var(--cardColor); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.progress::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--cardColor); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
