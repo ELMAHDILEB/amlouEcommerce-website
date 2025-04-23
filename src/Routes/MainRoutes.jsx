@@ -8,9 +8,9 @@ import cajou1 from "../assets/cajou1.webp";
 import amandes1 from "../assets/amandes1.webp";
 import amlouBloz from "../assets/amlouBloz.svg";
 
-import  amlouAmandes from "../assets/productsImg/amlouAmandes.png";
-import amandesRomarin from "../assets/productsImg/amandes-romarin.png";
-import noixCajouTruffeBio from "../assets/productsImg/noix-de-cajou-truffe-bio.png";
+import  amlouAmandes from "/assets/productsImg/amlouAmandes.png";
+import amandesRomarin from "/assets/productsImg/amandes-romarin.png";
+import noixCajouTruffeBio from "/assets/productsImg/noix-de-cajou-truffe-bio.png";
 
 import men1 from "../assets/testimonialsPicture/men-1.jpg";
 import men2 from "../assets/testimonialsPicture/men-2.jpg";
