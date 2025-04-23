@@ -1,4 +1,32 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+
 const SearchInput = () => {
+  const [data, setData] = useState([])
+  const [filterData, setFilterData] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+    
+  useEffect(()=>{
+    axios.get("data/products.json")
+    .then((res)=>{
+      const dataValue = res.data;
+      setFilterData(dataValue);
+      setData(dataValue)
+    }).catch(error =>{
+      console.log(error)
+    })
+  },[]);
+
+  const handleSearch = (e)=>{
+     const query = e.target.value.toLowerCase();
+     setSearchQuery(query);
+
+     const filteredData = data.filter(item =>{
+       return  item.name.toLowerCase().includes(query)  || item.category.toLowerCase().includes(query);
+     })
+     setFilterData(filteredData);
+  }
+  
   return (
     <section className="w-full">
       <div className="w-full relative">
@@ -18,6 +46,7 @@ const SearchInput = () => {
         </svg>
 
         <input
+        onInput={handleSearch}
           type="text"
           placeholder="Search Products..."
           className="w-full pl-12 py-2 rounded-[10px] border border-gray-300 focus:border-gray-500 dark:focus:border-slate-500 outline-none transition-all duration-500 placeholder:italic"

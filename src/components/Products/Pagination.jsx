@@ -1,5 +1,3 @@
-
-
 const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
 
     const handlePrev = () => {
