@@ -11,7 +11,7 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
     const currentRenderPage = (page) => {
         return (
             <button
-                className={`w-[40px] h-[40px]  flex items-center justify-center  rounded-[50%] cursor-pointer font-bold ${currentPage === page ? "bg-black text-white" : "bg-[var(--primary)] text-black"} `}
+                className={`w-[20px] md:w-[40px] h-[20px]  md:h-[40px]  flex items-center justify-center  rounded-[50%] cursor-pointer font-semibold md:font-bold ${currentPage === page ? "bg-black text-white" : "bg-[var(--primary)] text-black"} `}
                 key={page}
                 onClick={() => setCurrentPage(page)}>
                 {page}
@@ -43,7 +43,7 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
 
     return (
         <section className="flex items-center justify-center flex-wrap gap-10 w-full py-5 font-montserrat">
-            <button className="w-[40px] h-[40px] bg-[var(--primary)] flex items-center justify-center text-black rounded-[50%] cursor-pointer font-bold" onClick={handlePrev} disabled={currentPage === 1}>
+            <button className={`w-[20px] h-[20px] md:w-[40px] md:h-[40px] bg-[var(--primary)]  items-center justify-center text-black rounded-[50%] cursor-pointer font-semibold md:font-bold ${currentPage === 1 ? "hidden" : "flex"}`} onClick={handlePrev} >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                 </svg>
@@ -52,7 +52,7 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
 
             {pages}
 
-            <button className="w-[40px] h-[40px] bg-[var(--primary)] flex items-center justify-center text-black rounded-[50%] cursor-pointer font-bold" onClick={handleNext} disabled={currentPage === totalPages}>
+            <button className={`w-[20px] h-[20px] md:w-[40px] md:h-[40px] bg-[var(--primary)]  items-center justify-center text-black rounded-[50%] cursor-pointer font-semibold md:font-bold ${currentPage === totalPages ? "hidden" : "flex"}`} onClick={handleNext} >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                 </svg>
