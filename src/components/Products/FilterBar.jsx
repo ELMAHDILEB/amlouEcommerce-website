@@ -12,7 +12,7 @@ const FilterBar = () => {
   const categories = ["Dried Fruits", "Amlou", "Preserved Vegetables and Fruits"];
   const [selectedCategories, setSelectedCategories] = useState("All");
 
-  const sortBy = ["MEHDI", "Amlou", "Preserved Vegetables and Fruits"];
+  const sortBy = ["Price: Low To High", "Price: High To Low"];
   const [selectedSort, setSelectedSort] = useState("sortOptions");
 
 
@@ -51,7 +51,7 @@ const FilterBar = () => {
 
       <DropDown
         title="Sort By"
-        subTitle="All"
+        subTitle="Featured"
         items={sortBy}
         selectedItem={selectedSort}
         setSelectedItem={setSelectedSort}
