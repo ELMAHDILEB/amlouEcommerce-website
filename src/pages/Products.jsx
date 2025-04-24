@@ -24,7 +24,7 @@ const Products = () => {
     return 0;
   })
 
-  
+  const noDatFounded = filterProducts.length === 0;
   return (
     <section className="w-full h-[calc(100dvh-70px)] flex flex-col items-center  gap-10  pt-7 relative  px-4 md:px-0  mx-auto my-0">
       <h1 className="break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[32px] pt-10 text-center" style={{ fontSize: "clamp(20px, 4vw, 50px)" }}>Our Products</h1>
@@ -37,7 +37,11 @@ const Products = () => {
         priceValue={priceValue}
         setPriceValue={setPriceValue}
       />
-      <CardsProducts  products={filterProducts} isLoading={isLoading}/>
+     {
+      noDatFounded ? 
+      (<p className="w-full h-full flex items-center justify-center font-bold text-2xl">No Data Fonded</p>) : 
+       <CardsProducts  products={filterProducts} isLoading={isLoading}/>
+     }
     </section>
   )
 }
