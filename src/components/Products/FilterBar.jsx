@@ -1,23 +1,13 @@
 import { useState } from "react";
 import DropDown from "./DropDown";
 
-const FilterBar = () => {
- 
-  // CREATE STATE
+const FilterBar = ({selectedCategory, setSelectedCategory, selectedSort, setSelectedSort, priceValue, setPriceValue}) => {
+
   const [openCategoriesDrop, setOpenCategoriesDrop] = useState(false);
   const [openSortDrop, setOpenSortDrop] = useState(false);
-  const [sliderValue, setSliderValue] = useState(50);
-
-   // CREATE CATEGORIES AND SORT ARRAYS WITH STATE
   const categories = ["Dried Fruits", "Amlou", "Preserved Vegetables and Fruits"];
-  const [selectedCategories, setSelectedCategories] = useState("All");
-
   const sortBy = ["Price: Low To High", "Price: High To Low"];
-  const [selectedSort, setSelectedSort] = useState("sortOptions");
 
-
-
-  // FUNCTION 
   const setOpenFirstDropDown = ()=>{
      setOpenCategoriesDrop(!openCategoriesDrop);
     setOpenSortDrop(false);
@@ -27,12 +17,9 @@ const FilterBar = () => {
     setOpenCategoriesDrop(false);
   }
 
-  
-
   const sliderRange = (e) => {
     const value = e.target.value;
-    setSliderValue(value);
-    document.querySelector(".value").textContent = value + "$";
+    setPriceValue(value);
   }
 
   return (
@@ -41,17 +28,17 @@ const FilterBar = () => {
   
       <DropDown
         title="Category"
-        subTitle="All"
+        subTitle={selectedCategory}
         items={categories}
-        selectedItem={selectedCategories}
-        setSelectedItem={setSelectedCategories}
+        selectedItem={selectedCategory}
+        setSelectedItem={setSelectedCategory}
         isOpen={openCategoriesDrop}
         setIsOpen={setOpenFirstDropDown}
       />
 
       <DropDown
         title="Sort By"
-        subTitle="Featured"
+        subTitle={selectedSort}
         items={sortBy}
         selectedItem={selectedSort}
         setSelectedItem={setSelectedSort}
@@ -61,10 +48,10 @@ const FilterBar = () => {
 
       <label className="flex flex-col gap-4 h-fit">
         <span className="font-bold">Price Range</span>
-        <input type="range" min="0" max="200" className="progress" onInput={sliderRange} />
+        <input type="range" min="0" max="200" className="progress" onInput={sliderRange}  value={priceValue}/>
         <div className="w-full flex flex-row justify-between gap-5">
           <span>0$</span>
-          <span className="flex items-center gap-4">Value: <p className="value">{sliderValue}$</p></span>
+          <span className="flex items-center gap-4">Value: <p className="value">{priceValue}$</p></span>
           <span>200$</span>
         </div>
 
@@ -75,4 +62,4 @@ const FilterBar = () => {
   )
 }
 
-export default FilterBar
+export default FilterBar;

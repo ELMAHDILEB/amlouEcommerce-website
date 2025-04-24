@@ -1,33 +1,14 @@
 import { useState } from "react";
 import Pagination from "./Pagination";
-// import data from "../../data/products.json";
-import { useEffect } from "react";
-import axios from "axios";
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
+import useFetchProducts from "../../utils/useFetchProducts";
 
 
-const CardsProducts = () => {
+const CardsProducts = ({products, isLoading, error}) => {
 
-  const [products, setProducts] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
-
-  useEffect(() => {
-    axios.get("/data/products.json")
-      .then((res) => {
-        const dataValue = res.data;
-        setProducts(dataValue);
-        setTimeout(() => {
-          setIsLoading(false);
-        }, 2000)
-
-      })
-      .catch((error) => {
-        setIsLoading(false);
-      })
-  }, []);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
@@ -109,7 +90,6 @@ const CardsProducts = () => {
         setCurrentPage={setCurrentPage}
       />
     </section>
-
 
 
   )
