@@ -14,6 +14,7 @@ const useFetchProducts = () => {
                 const response = await axios.get("/data/products.json")
                 const dataValue = response.data;
                 setProducts(dataValue);
+                    setIsLoading(false);
             }
             catch (error) {
                 setIsError(false)
@@ -26,4 +27,4 @@ const useFetchProducts = () => {
     return {products, isLoading, error}
 }
 
-export default useFetchProducts
+export default useFetchProducts;

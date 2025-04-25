@@ -37,16 +37,16 @@
     },
     {
         "id":6,
-        "name":"Shelled almonds from Sicily Calibrated 1st choice Healthy snacking Kitchen 1 KG",
+        "name":"Sicilian Shelled Almonds 1kg",
         "price":60.00,
-        "category":"Preserved Vegetables and Fruits",
+        "category":"Preserved Produce",
         "image":"/assets/productsImg/shelled-almonds.png"
     },
     {
         "id":7,
-        "name":"Sicilian shelled almonds calibrated selected for healthy snacking Cooking or baking 1 KG",
+        "name":"Sicilian Shelled Almonds 1kg",
         "price":80.00,
-        "category":"Preserved Vegetables and Fruits",
+        "category":"Preserved Produce",
         "image":"/assets/productsImg/sicilian-shelled-almonds.png"
     },
     {
