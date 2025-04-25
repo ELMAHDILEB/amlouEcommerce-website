@@ -2,18 +2,19 @@ import { useState } from "react";
 import Pagination from "./Pagination";
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
-import useFetchProducts from "../../utils/useFetchProducts";
 
 
 const CardsProducts = ({products, isLoading, error}) => {
 
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 5;
+  const productsPerPage = 5;
 
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
+  const endIndex = currentPage  *  productsPerPage;
+  const startIndex = endIndex - productsPerPage;
+
   const currentProducts = products.slice(startIndex, endIndex);
-  const totalPages = Math.ceil(products.length / itemsPerPage);
+  const totalPages = Math.ceil(products.length / productsPerPage);
+  console.log(totalPages);
 
 
   return (
@@ -22,7 +23,7 @@ const CardsProducts = ({products, isLoading, error}) => {
 
         {
           isLoading ? (
-            Array.from({ length: itemsPerPage }).map((_, index) => (
+            Array.from({ length: productsPerPage }).map((_, index) => (
               <div
                 className="w-full h-[500px] flex flex-col items-center bg-[var(--cardColor)] rounded-[15px] shadow-md overflow-hidden pb-2"
                 key={index * 3}
