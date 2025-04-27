@@ -17,7 +17,7 @@ const DropDown = ({ title, subTitle, items, selectedItem, setSelectedItem }) => 
                 </svg>
                 <div className='w-full pl-5 py-2 rounded-[10px] border border-gray-300 focus:border-gray-500 dark:focus:border-slate-500 outline-none transition-all duration-500'>
                     <div
-                        onClick={() => handleSelectItem("All")}
+                       
                         className={`text-start font-bold ${selectedItem === "All" ? "font-bold" : ""}`}
                     >
                        {subTitle}

@@ -6,8 +6,8 @@ const FilterBar = ({ selectedCategory, setSelectedCategory, selectedSort, setSel
 
   const [openCategoriesDrop, setOpenCategoriesDrop] = useState(false);
   const [openSortDrop, setOpenSortDrop] = useState(false);
-  const categories = ["Dried Fruits", "Amlou", "Preserved Produce"];
-  const sortBy = ["Price: Low To High", "Price: High To Low"];
+  const categories = ["All","Dried Fruits", "Amlou", "Preserved Produce"];
+  const sortBy = ["All","Price: Low To High", "Price: High To Low"];
 
   const setOpenFirstDropDown = () => {
     setOpenCategoriesDrop(!openCategoriesDrop);

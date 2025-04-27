@@ -14,12 +14,13 @@ const Products = () => {
 
   const filterProducts = products
     .filter((product) =>
-      selectedCategory === "All" ? true : product.category && product.category === selectedCategory
+      selectedCategory === "All" ? product : product.category && product.category === selectedCategory
     )
     .filter((product) => product.price <= priceValue)
     .filter((product) => product.name.toLowerCase().includes(searchTerm.toLowerCase())
     )
     .sort((a, b) => {
+      if (selectedSort === "All") return a.price + b.price;
       if (selectedSort === "Price: Low To High") return a.price - b.price;
       if (selectedSort === "Price: High To Low") return b.price - a.price;
       return 0;
