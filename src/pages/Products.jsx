@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import FilterBar from "../components/Products/FilterBar";
 import CardsProducts from "../components/Products/CardsProducts";
 import useFetchProducts from "../utils/useFetchProducts";
@@ -12,12 +13,16 @@ const Products = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
 
+
+
+
+
   const filterProducts = products
     .filter((product) =>
-      selectedCategory === "All" ? product : product.category && product.category === selectedCategory
+      selectedCategory === "All" ||  product.category === selectedCategory
     )
     .filter((product) => product.price <= priceValue)
-    .filter((product) => product.name.toLowerCase().includes(searchTerm.toLowerCase())
+    .filter((product) => product.name.toLowerCase().includes(searchTerm.toLowerCase().trim())
     )
     .sort((a, b) => {
       if (selectedSort === "All") return a.price + b.price;

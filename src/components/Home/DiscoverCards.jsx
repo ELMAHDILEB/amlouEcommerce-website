@@ -1,11 +1,12 @@
 import { useState } from "react";
+import {Link} from "react-router-dom";
 import { MdShoppingCartCheckout } from "react-icons/md";
 import {discoverCard} from "../../Routes/MainRoutes"
 
 
 
 function discoverCards() {
-    const [isFocus, setIsFocus] = useState([false, false, false])
+    const [isFocus, setIsFocus] = useState([false, false, false]);
 
     const handleFocus = (index) => {
         setIsFocus(prevState => {
@@ -57,12 +58,12 @@ function discoverCards() {
                         >
                            {title}
                         </h1>
-                        <button
+                        <Link to="/products?category=amlou"
                             className="cursor-pointer rounded-full w-[25px] md:w-[50px] h-[25px] md:h-[50px] bg-[var(--primary)] flex items-center justify-center"
                             aria-label="buttonCart"
                         >
                             <MdShoppingCartCheckout className="text-[15px] md:text-xl font-bold text-black dark:text-white"  />
-                        </button>
+                        </Link>
                     </div>
                 </article>
 

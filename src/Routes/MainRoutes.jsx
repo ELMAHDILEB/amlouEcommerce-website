@@ -110,3 +110,21 @@ export const links = [
       }
  
   ];
+
+  export const data = [
+    {
+      id: 1,
+      img: "/public/assets/productsImg/amlou-noix-de-cajou-dattes.png",
+      title: "amlou cashew nuts dates",
+    },
+    {
+      id: 2,
+      img: "/public/assets/productsImg/amande-crue-rond.png",
+      title: "amande crue rond",
+    },
+    {
+      id: 3,
+      img: "/public/assets/productsImg/shelled-almonds.png",
+      title: "shelled almonds",
+    },
+  ]

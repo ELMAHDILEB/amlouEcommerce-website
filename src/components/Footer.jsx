@@ -1,8 +1,8 @@
-import React from 'react'
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <footer className='w-full p-4 mx-auto my-0 "'>
+        <footer className='w-full p-4 mx-auto my-0 '>
 
             <section className='  w-full h-fit grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 place-items-between font-montserrat'>
                 <div className='w-full h-fit   flex flex-col items-center gap-10  p-5 '>
@@ -35,10 +35,10 @@ const Footer = () => {
                     <h1 className="text-[var(--primary)] text-2xl font-semibold ">Follow Us</h1>
                     <nav>
                         <ul className='flex flex-col items-start gap-5'>
-                            <li><a href=''>INSTAGRAM</a></li>
-                            <li><a href=''>FACEBOOK</a></li>
-                            <li><a href=''>TWITTER</a></li>
-                            <li><a href=''>TIKTOK</a></li>
+                            <li><a href='https://www.instagram.com/' target='_blank' rel='noopener noreferrer'>INSTAGRAM</a></li>
+                            <li><a href='https://www.facebook.com/' target='_blank' rel='noopener noreferrer'>FACEBOOK</a></li>
+                            <li><a href='https://www.x.com/' target='_blank' rel='noopener noreferrer'>TWITTER</a></li>
+                            <li><a href='https://www.tiktok.com/' target='_blank' rel='noopener noreferrer'>TIKTOK</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -47,10 +47,10 @@ const Footer = () => {
 
                     <nav>
                         <ul className='flex flex-col items-start gap-5'>
-                            <li><a href='#'>HOME</a></li>
-                            <li><a href='#'>PRODUCTS</a></li>
-                            <li><a href='#'>ABOUT</a></li>
-                            <li><a href='#'>CONTACT</a></li>
+                            <li><Link to='/'>HOME</Link></li>
+                            <li><Link to='/products'>PRODUCTS</Link></li>
+                            <li><Link to='/about'>ABOUT</Link></li>
+                            <li><Link to='/contact'>CONTACT</Link></li>
                         </ul>
                     </nav>
                 </div>

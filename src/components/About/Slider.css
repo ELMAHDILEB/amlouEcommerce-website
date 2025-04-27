@@ -1,0 +1,31 @@
+@keyframes fadeInFromTop {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  @keyframes fadeOutToBottom {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  }
+  
+  .animated-img {
+    animation: fadeInFromTop 1s ease-out, fadeOutToBottom 1s ease-in 3s forwards;
+  }
+  
+  
+  .animated-title {
+    animation: fadeInFromTop 1s ease-out, fadeOutToBottom 1s ease-in 3s forwards;
+  }
