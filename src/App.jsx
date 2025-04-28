@@ -15,7 +15,7 @@ function App() {
             links.map((link, index) => {
               const { path, element } = link;
               return (
-                <Route key={index} path={path} element={element} />
+                <Route key={index * 3} path={path} element={element} />
               )
             })
           }

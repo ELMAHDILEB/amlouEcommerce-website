@@ -7,15 +7,14 @@ import { FaMoon } from "react-icons/fa";
 import { IoIosSunny } from "react-icons/io";
 import { CgMenuRightAlt } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
-import {labels} from "../Routes/MainRoutes"
+import {labels} from "../Routes/MainRoutes";
+import useDarkMode from '../hooks/useDarkMode';
 
 
 const Header = memo(() =>{
   const [openNav, setOpenNav] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(()=>{
-      const savedTheme = localStorage.getItem('theme');
-      return savedTheme === "darkMode";
-  })
+  const [isDarkMode, toggleDarkTheme] = useDarkMode();
+
 
   const handleOpen = (e) => {
     e.preventDefault();
@@ -24,20 +23,6 @@ const Header = memo(() =>{
   const handleOut = () => {
     setOpenNav(false);
   }
-
-  const toggleTheme = ()=>{
-    setIsDarkMode(prevTheme=>{
-        const newTheme =!prevTheme;
-        localStorage.setItem("theme", newTheme ? "darkMode" : "lightMode");
-        return newTheme;
-    })
-  }
-
-  useEffect(()=>{
-    isDarkMode ? document.body.classList.add("darkMode") : document.body.classList.remove("darkMode");
-    
-  },[isDarkMode])
-
 
 
   return (
@@ -56,7 +41,7 @@ const Header = memo(() =>{
               return (
                 <li  key={index}>
                   <NavLink to={to} onClick={handleOut} className={({ isActive }) =>
-                    isActive ? "'text-[1em] font-normal uppercase text-[var(--primary)] " : "text-[1em] font-normal uppercase  text-[var(--colorBlack)]"
+                    isActive ? "text-[1em] font-normal uppercase text-[var(--primary)] " : "text-[1em] font-normal uppercase  text-[var(--colorBlack)]"
                   }  aria-label={ariaLabel}>
                     {label}
                   </NavLink>
@@ -68,7 +53,7 @@ const Header = memo(() =>{
       </nav>
 
       <div className='flex items-center  gap-6  p-2'>
-        {!isDarkMode ? (<FaMoon className='text-[1.15rem] cursor-pointer hover:text-[var(--primary)] transition-colors duration-500' onClick={toggleTheme} />) : (<IoIosSunny className='text-[1.15rem] cursor-pointer hover:text-[var(--primary)] transition-colors duration-500'  onClick={toggleTheme} />)}
+        {!isDarkMode ? (<FaMoon className='text-[1.15rem] cursor-pointer hover:text-[var(--primary)] transition-colors duration-500' onClick={toggleDarkTheme} />) : (<IoIosSunny className='text-[1.15rem] cursor-pointer hover:text-[var(--primary)] transition-colors duration-500'  onClick={toggleDarkTheme} />)}
         <NavLink to="/login" data-discover="true" aria-label="Login page">
           <RiAccountCircleFill className='text-[1.25rem] cursor-pointer hover:text-[var(--primary)] transition-colors duration-500' />
         </NavLink>
