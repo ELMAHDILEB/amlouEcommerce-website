@@ -1,0 +1,29 @@
+
+const ContactInfo = () => {
+    return (
+        <section className="w-full   h-full flex flex-col  justify-center pl-20 py-3">
+            <div className="flex flex-col text-start w-full">
+                <h1 className="break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[22px]  py-7" style={{ fontSize: "clamp(20px, 2vw, 35px)" }}>Address</h1>
+                <address className="text-[15px] capitalize">
+                    1234 Street WAFERS, <br/>
+                    Main Street, <br/>
+                    New York, USA <br/>
+                </address>
+            </div>
+            <div className="flex flex-col w-full">
+                <h1 className="break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[22px]  py-7" style={{ fontSize: "clamp(20px, 2vw, 35px)" }}>Contacts</h1>
+                <span className="py-3"><b>+212 7X-5XX4578</b></span>
+                <p className="text-[15px] capitalize">National Fixed network call</p>
+                <span className="py-3"><b>+212 7X-5XX4578</b></span>
+                <p className="text-[15px] capitalize">National mobile network call</p>
+            </div>
+            <div className="flex flex-col  w-full">
+                <h1 className="break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[22px]  py-7" style={{ fontSize: "clamp(20px, 2vw, 35px)" }}>Email</h1>
+                 <p className="text-[15px] lowercase">amlouInou@mail.ma</p>
+            </div>
+
+        </section>
+    )
+}
+
+export default ContactInfo;
