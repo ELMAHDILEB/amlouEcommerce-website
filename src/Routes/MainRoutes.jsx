@@ -115,13 +115,16 @@ export const links = [
     {
       id: 1,
       img: "/assets/productsImg/amlou-noix-de-cajou-dattes.png",
+      title:"amlou noix de cajou dattes"
     },
     {
       id: 2,
       img: "/assets/productsImg/amlou-chocolat-noir.png",
+      title:"amlou chocolat noir"
     },
     {
       id: 3,
       img: "/assets/productsImg/amlou-light.png",
+      title:"amlou light"
     },
   ]
