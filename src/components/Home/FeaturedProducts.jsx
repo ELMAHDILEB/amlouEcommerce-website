@@ -1,10 +1,13 @@
 import  {NavLink} from "react-router-dom"
-import {FeaProducts} from "../../Routes/MainRoutes";
+import {useFeaProducts} from "../../Routes/MainRoutes";
+import { useTranslation } from "react-i18next";
 
 const FeaturedProducts = () => {
+  const FeaProducts = useFeaProducts();
+  const {t} = useTranslation();
   return (
     <section className="w-full flex flex-col items-center justify-center gap-10 p-4 mx-auto my-0">
-      <h1 className="break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[32px] text-center py-10" style={{ fontSize: "clamp(20px, 4vw, 50px)" }}>Featured Products</h1>
+      <h1 className="break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[32px] text-center py-10" style={{ fontSize: "clamp(20px, 4vw, 50px)" }}>{t("featuredProducts.primaryTitle")}</h1>
       <section className="w-full h-fit grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center font-montserrat">
   {
     FeaProducts.map((item, index) => {
@@ -17,7 +20,7 @@ const FeaturedProducts = () => {
 
           <div className="w-full h-[130px] flex flex-col items-center justify-center gap-2 text-center">
             <h2 className="text-[12px]  md:text-[15px] font-bold uppercase">{title}</h2>
-            <span>{price} DHS</span>
+            <span>{price + " " + t("featuredProducts.products.dhs")} </span>
             <div className="flex items-center gap-2 py-4">
               <NavLink to="/products" className="w-[40px] h-[40px] flex items-center justify-center bg-[var(--primary)] text-white text-[22px] border border-[var(--blackColor)] rounded-full cursor-pointer" role="button" tabIndex="1" aria-label="button">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">

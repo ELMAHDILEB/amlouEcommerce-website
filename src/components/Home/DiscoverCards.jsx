@@ -1,11 +1,12 @@
 import { useState } from "react";
 import {Link} from "react-router-dom";
 import { MdShoppingCartCheckout } from "react-icons/md";
-import {discoverCard} from "../../Routes/MainRoutes"
+import {useDiscoverCard} from "../../Routes/MainRoutes"
 
 
 
 function discoverCards() {
+    const discoverCard = useDiscoverCard();
     const [isFocus, setIsFocus] = useState([false, false, false]);
 
     const handleFocus = (index) => {

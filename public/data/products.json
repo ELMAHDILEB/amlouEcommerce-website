@@ -1,185 +1,184 @@
-
 [
     {
-        "id":1,
-        "name":"round raw almond",
-        "price":57.50,
-        "category":"Dried Fruits",
-        "image":"/assets/productsImg/amande-crue-rond.png"
+      "id":1,
+      "nameKey":"round_raw_almond",
+      "price":57.50,
+      "category":"Dried Fruits",
+      "image":"/assets/productsImg/amande-crue-rond.png"
     },
     {
-        "id":2,
-        "name":"almond bake",
-        "price":40.00,
-        "category":"Dried Fruits",
-        "image":"/assets/productsImg/amande-forna.png"
+      "id":2,
+      "nameKey":"almond_bake",
+      "price":40.00,
+      "category":"Dried Fruits",
+      "image":"/assets/productsImg/amande-forna.png"
     },
     {
-        "id":3,
-        "name":"smoked almond",
-        "price":61.00,
-        "category":"Dried Fruits",
-        "image":"/assets/productsImg/amande-fumée.png"
+      "id":3,
+      "nameKey":"smoked_almond",
+      "price":61.00,
+      "category":"Dried Fruits",
+      "image":"/assets/productsImg/amande-fumée.png"
     },
     {
-        "id":4,
-        "name":"marcona almond",
-        "price":30.00,
-        "category":"Dried Fruits",
-        "image":"/assets/productsImg/amande-marcona.png"
+      "id":4,
+      "nameKey":"marcona_almond",
+      "price":30.00,
+      "category":"Dried Fruits",
+      "image":"/assets/productsImg/amande-marcona.png"
     },
     {
-        "id":5,
-        "name":"roasted almond",
-        "price":100.00,
-        "category":"Dried Fruits",
-        "image":"/assets/productsImg/amande-roussi.png"
+      "id":5,
+      "nameKey":"roasted_almond",
+      "price":100.00,
+      "category":"Dried Fruits",
+      "image":"/assets/productsImg/amande-roussi.png"
     },
     {
-        "id":6,
-        "name":"Sicilian Shelled Almonds 1kg",
-        "price":60.00,
-        "category":"Preserved Produce",
-        "image":"/assets/productsImg/shelled-almonds.png"
+      "id":6,
+      "nameKey":"Sicilian_Shelled_Almonds_1kg",
+      "price":60.00,
+      "category":"Preserved Produce",
+      "image":"/assets/productsImg/shelled-almonds.png"
     },
     {
-        "id":7,
-        "name":"Sicilian Shelled Almonds 1kg",
-        "price":80.00,
-        "category":"Preserved Produce",
-        "image":"/assets/productsImg/sicilian-shelled-almonds.png"
+      "id":7,
+      "nameKey":"Sicilian_Shelled_Almonds_1kg",
+      "price":80.00,
+      "category":"Preserved Produce",
+      "image":"/assets/productsImg/sicilian-shelled-almonds.png"
     },
     {
-        "id":8,
-        "name":"flaked almonds",
-        "price":150.00,
-        "category":"Dried Fruits",
-        "image":"/assets/productsImg/amandes-effilées.png"
+      "id":8,
+      "nameKey":"flaked_almonds",
+      "price":150.00,
+      "category":"Dried Fruits",
+      "image":"/assets/productsImg/amandes-effilées.png"
     },
     {
-        "id":9,
-        "name":"chopped almonds",
-        "price":20.00,
-        "category":"Dried Fruits",
-        "image":"/assets/productsImg/amandes-hachées.png"
+      "id":9,
+      "nameKey":"chopped_almonds",
+      "price":20.00,
+      "category":"Dried Fruits",
+      "image":"/assets/productsImg/amandes-hachées.png"
     },
     {
-        "id":10,
-        "name":"almonds rosemary",
-        "price":120.00,
-        "category":"Dried Fruits",
-        "image":"/assets/productsImg/amandes-romarin.png"
+      "id":10,
+      "nameKey":"almonds_rosemary",
+      "price":120.00,
+      "category":"Dried Fruits",
+      "image":"/assets/productsImg/amandes-romarin.png"
     },
     {
-        "id":11,
-        "name":"salted almonds",
-        "price":150.00,
-        "category":"Dried Fruits",
-        "image":"/assets/productsImg/amandes-salées.png"
+      "id":11,
+      "nameKey":"salted_almonds",
+      "price":150.00,
+      "category":"Dried Fruits",
+      "image":"/assets/productsImg/amandes-salées.png"
     },
     {
-        "id":12,
-        "name":"Amlou Amandes",
-        "price":16.00,
-        "category":"Amlou",
-        "image":"/assets/productsImg/amlouAmandes.png"
+      "id":12,
+      "nameKey":"Amlou_Amandes",
+      "price":16.00,
+      "category":"Amlou",
+      "image":"/assets/productsImg/amlouAmandes.png"
     },
     {
-        "id":13,
-        "name":"caramelized cashews",
-        "price":12.00,
-        "category":"Dried Fruits",
-        "image":"/assets/productsImg/cajou-caramélisées.png"
+      "id":13,
+      "nameKey":"caramelized_cashews",
+      "price":12.00,
+      "category":"Dried Fruits",
+      "image":"/assets/productsImg/cajou-caramélisées.png"
     },
     {
-        "id":14,
-        "name":"cashew chili",
-        "price":20.00,
-        "category":"Dried Fruits",
-        "image":"/assets/productsImg/cajou-chili.png"
+      "id":14,
+      "nameKey":"cashew_chili",
+      "price":20.00,
+      "category":"Dried Fruits",
+      "image":"/assets/productsImg/cajou-chili.png"
     },
     {
-        "id":15,
-        "name":"cashew cheese",
-        "price":57.00,
-        "category":"Dried Fruits",
-        "image":"/assets/productsImg/cajou-fromage.png"
+      "id":15,
+      "nameKey":"cashew_cheese",
+      "price":57.00,
+      "category":"Dried Fruits",
+      "image":"/assets/productsImg/cajou-fromage.png"
     },
     {
-        "id":16,
-        "name":"salted cashew",
-        "price":54.00,
-        "category":"Dried Fruits",
-        "image":"/assets/productsImg/cajou-salée.png"
+      "id":16,
+      "nameKey":"salted_cashew",
+      "price":54.00,
+      "category":"Dried Fruits",
+      "image":"/assets/productsImg/cajou-salée.png"
     },
     {
-        "id":17,
-        "name":"WHOLE ROASTED UNSALT CASHEW NUTS W1 1kg",
-        "price":39.00,
-        "category":"Dried Fruits",
-        "image":"/assets/productsImg/cashew-nuts.png"
+      "id":17,
+      "nameKey":"WHOLE_ROASTED_UNSALT_CASHEW_NUTS_W1_1kg",
+      "price":39.00,
+      "category":"Dried Fruits",
+      "image":"/assets/productsImg/cashew-nuts.png"
     },
     {
-        "id":18,
-        "name":"cashew nuts",
-        "price":19.00,
-        "category":"Dried Fruits",
-        "image":"/assets/productsImg/noix-de-cajou.png"
+      "id":18,
+      "nameKey":"cashew_nuts",
+      "price":19.00,
+      "category":"Dried Fruits",
+      "image":"/assets/productsImg/noix-de-cajou.png"
     },
     {
-        "id":19,
-        "name":"cashew nuts with rosemarys",
-        "price":27.00,
-        "category":"Dried Fruits",
-        "image":"/assets/productsImg/noix-de-cajou-au-romarin.png"
+      "id":19,
+      "nameKey":"cashew_nuts_with_rosemarys",
+      "price":27.00,
+      "category":"Dried Fruits",
+      "image":"/assets/productsImg/noix-de-cajou-au-romarin.png"
     },
     {
-        "id":20,
-        "name":"cashew  lemon",
-        "price":59.00,
-        "category":"Dried Fruits",
-        "image":"/assets/productsImg/noix-de-cajou-citron.png"
+      "id":20,
+      "nameKey":"cashew_lemon",
+      "price":59.00,
+      "category":"Dried Fruits",
+      "image":"/assets/productsImg/noix-de-cajou-citron.png"
     },
     {
-        "id":21,
-        "name":"organic truffle cashew nuts",
-        "price":90.00,
-        "category":"Dried Fruits",
-        "image":"/assets/productsImg/noix-de-cajou-truffe-bio.png"
+      "id":21,
+      "nameKey":"organic_truffle_cashew_nuts",
+      "price":90.00,
+      "category":"Dried Fruits",
+      "image":"/assets/productsImg/noix-de-cajou-truffe-bio.png"
     },
     {
-        "id":23,
-        "name":"amlou peanuts and fleur de sel",
-        "price":75.00,
-        "category":"Amlou",
-        "image":"/assets/productsImg/amlou-cacahuetes-et-fleur-de-sel.png"
+      "id":23,
+      "nameKey":"amlou_peanuts_and_fleur_de_sel",
+      "price":75.00,
+      "category":"Amlou",
+      "image":"/assets/productsImg/amlou-cacahuetes-et-fleur-de-sel.png"
     },
     {
-        "id":24,
-        "name":"amlou dark chocolate",
-        "price":77.00,
-        "category":"Amlou",
-        "image":"/assets/productsImg/amlou-chocolat-noir.png"
+      "id":24,
+      "nameKey":"amlou_dark_chocolate",
+      "price":77.00,
+      "category":"Amlou",
+      "image":"/assets/productsImg/amlou-chocolat-noir.png"
     },
     {
-        "id":25,
-        "name":"amlou cashew nuts dates",
-        "price":34.00,
-        "category":"Amlou",
-        "image":"/assets/productsImg/amlou-noix-de-cajou-dattes.png"
+      "id":25,
+      "nameKey":"amlou_cashew_nuts_dates",
+      "price":34.00,
+      "category":"Amlou",
+      "image":"/assets/productsImg/amlou-noix-de-cajou-dattes.png"
     },
     {
-        "id":26,
-        "name":"amlou orange chocolate",
-        "price":69.00,
-        "category":"Amlou",
-        "image":"/assets/productsImg/amlou-orange-chocolat.png"
+      "id":26,
+      "nameKey":"amlou_orange_chocolate",
+      "price":69.00,
+      "category":"Amlou",
+      "image":"/assets/productsImg/amlou-orange-chocolat.png"
     },
     {
-        "id":27,
-        "name":"amlou pistache",
-        "price":18.00,
-        "category":"Amlou",
-        "image":"/assets/productsImg/amlou-pistache.png"
+      "id":27,
+      "nameKey":"amlou_pistache",
+      "price":18.00,
+      "category":"Amlou",
+      "image":"/assets/productsImg/amlou-pistache.png"
     }
-]
+  ]

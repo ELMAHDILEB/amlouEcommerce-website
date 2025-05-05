@@ -4,8 +4,11 @@ import FilterBar from "../components/Products/FilterBar";
 import CardsProducts from "../components/Products/CardsProducts";
 import useFetchProducts from "../utils/useFetchProducts";
 import SearchInput from "../components/Products/SearchInput";
+import { useTranslation } from "react-i18next";
+
 
 const Products = () => {
+  const {t} = useTranslation();
   const { products, isLoading } = useFetchProducts();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSort, setSelectedSort] = useState("All");
@@ -14,15 +17,12 @@ const Products = () => {
 
 
 
-
-
-
   const filterProducts = products
     .filter((product) =>
       selectedCategory === "All" ||  product.category === selectedCategory
     )
     .filter((product) => product.price <= priceValue)
-    .filter((product) => product.name.toLowerCase().includes(searchTerm.toLowerCase().trim())
+    .filter((product) => product.nameKey.toLowerCase().includes(searchTerm.toLowerCase().trim())
     )
     .sort((a, b) => {
       if (selectedSort === "All") return a.price + b.price;

@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Pagination from "./Pagination";
 import 'react-loading-skeleton/dist/skeleton.css';
 import Card from "./Card";
-
+import { useTranslation } from "react-i18next";
 
 const CardsProducts = ({products, isLoading, error}) => {
+
+  const {t} = useTranslation();
 
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 5;
@@ -15,8 +17,13 @@ const CardsProducts = ({products, isLoading, error}) => {
   const currentProducts = products.slice(startIndex, endIndex);
   const totalPages = Math.ceil(products.length / productsPerPage);
 
+ 
+
+
+
 
   return (
+    
     <section className="w-full flex flex-col">
       <section className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-6 py-5 font-montserrat">
 
@@ -25,10 +32,12 @@ const CardsProducts = ({products, isLoading, error}) => {
                <SkeletonLoader count={5}/>
           ) : (
             currentProducts.map((productItem) => {
-              const { id, name, price, category, image } = productItem;
+            const {id, nameKey, image, price, category} = productItem;
+             
+        
               return (
                 
-                      <Card key={id} name={name} image={image} price={price} category={category}/>
+                      <Card key={id} name={nameKey} image={image} price={price} category={category}/>
               )
             })
           )
@@ -41,6 +50,8 @@ const CardsProducts = ({products, isLoading, error}) => {
         setCurrentPage={setCurrentPage}
       />
     </section>
+
+
 
 
   )

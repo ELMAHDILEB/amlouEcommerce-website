@@ -3,11 +3,14 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-import { testimonials } from "../../Routes/MainRoutes";
+import { useTestimonials } from "../../Routes/MainRoutes";
 import bg from "../../assets/testimonialsPicture/bg.jpg";
-
+import { useTranslation } from 'react-i18next';
 
 function TestimonialsCarousel() {
+    const testimonials = useTestimonials();
+    const {t} = useTranslation();
+
     return (
         <section className='w-full'>
             <Swiper
@@ -32,11 +35,11 @@ function TestimonialsCarousel() {
                                         className="w-full h-full  absolute top-0 left-0 -z-10 opacity-[40%] bg-cover bg-center"
                                         style={{ backgroundImage: `url(${bg})`, backgroundRepeat: 'no-repeat' }}
                                     ></div>
-                                    <p className="  italic">"{text}"</p>
+                                    <p className="  italic">"{t(text)}"</p>
                                     <div className='w-[100px] h-[100px] rounded-[50%] flex items-center justify-center overflow-hidden bg-slate-100'>
-                                        <img className='w-full h-full object-cover grayscale hover:grayscale-0 transition duration-300' src={imgSrc} alt={author} />
+                                        <img className='w-full h-full object-cover grayscale hover:grayscale-0 transition duration-300' src={imgSrc} alt={t(author)} />
                                     </div>
-                                    <h3 className="text-[#b6ce04] font-bold">{author}</h3>
+                                    <h3 className="text-[#b6ce04] font-bold">{t(author)}</h3>
                                 </article>
                             </SwiperSlide>
                         )

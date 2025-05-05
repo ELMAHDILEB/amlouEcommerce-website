@@ -1,16 +1,19 @@
-import React from 'react'
-
+import { useTranslation } from "react-i18next"
 const Card = ({id,name,image,category,price}) => {
+  const {t} = useTranslation();
+  const formatString = name.replace(/_/g, " ");
+
   return (
+
     <div className="w-full h-[500px]  flex flex-col items-center bg-[var(--cardColor)]   rounded-[15px] shadow-md overflow-hidden pb-2" key={id}>
 
     <div className="w-full h-[200px] lg:h-[250px] flex items-center justify-center">
-      <img src={image} alt={name} className="w-full h-[70%]  lg:h-full object-contain " />
+      <img src={image} alt={t(formatString)} className="w-full h-[70%]  lg:h-full object-contain " />
     </div>
 
     <div className="w-full flex flex-col justify-center gap-10  flex-grow">
       <div className="flex flex-col justify-between items-center gap-5 px-4">
-        <h1 className="font-semibold tracking-5 uppercase text-center text-[12px] md:text-[15px]">{name}</h1>
+        <h1 className="font-semibold tracking-5 uppercase text-center text-[12px] md:text-[15px]">{t(formatString)}</h1>
         <h2 className="font-normal tracking-xl">{`${price} DHS`}</h2>
 
       </div>

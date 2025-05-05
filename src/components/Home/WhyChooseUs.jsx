@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { TbSquareRoundedArrowRightFilled } from "react-icons/tb";
-import { accordions } from "../../Routes/MainRoutes.jsx";
+import { useAccordions } from "../../Routes/MainRoutes.jsx";
+import { useTranslation } from "react-i18next";
 
 const WhyChooseUs = () => {
+  const {t} = useTranslation()
+  const accordions = useAccordions();
   const [toggle, setToggle] = useState(null);
 
   const handleToggle = (index) => {
@@ -10,7 +13,7 @@ const WhyChooseUs = () => {
   }
   return (
     <section className="w-full flex flex-col items-center justify-center gap-10 p-4 mx-auto my-0">
-      <h1 className="break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[32px] py-10 text-center"  style={{fontSize: "clamp(20px, 4vw, 50px)"}}>Why Choose us</h1>
+      <h1 className="break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[32px] py-10 text-center"  style={{fontSize: "clamp(20px, 4vw, 50px)"}}>{t("whychooseus.primaryTitle")}</h1>
       <section className="w-full  xl:w-[60%]  flex flex-col space-y-5">
         {
           accordions.map((accordion, index) => {
