@@ -2,7 +2,6 @@ import  {memo, useEffect, useState } from 'react'
 import { NavLink } from "react-router-dom";
 import { ImLeaf } from "react-icons/im";
 import { IoBagHandle } from "react-icons/io5";
-import { RiAccountCircleFill } from "react-icons/ri";
 import { FaMoon } from "react-icons/fa";
 import { IoIosSunny } from "react-icons/io";
 import { CgMenuRightAlt } from "react-icons/cg";
@@ -11,11 +10,14 @@ import useDarkMode from '../hooks/useDarkMode';
 import SwitcherLang from './SwitcherLang';
 import { useLabels } from '../Routes/MainRoutes';
 import { useTranslation } from 'react-i18next';
+import useIsArabic from '../hooks/useIsArabic';
+
 
 
 const Header = memo(() =>{
   const {t} = useTranslation();
   const labels = useLabels();
+  const isArabic = useIsArabic()
 
 
   const [openNav, setOpenNav] = useState(false);

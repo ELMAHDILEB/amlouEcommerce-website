@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useState } from "react";
 import FilterBar from "../components/Products/FilterBar";
 import CardsProducts from "../components/Products/CardsProducts";
 import useFetchProducts from "../utils/useFetchProducts";

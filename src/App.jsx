@@ -10,9 +10,9 @@ function App() {
   const { i18n } = useTranslation();
   useEffect(() => {
     const isArabic = i18n.language === "ar";
-    document.body.classList.toggle("arabic-font", isArabic);
     document.documentElement.dir = i18n.language === "ar" ? "rtl" : "ltr";
-  }, [i18n.language])
+    isArabic ? document.body.classList.add("arabic-font") : document.body.classList.remove("arabic-font");
+  }, [i18n.language]);
   return (
 
     <Routes>

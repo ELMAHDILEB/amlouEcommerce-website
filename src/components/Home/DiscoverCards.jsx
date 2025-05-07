@@ -2,6 +2,7 @@ import { useState } from "react";
 import {Link} from "react-router-dom";
 import { MdShoppingCartCheckout } from "react-icons/md";
 import {useDiscoverCard} from "../../Routes/MainRoutes"
+import useIsArabic from "../../hooks/useIsArabic";
 
 
 

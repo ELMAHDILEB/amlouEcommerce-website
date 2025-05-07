@@ -9,11 +9,12 @@ import { useTranslation } from 'react-i18next';
 
 function TestimonialsCarousel() {
     const testimonials = useTestimonials();
-    const {t} = useTranslation();
+    const { t, i18n } = useTranslation();
 
     return (
         <section className='w-full'>
             <Swiper
+                key={i18n.language}
                 modules={[Autoplay]}
                 spaceBetween={20}
                 slidesPerView={1}
