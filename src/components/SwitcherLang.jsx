@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 const SwitcherLang = () => {
   const languages = [
-    { code: 'en', label: "Englsh" },
+    { code: 'en', label: "English" },
     { code: 'ar', label: "العربية" },
     { code: 'fr', label: "Français" }
   ]
