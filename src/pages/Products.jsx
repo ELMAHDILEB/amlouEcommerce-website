@@ -24,7 +24,7 @@ const Products = () => {
     .filter((product) => product.nameKey.toLowerCase().includes(searchTerm.toLowerCase().trim())
     )
     .sort((a, b) => {
-      if (selectedSort === "All") return a.price + b.price;
+      // if (selectedSort === "All") return a.price + b.price;
       if (selectedSort === "Price: Low To High") return a.price - b.price;
       if (selectedSort === "Price: High To Low") return b.price - a.price;
       return 0;

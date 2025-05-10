@@ -111,19 +111,18 @@
    "pageProducts":{
     "ourProducts":"منتجاتنا",
     "placeholder":" البحث عن المنتجات...",
-    "category":{
-        "title":"الفئة",
-         "all": "الجميع",
-         "driedFruits":"فواكه مجففة",
-         "amlou":"أملو",
-         "preservedProduce":"منتجات معلبة"
+    "category": {
+      "title": "الفئة",
+      "all": "الكل",
+      "driedFruits": "فواكه مجففة",
+      "amlou": "أملو",
+      "preservedProduce": "منتجات معلبة"
     },
-    "sort":
-    {
-        "title":"تصنيف",
-        "price:low_to_high":"السعر: من الأقل إلى الأعلى",
-        "price:high_to_low":"السعر: من الأعلى إلى الأقل"
-
+    "sort": {
+      "title": "ترتيب حسب",
+      "All": "الكل",
+      "lowToHigh": "السعر: من الأقل إلى الأعلى",
+      "highToLow": "السعر: من الأعلى إلى الأقل"
     },
     "priceRang":"نطاق السعر",
     "value":"القيمة",

@@ -116,16 +116,17 @@
       "placeholder": "Rechercher des produits",
       "category": {
         "title": "Catégorie",
-        "all": "Tous",
+        "all": "toute",
         "driedFruits": "Fruits secs",
         "amlou": "Amlou",
         "preservedProduce": "Produits en conserve"
       },
       "sort": {
         "title": "Trier",
-        "price:low_to_high": "Prix : du plus bas au plus élevé",
-        "price:high_to_low": "Prix : du plus élevé au plus bas"
-      },
+        "All": "toute",
+        "lowToHigh": "Prix : du plus bas au plus élevé",
+        "highToLow": "Prix : du plus élevé au plus bas"
+      } ,
       "priceRang": "Plage de prix",
       "value": "Valeur",
       "price":"DHS"

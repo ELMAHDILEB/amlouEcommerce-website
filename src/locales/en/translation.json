@@ -121,11 +121,13 @@
         "amlou": "Amlou",
         "preservedProduce": "Preserved Produce"
       },
+ 
       "sort": {
-        "title": "Sort",
-        "price:low_to_high": "Price: Low to High",
-        "price:high_to_low": "Price: High to Low"
-      },
+        "title": "sort by",
+        "All": "All",
+        "lowToHigh": "Price: Low to High",
+        "highToLow": "Price: High to Low"
+      } ,
       "priceRang": "Price Range",
       "value": "Value",
       "price":"DHS"

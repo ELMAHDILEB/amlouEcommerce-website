@@ -1,13 +1,28 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import DropDown from "./DropDown";
 import PriceRange from "./PriceRange";
+import { useTranslation } from "react-i18next";
 
 const FilterBar = ({ selectedCategory, setSelectedCategory, selectedSort, setSelectedSort, priceValue, setPriceValue }) => {
-
+  const { t } = useTranslation();
   const [openCategoriesDrop, setOpenCategoriesDrop] = useState(false);
   const [openSortDrop, setOpenSortDrop] = useState(false);
-  const categories = ["All","Dried Fruits", "Amlou", "Preserved Produce"];
-  const sortBy = ["All","Price: Low To High", "Price: High To Low"];
+  const categories = useMemo(() => {
+     return [
+      { value: "All", label: t("pageProducts.category.all") },
+      { value: "Dried Fruits", label: t("pageProducts.category.driedFruits") },
+      { value: "Amlou", label: t("pageProducts.category.amlou") },
+      { value: "Preserved Produce", label: t("pageProducts.category.preservedProduce") },
+     ]
+  }, [t]);
+
+  const sortBy = useMemo(() => {
+    return [
+      { value: "All", label: t("pageProducts.sort.All") },
+      { value: "Price: Low To High", label: t("pageProducts.sort.lowToHigh") },
+      { value: "Price: High To Low", label: t("pageProducts.sort.highToLow") },
+    ];
+  }, [t]);
 
   const setOpenFirstDropDown = () => {
     setOpenCategoriesDrop(!openCategoriesDrop);
@@ -23,8 +38,8 @@ const FilterBar = ({ selectedCategory, setSelectedCategory, selectedSort, setSel
     <section className="w-full grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4 font-montserrat">
 
       <DropDown
-        title="Category"
-        subTitle={selectedCategory}
+        title={t("pageProducts.category.title")}
+        subTitle={categories.find(category => category.value === selectedCategory)?.label}
         items={categories}
         selectedItem={selectedCategory}
         setSelectedItem={setSelectedCategory}
@@ -33,8 +48,8 @@ const FilterBar = ({ selectedCategory, setSelectedCategory, selectedSort, setSel
       />
 
       <DropDown
-        title="Sort By"
-        subTitle={selectedSort}
+        title={t("pageProducts.sort.title")}
+        subTitle={sortBy.find(option => option.value === selectedSort)?.label}
         items={sortBy}
         selectedItem={selectedSort}
         setSelectedItem={setSelectedSort}
