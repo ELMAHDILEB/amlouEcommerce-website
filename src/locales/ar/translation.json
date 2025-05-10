@@ -110,7 +110,7 @@
 
    "pageProducts":{
     "ourProducts":"منتجاتنا",
-    "placeholder":"البحث عن المنتجات",
+    "placeholder":" البحث عن المنتجات...",
     "category":{
         "title":"الفئة",
          "all": "الجميع",
@@ -126,7 +126,8 @@
 
     },
     "priceRang":"نطاق السعر",
-    "value":"القيمة"
+    "value":"القيمة",
+    "price" : "درهم"
 
    },
 

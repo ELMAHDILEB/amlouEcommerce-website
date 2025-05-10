@@ -127,7 +127,8 @@
         "price:high_to_low": "Prix : du plus élevé au plus bas"
       },
       "priceRang": "Plage de prix",
-      "value": "Valeur"
+      "value": "Valeur",
+      "price":"DHS"
     },
   
     "dataProducts": {
@@ -158,10 +159,12 @@
       "amlou_pistache": "Amlou à la pistache"
     },
   
-    "category": "Catégorie",
-    "driedFruits": "Fruits secs",
-    "amlou": "Amlou",
-    "preservedProduce": "Produits en conserve",
+    "category": {
+      "driedFruits": "Fruits secs",
+      "amlou": "Amlou",
+      "preservedProduce": "Produits en conserve"
+    },
+   
     "addtocard": "Ajouter au panier",
   
     "aboutPage": {

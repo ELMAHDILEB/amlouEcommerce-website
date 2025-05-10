@@ -113,7 +113,7 @@
   
     "pageProducts": {
       "ourProducts": "Our Products",
-      "placeholder": "Search for products",
+      "placeholder": "Search for products..",
       "category": {
         "title": "Category",
         "all": "All",
@@ -127,7 +127,8 @@
         "price:high_to_low": "Price: High to Low"
       },
       "priceRang": "Price Range",
-      "value": "Value"
+      "value": "Value",
+      "price":"DHS"
     },
   
     "dataProducts": {
