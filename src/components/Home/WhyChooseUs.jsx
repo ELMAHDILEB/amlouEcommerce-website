@@ -2,9 +2,11 @@ import { useState } from "react";
 import { TbSquareRoundedArrowRightFilled } from "react-icons/tb";
 import { useAccordions } from "../../Routes/MainRoutes.jsx";
 import { useTranslation } from "react-i18next";
+import useIsArabic from "../../hooks/useIsArabic.jsx";
 
 const WhyChooseUs = () => {
-  const {t} = useTranslation()
+  const {t} = useTranslation();
+  const isArabic = useIsArabic();
   const accordions = useAccordions();
   const [toggle, setToggle] = useState(null);
 

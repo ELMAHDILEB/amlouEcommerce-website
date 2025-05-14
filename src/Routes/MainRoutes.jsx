@@ -76,7 +76,7 @@ export const useAccordions = ()=>{
 
    return  [
     { icon: <LuLeaf />, title: t("whychooseus.accordion.highQuality.title"), description:t("whychooseus.accordion.highQuality.description")},
-    { icon: <LuHandCoins />, title:  t("whychooseus.accordion.affordablePrice.title"), description:t("whychooseus.accordion.affordablePricedescription") },
+    { icon: <LuHandCoins />, title:  t("whychooseus.accordion.affordablePrice.title"), description:t("whychooseus.accordion.affordablePrice.description") },
     { icon: <LuFlaskConical />, title:  t("whychooseus.accordion.noPreservatives.title"), description:t("whychooseus.accordion.noPreservatives.description") },
     { icon: <LuTruck />, title:  t("whychooseus.accordion.fastDelivery.title"), description:t("whychooseus.accordion.fastDelivery.description")},
     { icon: <LuUsersRound />, title:  t("whychooseus.accordion.customerTrust.title"), description:t("whychooseus.accordion.customerTrust.description") },
