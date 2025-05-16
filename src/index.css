@@ -92,7 +92,7 @@ body.arabic-font span {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .dropDown {
-  @apply w-full bg-[var(--cardColor)]  py-5 pl-5 mt-3 z-[1000]  absolute left-0 rounded-[10px];
+  @apply w-full bg-[var(--cardColor)]  py-5 px-5 mt-3 z-[1000]  absolute left-0 rounded-[10px];
   clip-path: polygon(100% 0, 100% 0, 0 0, 0 0);
   opacity: 0;
   transform: translateY(-10px);

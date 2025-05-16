@@ -10,9 +10,9 @@ const FilterBar = ({ selectedCategory, setSelectedCategory, selectedSort, setSel
   const categories = useMemo(() => {
      return [
       { value: "All", label: t("pageProducts.category.all") },
-      { value: "Dried Fruits", label: t("pageProducts.category.driedFruits") },
-      { value: "Amlou", label: t("pageProducts.category.amlou") },
-      { value: "Preserved Produce", label: t("pageProducts.category.preservedProduce") },
+      { value: "driedFruits", label: t("pageProducts.category.driedFruits") },
+      { value: "amlou", label: t("pageProducts.category.amlou") },
+      { value: "preservedProduce", label: t("pageProducts.category.preservedProduce") },
      ]
   }, [t]);
 

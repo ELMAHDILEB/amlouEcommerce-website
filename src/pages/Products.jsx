@@ -21,10 +21,10 @@ const Products = () => {
       selectedCategory === "All" ||  product.category === selectedCategory
     )
     .filter((product) => product.price <= priceValue)
-    .filter((product) => product.nameKey.toLowerCase().includes(searchTerm.toLowerCase().trim())
+  
+    .filter((product) => product.nameKey.includes(searchTerm.toLowerCase().trim())
     )
     .sort((a, b) => {
-      // if (selectedSort === "All") return a.price + b.price;
       if (selectedSort === "Price: Low To High") return a.price - b.price;
       if (selectedSort === "Price: High To Low") return b.price - a.price;
       return 0;
@@ -45,7 +45,7 @@ const Products = () => {
       />
       {
         noDatFounded ?
-          (<p className="w-full h-full flex items-center justify-center font-bold text-2xl">No Data Fonded</p>) :
+          (<p className="w-full h-full flex items-center justify-center font-bold text-2xl">{t("dataProducts.noResults")}</p>) :
           <CardsProducts products={filterProducts} isLoading={isLoading} />
       }
     </section>

@@ -47,7 +47,7 @@ function discoverCards() {
                     />
 
                     <div
-                        className={`focus ${isFocus[index] ? "open" : ""} h-[40px] md:h-[80px] w-fit  flex flex-row  items-center  justify-center  rounded-[5px] px-2 md:px-4 transition-all duration-500`}
+                        className={`focus ${isFocus[index] ? "open" : "open"} h-[40px] md:h-[80px] w-fit  flex flex-row  items-center  justify-center  rounded-[5px] px-2 md:px-4 transition-all duration-500`}
                         style={{
                             backgroundColor: "rgba(255, 255, 255, 0.2)",
                             backdropFilter: "blur(5px)",
@@ -60,7 +60,7 @@ function discoverCards() {
                         >
                            {title}
                         </h1>
-                        <Link to="/products?category=amlou"
+                        <Link to="/products"
                             className="cursor-pointer rounded-full w-[25px] md:w-[50px] h-[25px] md:h-[50px] bg-[var(--primary)] flex items-center justify-center"
                             aria-label="buttonCart"
                         >

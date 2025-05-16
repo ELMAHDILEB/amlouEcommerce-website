@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
-const SearchInput = ({searchTerm, setSearchTerm}) => {
-  const {t} = useTranslation();
-  
+import useIsArabic from "../../hooks/useIsArabic";
+
+const SearchInput = ({ searchTerm, setSearchTerm }) => {
+  const { t } = useTranslation();
+
   return (
     <section className="w-full">
       <div className="w-full relative">
@@ -21,8 +23,8 @@ const SearchInput = ({searchTerm, setSearchTerm}) => {
         </svg>
 
         <input
-        onInput={(e) => setSearchTerm(e.target.value)}
-        value={searchTerm}
+          onInput={(e) => setSearchTerm(e.target.value)}
+          value={searchTerm}
           type="text"
           placeholder={t("pageProducts.placeholder")}
           className="w-full px-12 py-2 rounded-[10px] border border-gray-300 focus:border-gray-500 dark:focus:border-slate-500 outline-none transition-all duration-500 placeholder:italic"

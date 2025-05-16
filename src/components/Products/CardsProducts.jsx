@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import Pagination from "./Pagination";
 import 'react-loading-skeleton/dist/skeleton.css';
 import Card from "./Card";
@@ -17,11 +17,6 @@ const CardsProducts = ({products, isLoading, error}) => {
   const currentProducts = products.slice(startIndex, endIndex);
   const totalPages = Math.ceil(products.length / productsPerPage);
 
- 
-
-
-
-
   return (
     
     <section className="w-full flex flex-col">
@@ -33,11 +28,10 @@ const CardsProducts = ({products, isLoading, error}) => {
           ) : (
             currentProducts.map((productItem) => {
             const {id, nameKey, image, price, category} = productItem;
-             
-        
+
               return (
                 
-                      <Card key={id} name={nameKey} image={image} price={price} category={category}/>
+                      <Card key={id} name={t(`dataProducts.${nameKey}`)} image={image} price={price} category={t(`dataProducts.category.${category}`)}  />
               )
             })
           )

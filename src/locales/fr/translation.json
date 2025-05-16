@@ -157,16 +157,19 @@
       "amlou_dark_chocolate": "Amlou au chocolat noir",
       "amlou_cashew_nuts_dates": "Amlou aux noix de cajou et dattes",
       "amlou_orange_chocolate": "Amlou à l’orange et chocolat",
-      "amlou_pistache": "Amlou à la pistache"
+      "amlou_pistache": "Amlou à la pistache",
+
+      "category": {
+        "title":"Catégorie",
+        "driedFruits": "Fruits secs",
+        "amlou": "Amlou",
+        "preservedProduce": "Produits en conserve"
+      },
+      "addtocard": "Ajouter au panier",
+      "noResults": "Aucun produit trouvé."
+
     },
   
-    "category": {
-      "driedFruits": "Fruits secs",
-      "amlou": "Amlou",
-      "preservedProduce": "Produits en conserve"
-    },
-   
-    "addtocard": "Ajouter au panier",
   
     "aboutPage": {
       "primaryTitle": "À propos de Amlou Inno",

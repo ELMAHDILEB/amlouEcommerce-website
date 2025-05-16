@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import { useTranslation } from "react-i18next";
 
 const PriceRange = ({min = "0", max = "200", priceValue, setPriceValue}) => {
+
+  const {t} = useTranslation();
 
 
     const sliderRange = (e)=>{
@@ -9,13 +11,13 @@ const PriceRange = ({min = "0", max = "200", priceValue, setPriceValue}) => {
     }
   return (
     <label className="flex flex-col gap-4 h-fit">
-    <span className="font-bold">Price Range</span>
+    <span className="font-bold">{t("pageProducts.priceRang")}</span>
     <input type="range" min={min} max={max} className="progress" onInput={sliderRange}  value={priceValue}/>
     <div className="w-full flex flex-row justify-between gap-5">
-      <span>{min} dhs</span>
-      <span className="flex items-center gap-4">Value: <p className="value">{priceValue} dhs</p></span>
+      <span>{min} {t("pageProducts.price")}</span>
+      <span className="flex items-center gap-4">{t("pageProducts.value")}: <p className="value">{priceValue} {t("pageProducts.price")}</p></span>
       
-      <span>{max} dhs</span>
+      <span>{max} {t("pageProducts.price")}</span>
     </div>
 
   </label>

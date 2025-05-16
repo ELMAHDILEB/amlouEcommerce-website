@@ -158,14 +158,20 @@
       "amlou_dark_chocolate": "Amlou with Dark Chocolate",
       "amlou_cashew_nuts_dates": "Amlou with Cashew Nuts and Dates",
       "amlou_orange_chocolate": "Amlou with Orange and Chocolate",
-      "amlou_pistache": "Amlou with Pistachio"
+      "amlou_pistache": "Amlou with Pistachio",
+      "category": {
+        "title":"Category",
+        "driedFruits": "Dried Fruits",
+        "amlou": "Amlou",
+        "preservedProduce": "Preserved Produce"
+      },
+      
+      "addtocard": "Add to Cart",
+      "noResults": "No products found."
     },
   
-    "category": "Category",
-    "driedFruits": "Dried Fruits",
-    "amlou": "Amlou",
-    "preservedProduce": "Preserved Produce",
-    "addtocard": "Add to Cart",
+ 
+    
   
     "aboutPage": {
       "primaryTitle": "About Amlou Inno",

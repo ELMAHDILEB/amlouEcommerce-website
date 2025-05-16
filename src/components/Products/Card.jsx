@@ -6,13 +6,18 @@ const Card = ({id,name,image,category,price}) => {
   const displayname =translateName === name 
   ?  translateName.replace(/_/g, " ") 
   :  translateName;
+
+  const translatedCategory = t(category) !== category ? t(category) : category;
+
   let  indexCategory = 0;
 
   useEffect(()=>{
-       if(category == t("category[indexCategory++]")){
+       if(category == t(`category[${indexCategory}++]`)){
         return category;
        }
   },[category])
+
+  console.log(t(`categories.${category}`));
 
   return (
 
@@ -31,13 +36,13 @@ const Card = ({id,name,image,category,price}) => {
 
       <div className=" flex flex-col md:flex-row justify-between items-center gap-5  px-4">
 
-        <p className="font-normal text-[14px] text-[var(--SubColor)]">{t("pageProducts.category.title")}</p>
-        <p className="font-normal text-[14px] text-[var(--SubColor)]">{t(`${category}`)}</p>
+        <p className="font-normal text-[14px] text-[var(--SubColor)]">{t("dataProducts.category.title")}</p>
+        <p className="font-normal text-[14px] text-[var(--SubColor)]">{translatedCategory}</p>
 
       </div>
     </div>
 
-    <a href="#" className="px-7 py-3 lg:px-10 lg:py-3 bg-[var(--primary)] rounded-[10px] font-semibold uppercase text-[12px] lg:text-[15px]">{t("addtocard")}</a>
+    <a href="#" className="px-7 py-3 lg:px-10 lg:py-3 bg-[var(--primary)] rounded-[10px] font-semibold uppercase text-[12px] lg:text-[15px]">{t("dataProducts.addtocard")}</a>
   </div>
   )
 }

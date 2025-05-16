@@ -6,7 +6,7 @@ import { images } from "../../Routes/MainRoutes";
 
 function WrapperResponsiveImage() {
   return (
-    <div className='relative w-[350px] md:w-[500px] h-auto flex' >
+    <div className='relative h-auto flex'  style={{width:"min(100%,450px)"}}>
       {/* after:absolute after:top-5 after:right-0 after:z-[-1] after:w-32 after:h-32 after:bg-gradient-to-t after:from-[var(--primary)] after:to-white after:rounded-full before:absolute before:bottom-5 before:left-0 before:z-[-1] before:w-32 before:h-32 before:bg-gradient-to-t  before:from-[var(--primary)] before:to-white before:rounded-full */}
 
       <ResponsiveImage />

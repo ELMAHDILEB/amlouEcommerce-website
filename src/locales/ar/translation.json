@@ -1,116 +1,115 @@
-{ 
-    "header":{
-       "logo":"أملو اينو",
-       "nav":{
-          "home":"الرئيسية",
-          "products":"المنتجات",
-          "about": "حول",
-          "contact": "اتصال"
-       }
-    },
-
-   "hero":{
-
-       "primaryTitle": "وجهتك",
-       "secondaryTitle":"العضوية والطبيعية",
-       "tertiaryTitle":"للأطعمة",
-       "button": "انظر المزيد"
-   },
-
-   "discoverCards":{
-    "titleProductOne":"لوز عضوي مقشر 1 كجم",
-    "titleProductTwo":"الكاجو المحمص",
-    "titleProductThree":"أملو باللوز"
-   },
-
-   "whychooseus":{
-          "primaryTitle":"لماذا تختارنا",
-          "accordion":{
-            "highQuality":{
-                "title":"جودة عالية",
-                "description":"نستخدم لوزًا وعسلًا طبيعيين 100% فقط لتحضير أملو عضوي."
-            },
-            "affordablePrice":{
-                "title":"سعر مناسب",
-                "description":"أفضل جودة بأفضل سعر."
-            },
-            "noPreservatives":{
-                "title":"خالٍ من المواد الحافظة",
-                "description":"طبيعي 100% وخالي من أي مواد كيميائية."
-            },
-            "fastDelivery":{
-                "title":"توصيل سريع",
-                "description":"نوصل طلبك خلال 48 ساعة في أي مكان بالمغرب."
-            },
-            "customerTrust":{
-                "title":"ثقة العملاء",
-                "description":"تقييمات ممتازة من عملائنا في جميع أنحاء المغرب."
-            }
-          }
-   },
-   "featuredProducts":{
-    "primaryTitle":"منتجات مميزة",
-    "products":{
-        "almonds_rosemary":"لوز مع إكليل الجبل",
-        "almond_amlou":"أملو لوز ١ كجم",
-        "organic_truffle_cashew_nuts":"كاجو عضوي بنكهة الكمأة",
-        "dhs" : "درهم"
+{
+  "header": {
+    "logo": "أملو اينو",
+    "nav": {
+      "home": "الرئيسية",
+      "products": "المنتجات",
+      "about": "حول",
+      "contact": "اتصال"
     }
-   },
-   "testimonials":{
-    "primaryTitle":"عملاؤنا يقولون ذلك أفضل مما نفعل",
-    "1": {
-        "text": "منتجات ممتازة! الطعم طازج للغاية والنكهة مذهلة. أحببت اللوز والفستق، أوصي بها بشدة.",
-        "author": "سارة بنجلون"
+  },
+
+  "hero": {
+    "primaryTitle": "وجهتك",
+    "secondaryTitle": "العضوية والطبيعية",
+    "tertiaryTitle": "للأطعمة",
+    "button": "انظر المزيد"
+  },
+
+  "discoverCards": {
+    "titleProductOne": "لوز عضوي مقشر 1 كجم",
+    "titleProductTwo": "الكاجو المحمص",
+    "titleProductThree": "أملو باللوز"
+  },
+
+  "whychooseus": {
+    "primaryTitle": "لماذا تختارنا",
+    "accordion": {
+      "highQuality": {
+        "title": "جودة عالية",
+        "description": "نستخدم لوزًا وعسلًا طبيعيين 100% فقط لتحضير أملو عضوي."
       },
-      "2": {
-        "text": "من أفضل المنتجات التي جربتها! جودة رائعة وطعم لذيذ. سأشتري مرة أخرى بالتأكيد.",
-        "author": "أحمد العمراني"
+      "affordablePrice": {
+        "title": "سعر مناسب",
+        "description": "أفضل جودة بأفضل سعر."
       },
-      "3": {
-        "text": "كان الفستق والكاجو طازجين للغاية، ويمكنني فعلاً تذوق الفرق في الجودة. أشتري دائمًا من هذا المتجر.",
-        "author": "يوسف بودرة"
+      "noPreservatives": {
+        "title": "خالٍ من المواد الحافظة",
+        "description": "طبيعي 100% وخالي من أي مواد كيميائية."
       },
-      "4": {
-        "text": "اشتريت اللوز وكان رائعًا! طعم طبيعي ونكهة غنية. سأضيفه إلى نظامي الغذائي بشكل دائم.",
-        "author": "كنزة الخطيب"
+      "fastDelivery": {
+        "title": "توصيل سريع",
+        "description": "نوصل طلبك خلال 48 ساعة في أي مكان بالمغرب."
       },
-      "5": {
-        "text": "منتجات عالية الجودة! الكاجو واللوز كانا خفيفين وطازجين. أنا سعيد جدًا بشرائي.",
-        "author": "معاذ الشابي"
-      },
-      "6": {
-        "text": "جربت اللوز والكاجو، والطعم لا يُصدق! والخدمة كانت ممتازة أيضًا. سأوصي بها لأصدقائي وعائلتي بالتأكيد.",
-        "author": "ليلى الصحراوي"
+      "customerTrust": {
+        "title": "ثقة العملاء",
+        "description": "تقييمات ممتازة من عملائنا في جميع أنحاء المغرب."
       }
-   },
-   "newsletter":{
-    "primaryTitle":"نشرتنا الإخبارية",
-    "subTitle":"انضم إلى مجتمعنا من محبي المنتجات العضوية",
+    }
+  },
+  "featuredProducts": {
+    "primaryTitle": "منتجات مميزة",
+    "products": {
+      "almonds_rosemary": "لوز مع إكليل الجبل",
+      "almond_amlou": "أملو لوز ١ كجم",
+      "organic_truffle_cashew_nuts": "كاجو عضوي بنكهة الكمأة",
+      "dhs": "درهم"
+    }
+  },
+  "testimonials": {
+    "primaryTitle": "عملاؤنا يقولون ذلك أفضل مما نفعل",
+    "1": {
+      "text": "منتجات ممتازة! الطعم طازج للغاية والنكهة مذهلة. أحببت اللوز والفستق، أوصي بها بشدة.",
+      "author": "سارة بنجلون"
+    },
+    "2": {
+      "text": "من أفضل المنتجات التي جربتها! جودة رائعة وطعم لذيذ. سأشتري مرة أخرى بالتأكيد.",
+      "author": "أحمد العمراني"
+    },
+    "3": {
+      "text": "كان الفستق والكاجو طازجين للغاية، ويمكنني فعلاً تذوق الفرق في الجودة. أشتري دائمًا من هذا المتجر.",
+      "author": "يوسف بودرة"
+    },
+    "4": {
+      "text": "اشتريت اللوز وكان رائعًا! طعم طبيعي ونكهة غنية. سأضيفه إلى نظامي الغذائي بشكل دائم.",
+      "author": "كنزة الخطيب"
+    },
+    "5": {
+      "text": "منتجات عالية الجودة! الكاجو واللوز كانا خفيفين وطازجين. أنا سعيد جدًا بشرائي.",
+      "author": "معاذ الشابي"
+    },
+    "6": {
+      "text": "جربت اللوز والكاجو، والطعم لا يُصدق! والخدمة كانت ممتازة أيضًا. سأوصي بها لأصدقائي وعائلتي بالتأكيد.",
+      "author": "ليلى الصحراوي"
+    }
+  },
+  "newsletter": {
+    "primaryTitle": "نشرتنا الإخبارية",
+    "subTitle": "انضم إلى مجتمعنا من محبي المنتجات العضوية",
     "text": "اشترك لتلقي",
-"subText": "عروض حصرية، وصفات ونصائح.",
+    "subText": "عروض حصرية، وصفات ونصائح.",
     "placeholder": "أدخل عنوان البريد الإلكتروني",
     "button": "اشترك"
-   },
-   "footer":{
-     "title":"أملو اينو",
-     "description":"وجهتك للأطعمة العضوية والطبيعية",
-     "followus":"تابعنا",
-     "INSTAGRAM":"أنستقرام",
-     "FACEBOOK":"فايسبوك",
-     "TWITTER":"تويتر",
-     "TIKTOK":"تيكتوك",
-     "quicklinks":"روابط سريعة",
-     "home":"الرئيسية",
-     "products":"المنتجات",
-     "about": "حول",
-     "contact": "اتصال",
-     "copyright":" جميع الحقوق محفوظة"
-   },
+  },
+  "footer": {
+    "title": "أملو اينو",
+    "description": "وجهتك للأطعمة العضوية والطبيعية",
+    "followus": "تابعنا",
+    "INSTAGRAM": "أنستقرام",
+    "FACEBOOK": "فايسبوك",
+    "TWITTER": "تويتر",
+    "TIKTOK": "تيكتوك",
+    "quicklinks": "روابط سريعة",
+    "home": "الرئيسية",
+    "products": "المنتجات",
+    "about": "حول",
+    "contact": "اتصال",
+    "copyright": " جميع الحقوق محفوظة"
+  },
 
-   "pageProducts":{
-    "ourProducts":"منتجاتنا",
-    "placeholder":" البحث عن المنتجات...",
+  "pageProducts": {
+    "ourProducts": "منتجاتنا",
+    "placeholder": " البحث عن المنتجات...",
     "category": {
       "title": "الفئة",
       "all": "الكل",
@@ -124,66 +123,65 @@
       "lowToHigh": "السعر: من الأقل إلى الأعلى",
       "highToLow": "السعر: من الأعلى إلى الأقل"
     },
-    "priceRang":"نطاق السعر",
-    "value":"القيمة",
-    "price" : "درهم"
+    "priceRang": "نطاق السعر",
+    "value": "القيمة",
+    "price": "درهم"
+  },
 
-   },
+  "dataProducts": {
+    "round_raw_almond": "لوز ني مدوّر",
+    "almond_bake": "لوز مشوي",
+    "smoked_almond": "لوز مدخن",
+    "marcona_almond": "لوز ماركونا",
+    "roasted_almond": "لوز محمص",
+    "Sicilian_Shelled_Almonds_1kg": "لوز مقشر من صقلية 1 كجم",
+    "flaked_almonds": "لوز مقطع",
+    "chopped_almonds": "لوز مفروم",
+    "almonds_rosemary": "لوز بإكليل الجبل",
+    "salted_almonds": "لوز مملح",
+    "Amlou_Amandes": "أملو باللوز",
+    "caramelized_cashews": "كاجو مكرمل",
+    "cashew_chili": "كاجو بالفلفل الحار",
+    "cashew_cheese": "كاجو بالجبن",
+    "salted_cashew": "كاجو مملح",
+    "WHOLE_ROASTED_UNSALT_CASHEW_NUTS_W1_1kg": "كاجو محمص غير مملح 1 كجم",
+    "cashew_nuts": "كاجو",
+    "cashew_nuts_with_rosemarys": "كاجو بإكليل الجبل",
+    "cashew_lemon": "كاجو بالليمون",
+    "organic_truffle_cashew_nuts": "كاجو عضوي بنكهة الكمأة",
+    "amlou_peanuts_and_fleur_de_sel": "أملو بالفول السوداني وملح الزهور",
+    "amlou_dark_chocolate": "أملو بالشوكولاتة الداكنة",
+    "amlou_cashew_nuts_dates": "أملو كاجو بالتمر",
+    "amlou_orange_chocolate": "أملو بالبرتقال والشوكولاتة",
+    "amlou_pistache": "أملو بالفستق",
 
-
-    "dataProducts": {
-      "round_raw_almond": "لوز ني مدوّر",
-      "almond_bake": "لوز مشوي",
-      "smoked_almond": "لوز مدخن",
-      "marcona_almond": "لوز ماركونا",
-      "roasted_almond": "لوز محمص",
-      "Sicilian_Shelled_Almonds_1kg": "لوز مقشر من صقلية 1 كجم",
-      "flaked_almonds": "لوز مقطع",
-      "chopped_almonds": "لوز مفروم",
-      "almonds_rosemary": "لوز بإكليل الجبل",
-      "salted_almonds": "لوز مملح",
-      "Amlou_Amandes": "أملو باللوز",
-      "caramelized_cashews": "كاجو مكرمل",
-      "cashew_chili": "كاجو بالفلفل الحار",
-      "cashew_cheese": "كاجو بالجبن",
-      "salted_cashew": "كاجو مملح",
-      "WHOLE_ROASTED_UNSALT_CASHEW_NUTS_W1_1kg": "كاجو محمص غير مملح 1 كجم",
-      "cashew_nuts": "كاجو",
-      "cashew_nuts_with_rosemarys": "كاجو بإكليل الجبل",
-      "cashew_lemon": "كاجو بالليمون",
-      "organic_truffle_cashew_nuts": "كاجو عضوي بنكهة الكمأة",
-      "amlou_peanuts_and_fleur_de_sel": "أملو بالفول السوداني وملح الزهور",
-      "amlou_dark_chocolate": "أملو بالشوكولاتة الداكنة",
-      "amlou_cashew_nuts_dates": "أملو كاجو بالتمر",
-      "amlou_orange_chocolate": "أملو بالبرتقال والشوكولاتة",
-      "amlou_pistache": "أملو بالفستق"
+    "category": {
+      "title": "الفئة",
+      "driedFruits": "فواكه مجففة",
+      "amlou": "أملو",
+      "preservedProduce": "منتجات معلبة"
     },
-    "category":"الفئة",
-       "driedFruits":"فواكه مجففة",
-       "amlou":"أملو",
-       "preservedProduce":"منتجات معلبة",
-       "addtocard":"أضف إلى السلة",
+    "addtocard": "أضف إلى السلة",
+    "noResults": "لم يتم العثور على منتجات."
+  },
 
-     "aboutPage":{
-            "primaryTitle": "نبذة عن أملو إينو",
-            "description": "'أملو إينو' علامة تجارية متخصصة في إنتاج وترويج الأملو المغربي الأصيل، وهو مزيج لذيذ مصنوع من اللوز المحمص وزيت الأرغان النقي والعسل الطبيعي. منتجاتهم مصنوعة يدويًا بكل حب وعناية من قِبل السيد والسيدة لو. تأسست 'أملو' لإيصال النكهة المغربية التقليدية إلى جمهور أوسع، وتركز على تقديم مكونات طبيعية عالية الجودة تُضفي على تجربة نكهة لا تُنسى."
+  "aboutPage": {
+    "primaryTitle": "نبذة عن أملو إينو",
+    "description": "'أملو إينو' علامة تجارية متخصصة في إنتاج وترويج الأملو المغربي الأصيل، وهو مزيج لذيذ مصنوع من اللوز المحمص وزيت الأرغان النقي والعسل الطبيعي. منتجاتهم مصنوعة يدويًا بكل حب وعناية من قِبل السيد والسيدة لو. تأسست 'أملو' لإيصال النكهة المغربية التقليدية إلى جمهور أوسع، وتركز على تقديم مكونات طبيعية عالية الجودة تُضفي على تجربة نكهة لا تُنسى."
+  },
 
-     },
-
-     "contactus":{
-      "primaryTitle":"اتصل بنا",
-      "paagraph":"نحن هنا لمساعدتك! إذا كانت لديك أي أسئلة أو تحتاج إلى مساعدة، فلا تتردد في التواصل معنا.",
-      "inputs":{
-        "name":"اسم",
-        "phone":"هاتف",
-        "email":"بريد إلكتروني",
-        "message":"رسالة",
-        "submitMessage":"إرسال الرسالة"
-      },
-      "address":"عنوان",
-      "contacts":"جهات الاتصال",
-      "email":"بريد إلكتروني"
-
-     }
-   
+  "contactus": {
+    "primaryTitle": "اتصل بنا",
+    "paagraph": "نحن هنا لمساعدتك! إذا كانت لديك أي أسئلة أو تحتاج إلى مساعدة، فلا تتردد في التواصل معنا.",
+    "inputs": {
+      "name": "اسم",
+      "phone": "هاتف",
+      "email": "بريد إلكتروني",
+      "message": "رسالة",
+      "submitMessage": "إرسال الرسالة"
+    },
+    "address": "عنوان",
+    "contacts": "جهات الاتصال",
+    "email": "بريد إلكتروني"
+  }
 }
