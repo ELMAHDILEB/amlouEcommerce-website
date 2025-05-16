@@ -71,7 +71,7 @@ const Header = memo(() =>{
         <span className='flex items-center justify-center absolute text-white  text-[12px]  -top-2 -right-4 w-5 h-5 bg-red-700 rounded-full'>0</span>
         <IoBagHandle className='text-[1.25rem] cursor-pointer hover:text-[var(--primary)] transition-colors duration-500' />
         </div>
-        {!openNav ? (<CgMenuRightAlt className='block md:hidden  text-[1.5rem] cursor-pointer hover:text-[var(--primary)] transition-colors duration-500' onClick={handleOpen} />) : <IoClose className='block md:hidden  text-[1.5rem] cursor-pointer hover:text-[var(--primary)] transition-colors duration-500' onClick={handleOpen} />}
+        {!openNav ? (<CgMenuRightAlt className={`block md:hidden  text-[1.5rem] cursor-pointer hover:text-[var(--primary)] transition-colors duration-500 ${isArabic ? "rotate-180" : ""}`} onClick={handleOpen} />) : <IoClose className='block md:hidden  text-[1.5rem] cursor-pointer hover:text-[var(--primary)] transition-colors duration-500' onClick={handleOpen} />}
       </div>
 
     </header>

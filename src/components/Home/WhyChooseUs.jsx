@@ -13,6 +13,9 @@ const WhyChooseUs = () => {
   const handleToggle = (index) => {
     setToggle(prevToggle => prevToggle === index ? null : index);
   }
+
+
+
   return (
     <section className="w-full flex flex-col items-center justify-center gap-10 p-4 mx-auto my-0">
       <h1 className="break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[32px] py-10 text-center"  style={{fontSize: "clamp(20px, 4vw, 50px)"}}>{t("whychooseus.primaryTitle")}</h1>
@@ -27,7 +30,7 @@ const WhyChooseUs = () => {
                   <p className="text-[1.5em] md:text-[2em] text-[var(--primary)]">{icon}</p>
                   <h1 className="w-full text-center md:text-start text-[1em]  font-semibold uppercase tracking-[1px] leading-6 break-normal" >{title}</h1></div>
                 <TbSquareRoundedArrowRightFilled className={`text-[1.5em] md:text-[2em] text-[var(--primary)] cursor-pointer transition-transform duration-500 ${toggle === index ? "rotate-90" : "rotate-0"
-                  }`} onClick={() => handleToggle(index)} />
+                  }  `} onClick={() => handleToggle(index)} />
               </div>
 
               <p className={`toggle ${toggle === index ? "open" : ""}`} style={{fontSize:"clamp(14px,1vw,18px)"}}>{description}</p>
