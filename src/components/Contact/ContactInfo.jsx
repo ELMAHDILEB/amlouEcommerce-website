@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next";
 
 const ContactInfo = () => {
+    const {t} = useTranslation();
     return (
         <section className="w-full   h-full flex flex-col  justify-center pl-20 py-3">
             <div className="flex flex-col text-start w-full">
-                <h1 className="break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[22px]  py-7" style={{ fontSize: "clamp(20px, 2vw, 35px)" }}>Address</h1>
+                <h1 className="break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[22px]  py-7" style={{ fontSize: "clamp(20px, 2vw, 35px)" }}>{t("contactus.address")}</h1>
                 <address className="text-[15px] capitalize">
                     1234 Street WAFERS, <br/>
                     Main Street, <br/>
@@ -11,14 +13,14 @@ const ContactInfo = () => {
                 </address>
             </div>
             <div className="flex flex-col w-full">
-                <h1 className="break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[22px]  py-7" style={{ fontSize: "clamp(20px, 2vw, 35px)" }}>Contacts</h1>
+                <h1 className="break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[22px]  py-7" style={{ fontSize: "clamp(20px, 2vw, 35px)" }}>{t("contactus.contacts")}</h1>
                 <span className="py-3"><b>+212 7X-5XX4578</b></span>
                 <p className="text-[15px] capitalize">National Fixed network call</p>
                 <span className="py-3"><b>+212 7X-5XX4578</b></span>
                 <p className="text-[15px] capitalize">National mobile network call</p>
             </div>
             <div className="flex flex-col  w-full">
-                <h1 className="break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[22px]  py-7" style={{ fontSize: "clamp(20px, 2vw, 35px)" }}>Email</h1>
+                <h1 className="break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[22px]  py-7" style={{ fontSize: "clamp(20px, 2vw, 35px)" }}>{t("contactus.email")}</h1>
                  <p className="text-[15px] lowercase">amlouInou@mail.ma</p>
             </div>
 
