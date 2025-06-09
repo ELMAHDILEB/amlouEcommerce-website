@@ -60,13 +60,13 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
     return (
         <section className="flex items-center justify-center flex-wrap gap-4 md:gap-10 w-full py-5 font-montserrat">
             <button className={`w-[20px] md:w-[40px] h-[20px]  md:h-[40px] bg-[var(--primary)]  items-center justify-center text-black rounded-[50%] cursor-pointer font-semibold md:font-bold ${currentPage === 1 ? "hidden" : "flex"} `} onClick={handlePrev} >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 rtl:rotate-180 transition-transform">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                 </svg>
             </button>
             {pages}
             <button className={`w-[20px] md:w-[40px] h-[20px]  md:h-[40px] bg-[var(--primary)]  items-center justify-center text-black rounded-[50%] cursor-pointer font-semibold md:font-bold ${currentPage === totalPages ? "hidden" : "flex"}`} onClick={handleNext} >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4 rtl:rotate-180 transition-transform">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                 </svg>
             </button>
