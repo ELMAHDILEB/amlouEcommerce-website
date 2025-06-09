@@ -12,10 +12,10 @@
 
 
 
-![واجهة الصفحة الرئيسية](public/home.jpeg)
-![واجهة صفحة المنتجات](public/products.jpeg)
-![واجهة صفحة الاتصال](public/contact.jpeg)
-![واجهة صفحة حول](public/about.jpeg)
+![واجهة الصفحة الرئيسية](public/assets/home.jpeg)
+![واجهة صفحة المنتجات](public/assets/products.jpeg)
+![واجهة صفحة الاتصال](public/assets/contact.jpeg)
+![واجهة صفحة حول](public/assets/about.jpeg)
 
 ---
 
