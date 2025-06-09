@@ -17,7 +17,7 @@ const Card = ({id,name,image,category,price}) => {
        }
   },[category])
 
-  console.log(t(`categories.${category}`));
+
 
   return (
 

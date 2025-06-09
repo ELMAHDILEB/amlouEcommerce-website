@@ -1,196 +1,223 @@
 {
-    "header": {
-      "logo": "Amlou Inno",
-      "nav": {
-        "home": "Home",
-        "products": "Products",
-        "about": "About",
-        "contact": "Contact"
-      }
-    },
-  
-    "hero": {
-      "primaryTitle": "Your destination for",
-      "secondaryTitle":"organic and natural ",
-      "tertiaryTitle":"foods",
-      "button": "See more"
-    },
-  
-    "discoverCards": {
-      "titleProductOne": "Organic Peeled Almonds 1kg",
-      "titleProductTwo": "Roasted Cashews",
-      "titleProductThree": "Amlou with Almonds"
-    },
-  
-    "whychooseus": {
-      "primaryTitle": "Why choose us",
-      "accordion": {
-        "highQuality": {
-          "title": "High Quality",
-          "description": "We use only 100% natural almonds and honey to prepare organic Amlou."
-        },
-        "affordablePrice": {
-          "title": "Affordable Price",
-          "description": "Best quality at the best price."
-        },
-        "noPreservatives": {
-          "title": "No Preservatives",
-          "description": "100% natural and free from any chemicals."
-        },
-        "fastDelivery": {
-          "title": "Fast Delivery",
-          "description": "We deliver your order within 48 hours anywhere in Morocco."
-        },
-        "customerTrust": {
-          "title": "Customer Trust",
-          "description": "Excellent reviews from our customers all over Morocco."
-        }
-      }
-    },
-  
-    "featuredProducts": {
-      "primaryTitle": "Featured Products",
-      "products": {
-        "almonds_rosemary": "Almonds with Rosemary",
-        "almond_amlou": "Almond Amlou 1kg",
-        "organic_truffle_cashew_nuts": "Organic Truffle-Flavored Cashews",
-        "dhs" : "DHS"
-      }
-    },
-  
-    "testimonials": {
-      "primaryTitle": "Our customers say it best",
-      "1": {
-        "text": "Excellent products! The taste is very fresh and the flavor is amazing. I loved the almonds and pistachios, highly recommend.",
-        "author": "Sarah Benjelloun"
-      },
-      "2": {
-        "text": "One of the best products I've tried! Great quality and delicious taste. I will definitely buy again.",
-        "author": "Ahmed El Omrani"
-      },
-      "3": {
-        "text": "The pistachios and cashews were very fresh, and I can really taste the difference in quality. I always buy from this store.",
-        "author": "Youssef Boudra"
-      },
-      "4": {
-        "text": "I bought the almonds and they were great! Natural taste and rich flavor. I will add it to my diet permanently.",
-        "author": "Kenza El Khatib"
-      },
-      "5": {
-        "text": "High-quality products! The cashews and almonds were light and fresh. I'm very happy with my purchase.",
-        "author": "Mouad Chaabi"
-      },
-      "6": {
-        "text": "I tried the almonds and cashews, and the taste is unbelievable! The service was excellent too. I will definitely recommend it to my friends and family.",
-        "author": "Leila Sahraoui"
-      }
-    },
-  
-    "newsletter": {
-      "primaryTitle": "Our Newsletter",
-      "subTitle": "Join our community of organic product lovers",
-      "text": "Subscribe to receive.",
-      "subText":"exclusive offers, recipes and tips",
-      "placeholder": "Enter email address",
-      "button": "Subscribe"
-    },
-  
-    "footer": {
-      "title": "Amlou Inno",
-      "description": "Your destination for organic and natural foods",
-      "followus": "Follow us",
-      "INSTAGRAM": "Instagram",
-      "FACEBOOK": "Facebook",
-      "TWITTER": "Twitter",
-      "TIKTOK": "TikTok",
-      "quicklinks": "Quick Links",
+  "header": {
+    "logo": "Amlou Inno",
+    "nav": {
       "home": "Home",
       "products": "Products",
       "about": "About",
-      "contact": "Contact",
-      "copyright": "All rights reserved"
-    },
-  
-    "pageProducts": {
-      "ourProducts": "Our Products",
-      "placeholder": "Search for products..",
-      "category": {
-        "title": "Category",
-        "all": "All",
-        "driedFruits": "Dried Fruits",
-        "amlou": "Amlou",
-        "preservedProduce": "Preserved Produce"
+      "contact": "Contact"
+    }
+  },
+
+  "hero": {
+    "primaryTitle": "Your destination for",
+    "secondaryTitle": "organic and natural ",
+    "tertiaryTitle": "foods",
+    "button": "See more"
+  },
+
+  "discoverCards": {
+    "titleProductOne": "Organic Peeled Almonds 1kg",
+    "titleProductTwo": "Roasted Cashews",
+    "titleProductThree": "Amlou with Almonds"
+  },
+
+  "whychooseus": {
+    "primaryTitle": "Why choose us",
+    "accordion": {
+      "highQuality": {
+        "title": "High Quality",
+        "description": "We use only 100% natural almonds and honey to prepare organic Amlou."
       },
- 
-      "sort": {
-        "title": "sort by",
-        "All": "All",
-        "lowToHigh": "Price: Low to High",
-        "highToLow": "Price: High to Low"
-      } ,
-      "priceRang": "Price Range",
-      "value": "Value",
-      "price":"DHS"
-    },
-  
-    "dataProducts": {
-      "round_raw_almond": "Round Raw Almond",
-      "almond_bake": "Baked Almond",
-      "smoked_almond": "Smoked Almond",
-      "marcona_almond": "Marcona Almond",
-      "roasted_almond": "Roasted Almond",
-      "Sicilian_Shelled_Almonds_1kg": "Sicilian Shelled Almonds 1kg",
-      "flaked_almonds": "Flaked Almonds",
-      "chopped_almonds": "Chopped Almonds",
+      "affordablePrice": {
+        "title": "Affordable Price",
+        "description": "Best quality at the best price."
+      },
+      "noPreservatives": {
+        "title": "No Preservatives",
+        "description": "100% natural and free from any chemicals."
+      },
+      "fastDelivery": {
+        "title": "Fast Delivery",
+        "description": "We deliver your order within 48 hours anywhere in Morocco."
+      },
+      "customerTrust": {
+        "title": "Customer Trust",
+        "description": "Excellent reviews from our customers all over Morocco."
+      }
+    }
+  },
+
+  "featuredProducts": {
+    "primaryTitle": "Featured Products",
+    "products": {
       "almonds_rosemary": "Almonds with Rosemary",
-      "salted_almonds": "Salted Almonds",
-      "Amlou_Amandes": "Amlou with Almonds",
-      "caramelized_cashews": "Caramelized Cashews",
-      "cashew_chili": "Chili Cashews",
-      "cashew_cheese": "Cheese Cashews",
-      "salted_cashew": "Salted Cashews",
-      "WHOLE_ROASTED_UNSALT_CASHEW_NUTS_W1_1kg": "Whole Roasted Unsalted Cashew Nuts W1 1kg",
-      "cashew_nuts": "Cashew Nuts",
-      "cashew_nuts_with_rosemarys": "Cashew Nuts with Rosemary",
-      "cashew_lemon": "Lemon Cashews",
+      "almond_amlou": "Almond Amlou 1kg",
       "organic_truffle_cashew_nuts": "Organic Truffle-Flavored Cashews",
-      "amlou_peanuts_and_fleur_de_sel": "Amlou with Peanuts and Fleur de Sel",
-      "amlou_dark_chocolate": "Amlou with Dark Chocolate",
-      "amlou_cashew_nuts_dates": "Amlou with Cashew Nuts and Dates",
-      "amlou_orange_chocolate": "Amlou with Orange and Chocolate",
-      "amlou_pistache": "Amlou with Pistachio",
-      "category": {
-        "title":"Category",
-        "driedFruits": "Dried Fruits",
-        "amlou": "Amlou",
-        "preservedProduce": "Preserved Produce"
-      },
-      
-      "addtocard": "Add to Cart",
-      "noResults": "No products found."
+      "dhs": "DHS"
+    }
+  },
+
+  "testimonials": {
+    "primaryTitle": "Our customers say it best",
+    "1": {
+      "text": "Excellent products! The taste is very fresh and the flavor is amazing. I loved the almonds and pistachios, highly recommend.",
+      "author": "Sarah Benjelloun"
     },
-  
- 
-    
-  
-    "aboutPage": {
-      "primaryTitle": "About Amlou Inno",
-      "description": "'Amlou Inno' is a brand specializing in the production and promotion of authentic Moroccan Amlou, a delicious blend made from roasted almonds, pure argan oil, and natural honey. Their products are handcrafted with love and care by Mr. and Mrs. Lou. 'Amlou' was established to bring the traditional Moroccan flavor to a wider audience, focusing on delivering high-quality natural ingredients that provide an unforgettable taste experience."
+    "2": {
+      "text": "One of the best products I've tried! Great quality and delicious taste. I will definitely buy again.",
+      "author": "Ahmed El Omrani"
     },
-  
-    "contactus": {
-      "primaryTitle": "Contact Us",
-      "paagraph": "We're here to help! If you have any questions or need assistance, feel free to reach out to us.",
-      "inputs": {
-        "name": "Name",
-        "phone": "Phone",
-        "email": "Email",
-        "message": "Message",
-        "submitMessage": "Send Message"
-      },
-      "address": "Address",
-      "contacts": "Contacts",
-      "email": "Email"
+    "3": {
+      "text": "The pistachios and cashews were very fresh, and I can really taste the difference in quality. I always buy from this store.",
+      "author": "Youssef Boudra"
+    },
+    "4": {
+      "text": "I bought the almonds and they were great! Natural taste and rich flavor. I will add it to my diet permanently.",
+      "author": "Kenza El Khatib"
+    },
+    "5": {
+      "text": "High-quality products! The cashews and almonds were light and fresh. I'm very happy with my purchase.",
+      "author": "Mouad Chaabi"
+    },
+    "6": {
+      "text": "I tried the almonds and cashews, and the taste is unbelievable! The service was excellent too. I will definitely recommend it to my friends and family.",
+      "author": "Leila Sahraoui"
+    }
+  },
+
+  "newsletter": {
+    "primaryTitle": "Our Newsletter",
+    "subTitle": "Join our community of organic product lovers",
+    "text": "Subscribe to receive.",
+    "subText": "exclusive offers, recipes and tips",
+    "placeholder": "Enter email address",
+    "button": "Subscribe"
+  },
+
+  "footer": {
+    "title": "Amlou Inno",
+    "description": "Your destination for organic and natural foods",
+    "followus": "Follow us",
+    "INSTAGRAM": "Instagram",
+    "FACEBOOK": "Facebook",
+    "TWITTER": "Twitter",
+    "TIKTOK": "TikTok",
+    "quicklinks": "Quick Links",
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact",
+    "copyright": "All rights reserved"
+  },
+
+  "pageProducts": {
+    "ourProducts": "Our Products",
+    "placeholder": "Search for products..",
+    "category": {
+      "title": "Category",
+      "all": "All",
+      "driedFruits": "Dried Fruits",
+      "amlou": "Amlou",
+      "preservedProduce": "Preserved Produce"
+    },
+
+    "sort": {
+      "title": "sort by",
+      "All": "All",
+      "lowToHigh": "Price: Low to High",
+      "highToLow": "Price: High to Low"
+    },
+    "priceRang": "Price Range",
+    "value": "Value",
+    "price": "DHS"
+  },
+
+  "dataProducts": {
+    "round_raw_almond": "Round Raw Almond",
+    "almond_bake": "Baked Almond",
+    "smoked_almond": "Smoked Almond",
+    "marcona_almond": "Marcona Almond",
+    "roasted_almond": "Roasted Almond",
+    "Sicilian_Shelled_Almonds_1kg": "Sicilian Shelled Almonds 1kg",
+    "flaked_almonds": "Flaked Almonds",
+    "chopped_almonds": "Chopped Almonds",
+    "almonds_rosemary": "Almonds with Rosemary",
+    "salted_almonds": "Salted Almonds",
+    "Amlou_Amandes": "Amlou with Almonds",
+    "caramelized_cashews": "Caramelized Cashews",
+    "cashew_chili": "Chili Cashews",
+    "cashew_cheese": "Cheese Cashews",
+    "salted_cashew": "Salted Cashews",
+    "WHOLE_ROASTED_UNSALT_CASHEW_NUTS_W1_1kg": "Whole Roasted Unsalted Cashew Nuts W1 1kg",
+    "cashew_nuts": "Cashew Nuts",
+    "cashew_nuts_with_rosemarys": "Cashew Nuts with Rosemary",
+    "cashew_lemon": "Lemon Cashews",
+    "organic_truffle_cashew_nuts": "Organic Truffle-Flavored Cashews",
+    "amlou_peanuts_and_fleur_de_sel": "Amlou with Peanuts and Fleur de Sel",
+    "amlou_dark_chocolate": "Amlou with Dark Chocolate",
+    "amlou_cashew_nuts_dates": "Amlou with Cashew Nuts and Dates",
+    "amlou_orange_chocolate": "Amlou with Orange and Chocolate",
+    "amlou_pistache": "Amlou with Pistachio",
+    "category": {
+      "title": "Category",
+      "driedFruits": "Dried Fruits",
+      "amlou": "Amlou",
+      "preservedProduce": "Preserved Produce"
+    },
+
+    "addtocard": "Add to Cart",
+    "noResults": "No products found."
+  },
+
+  "aboutPage": {
+    "primaryTitle": "About Amlou Inno",
+    "description": "'Amlou Inno' is a brand specializing in the production and promotion of authentic Moroccan Amlou, a delicious blend made from roasted almonds, pure argan oil, and natural honey. Their products are handcrafted with love and care by Mr. and Mrs. Lou. 'Amlou' was established to bring the traditional Moroccan flavor to a wider audience, focusing on delivering high-quality natural ingredients that provide an unforgettable taste experience."
+  },
+
+  "contactus": {
+    "primaryTitle": "Contact Us",
+    "paagraph": "We're here to help! If you have any questions or need assistance, feel free to reach out to us.",
+    "inputs": {
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "message": "Message",
+      "submitMessage": "Send Message"
+    },
+    "address": "Address",
+    "contacts": "Contacts",
+    "email": "Email"
+  },
+  "Oops...pagenotfound!": "Oops... page not found!",
+  "gobackhome": "Go back home",
+
+  "home": {
+    "meta": {
+      "title": "Home | Amlou Inou",
+      "description": "Discover the finest natural Amlou products for your health and taste.",
+      "keywords": "home, amlou, natural products, argan oil, almonds"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact Us | Amlou Inou",
+      "description": "Get in touch with Amlou Inou for inquiries, support, or feedback.",
+      "keywords": "contact, customer support, inquiries, argan oil, natural products, Amlou Inou"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About Us | Amlou Inou",
+      "description": "Learn about Amlou Inou’s story, values, and commitment to quality.",
+      "keywords": "about, company, story, quality, natural, amlou"
+    }
+  },
+  "products": {
+    "meta": {
+      "title": "Products | Amlou Inou",
+      "description": "Explore our wide range of natural Amlou products, made with care.",
+      "keywords": "products, amlou, natural, argan oil, almonds"
     }
   }
-  
+}

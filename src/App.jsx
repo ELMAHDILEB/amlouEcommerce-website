@@ -1,5 +1,5 @@
 import { lazy, useEffect } from 'react';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { links } from "./Routes/MainRoutes";
 import { useTranslation } from 'react-i18next';
 const MainWrapper = lazy(() => import("./components/MainWrapper"));
@@ -14,8 +14,7 @@ function App() {
     isArabic ? document.body.classList.add("arabic-font") : document.body.classList.remove("arabic-font");
   }, [i18n.language]);
   return (
-
-    <Routes>
+      <Routes>
       <Route path="/" element={<MainWrapper />}>
         {
           links.map((link, index) => {

@@ -1,194 +1,222 @@
 {
-    "header": {
-      "logo": "Amlou Inno",
-      "nav": {
-        "home": "Accueil",
-        "products": "Produits",
-        "about": "À propos",
-        "contact": "Contact"
-      }
-    },
-  
-    "hero": {
-      "primaryTitle": "Votre destination pour ",
-      "secondaryTitle": "une alimentation biologique",
-      "tertiaryTitle": "et naturelle",
-      "button": "Voir plus"
-    },
-  
-    "discoverCards": {
-      "titleProductOne": "Amandes biologiques émondées 1kg",
-      "titleProductTwo": "Noix de cajou grillées",
-      "titleProductThree": "Amlou aux amandes"
-    },
-  
-    "whychooseus": {
-      "primaryTitle": "Pourquoi nous choisir",
-      "accordion": {
-        "highQuality": {
-          "title": "Haute qualité",
-          "description": "Nous utilisons uniquement des amandes et du miel 100 % naturels pour préparer un amlou bio."
-        },
-        "affordablePrice": {
-          "title": "Prix abordable",
-          "description": "Meilleure qualité au meilleur prix."
-        },
-        "noPreservatives": {
-          "title": "Sans conservateurs",
-          "description": "100 % naturel, sans aucun produit chimique."
-        },
-        "fastDelivery": {
-          "title": "Livraison rapide",
-          "description": "Nous livrons votre commande en 48h partout au Maroc."
-        },
-        "customerTrust": {
-          "title": "Confiance des clients",
-          "description": "Excellentes évaluations de nos clients partout au Maroc."
-        }
-      }
-    },
-  
-    "featuredProducts": {
-      "primaryTitle": "Produits en vedette",
-      "products": {
-        "almonds_rosemary": "Amandes au romarin",
-        "almond_amlou": "Amlou aux amandes 1kg",
-        "organic_truffle_cashew_nuts": "Noix de cajou bio à la truffe",
-        "dhs" : "DHS"
-      }
-    },
-  
-    "testimonials": {
-      "primaryTitle": "Nos clients en parlent mieux que nous",
-      "1": {
-        "text": "Excellents produits ! Le goût est très frais et la saveur incroyable. J'ai adoré les amandes et les pistaches. Je recommande vivement.",
-        "author": "Sarah Benjelloun"
-      },
-      "2": {
-        "text": "L’un des meilleurs produits que j’ai essayés ! Qualité exceptionnelle et goût délicieux. J’achèterai à nouveau sans hésiter.",
-        "author": "Ahmed El Omrani"
-      },
-      "3": {
-        "text": "Les pistaches et les noix de cajou étaient très fraîches, on sent vraiment la différence de qualité. Je commande toujours chez eux.",
-        "author": "Youssef Boudra"
-      },
-      "4": {
-        "text": "J’ai acheté les amandes et elles étaient superbes ! Goût naturel et riche. Je les intégrerai désormais à mon alimentation.",
-        "author": "Kenza El Khatib"
-      },
-      "5": {
-        "text": "Produits de haute qualité ! Les noix de cajou et les amandes étaient légères et fraîches. Très satisfait de mon achat.",
-        "author": "Mouad Chaabi"
-      },
-      "6": {
-        "text": "J’ai essayé les amandes et les noix de cajou, le goût est incroyable ! Le service était également excellent. Je le recommanderai à mes amis et ma famille.",
-        "author": "Leila Sahraoui"
-      }
-    },
-  
-    "newsletter": {
-      "primaryTitle": "Notre newsletter",
-      "subTitle": "Rejoignez notre communauté d’amateurs de produits bio",
-      "text": "Abonnez-vous pour recevoir ",
-      "subText":"des offres exclusives, des recettes et des conseils.",
-      "placeholder": "Entrez votre adresse e-mail",
-      "button": "S’abonner"
-    },
-  
-    "footer": {
-      "title": "Amlou Inno",
-      "description": "Votre destination pour une alimentation biologique et naturelle",
-      "followus": "Suivez-nous",
-      "INSTAGRAM": "Instagram",
-      "FACEBOOK": "Facebook",
-      "TWITTER": "Twitter",
-      "TIKTOK": "TikTok",
-      "quicklinks": "Liens rapides",
+  "header": {
+    "logo": "Amlou Inno",
+    "nav": {
       "home": "Accueil",
       "products": "Produits",
       "about": "À propos",
-      "contact": "Contact",
-      "copyright": "Tous droits réservés"
-    },
-  
-    "pageProducts": {
-      "ourProducts": "Nos produits",
-      "placeholder": "Rechercher des produits",
-      "category": {
-        "title": "Catégorie",
-        "all": "toute",
-        "driedFruits": "Fruits secs",
-        "amlou": "Amlou",
-        "preservedProduce": "Produits en conserve"
+      "contact": "Contact"
+    }
+  },
+
+  "hero": {
+    "primaryTitle": "Votre destination pour ",
+    "secondaryTitle": "une alimentation biologique",
+    "tertiaryTitle": "et naturelle",
+    "button": "Voir plus"
+  },
+
+  "discoverCards": {
+    "titleProductOne": "Amandes biologiques émondées 1kg",
+    "titleProductTwo": "Noix de cajou grillées",
+    "titleProductThree": "Amlou aux amandes"
+  },
+
+  "whychooseus": {
+    "primaryTitle": "Pourquoi nous choisir",
+    "accordion": {
+      "highQuality": {
+        "title": "Haute qualité",
+        "description": "Nous utilisons uniquement des amandes et du miel 100 % naturels pour préparer un amlou bio."
       },
-      "sort": {
-        "title": "Trier",
-        "All": "toute",
-        "lowToHigh": "Prix : du plus bas au plus élevé",
-        "highToLow": "Prix : du plus élevé au plus bas"
-      } ,
-      "priceRang": "Plage de prix",
-      "value": "Valeur",
-      "price":"DHS"
-    },
-  
-    "dataProducts": {
-      "round_raw_almond": "Amande crue ronde",
-      "almond_bake": "Amande grillée",
-      "smoked_almond": "Amande fumée",
-      "marcona_almond": "Amande Marcona",
-      "roasted_almond": "Amande rôtie",
-      "Sicilian_Shelled_Almonds_1kg": "Amandes décortiquées de Sicile 1kg",
-      "flaked_almonds": "Amandes effilées",
-      "chopped_almonds": "Amandes hachées",
+      "affordablePrice": {
+        "title": "Prix abordable",
+        "description": "Meilleure qualité au meilleur prix."
+      },
+      "noPreservatives": {
+        "title": "Sans conservateurs",
+        "description": "100 % naturel, sans aucun produit chimique."
+      },
+      "fastDelivery": {
+        "title": "Livraison rapide",
+        "description": "Nous livrons votre commande en 48h partout au Maroc."
+      },
+      "customerTrust": {
+        "title": "Confiance des clients",
+        "description": "Excellentes évaluations de nos clients partout au Maroc."
+      }
+    }
+  },
+
+  "featuredProducts": {
+    "primaryTitle": "Produits en vedette",
+    "products": {
       "almonds_rosemary": "Amandes au romarin",
-      "salted_almonds": "Amandes salées",
-      "Amlou_Amandes": "Amlou aux amandes",
-      "caramelized_cashews": "Noix de cajou caramélisées",
-      "cashew_chili": "Noix de cajou au piment",
-      "cashew_cheese": "Noix de cajou au fromage",
-      "salted_cashew": "Noix de cajou salées",
-      "WHOLE_ROASTED_UNSALT_CASHEW_NUTS_W1_1kg": "Noix de cajou rôties non salées 1kg",
-      "cashew_nuts": "Noix de cajou",
-      "cashew_nuts_with_rosemarys": "Noix de cajou au romarin",
-      "cashew_lemon": "Noix de cajou au citron",
+      "almond_amlou": "Amlou aux amandes 1kg",
       "organic_truffle_cashew_nuts": "Noix de cajou bio à la truffe",
-      "amlou_peanuts_and_fleur_de_sel": "Amlou aux cacahuètes et fleur de sel",
-      "amlou_dark_chocolate": "Amlou au chocolat noir",
-      "amlou_cashew_nuts_dates": "Amlou aux noix de cajou et dattes",
-      "amlou_orange_chocolate": "Amlou à l’orange et chocolat",
-      "amlou_pistache": "Amlou à la pistache",
+      "dhs": "DHS"
+    }
+  },
 
-      "category": {
-        "title":"Catégorie",
-        "driedFruits": "Fruits secs",
-        "amlou": "Amlou",
-        "preservedProduce": "Produits en conserve"
-      },
-      "addtocard": "Ajouter au panier",
-      "noResults": "Aucun produit trouvé."
+  "testimonials": {
+    "primaryTitle": "Nos clients en parlent mieux que nous",
+    "1": {
+      "text": "Excellents produits ! Le goût est très frais et la saveur incroyable. J'ai adoré les amandes et les pistaches. Je recommande vivement.",
+      "author": "Sarah Benjelloun"
+    },
+    "2": {
+      "text": "L’un des meilleurs produits que j’ai essayés ! Qualité exceptionnelle et goût délicieux. J’achèterai à nouveau sans hésiter.",
+      "author": "Ahmed El Omrani"
+    },
+    "3": {
+      "text": "Les pistaches et les noix de cajou étaient très fraîches, on sent vraiment la différence de qualité. Je commande toujours chez eux.",
+      "author": "Youssef Boudra"
+    },
+    "4": {
+      "text": "J’ai acheté les amandes et elles étaient superbes ! Goût naturel et riche. Je les intégrerai désormais à mon alimentation.",
+      "author": "Kenza El Khatib"
+    },
+    "5": {
+      "text": "Produits de haute qualité ! Les noix de cajou et les amandes étaient légères et fraîches. Très satisfait de mon achat.",
+      "author": "Mouad Chaabi"
+    },
+    "6": {
+      "text": "J’ai essayé les amandes et les noix de cajou, le goût est incroyable ! Le service était également excellent. Je le recommanderai à mes amis et ma famille.",
+      "author": "Leila Sahraoui"
+    }
+  },
 
+  "newsletter": {
+    "primaryTitle": "Notre newsletter",
+    "subTitle": "Rejoignez notre communauté d’amateurs de produits bio",
+    "text": "Abonnez-vous pour recevoir ",
+    "subText": "des offres exclusives, des recettes et des conseils.",
+    "placeholder": "Entrez votre adresse e-mail",
+    "button": "S’abonner"
+  },
+
+  "footer": {
+    "title": "Amlou Inno",
+    "description": "Votre destination pour une alimentation biologique et naturelle",
+    "followus": "Suivez-nous",
+    "INSTAGRAM": "Instagram",
+    "FACEBOOK": "Facebook",
+    "TWITTER": "Twitter",
+    "TIKTOK": "TikTok",
+    "quicklinks": "Liens rapides",
+    "home": "Accueil",
+    "products": "Produits",
+    "about": "À propos",
+    "contact": "Contact",
+    "copyright": "Tous droits réservés"
+  },
+
+  "pageProducts": {
+    "ourProducts": "Nos produits",
+    "placeholder": "Rechercher des produits",
+    "category": {
+      "title": "Catégorie",
+      "all": "toute",
+      "driedFruits": "Fruits secs",
+      "amlou": "Amlou",
+      "preservedProduce": "Produits en conserve"
     },
-  
-  
-    "aboutPage": {
-      "primaryTitle": "À propos de Amlou Inno",
-      "description": "‘Amlou Inno’ est une marque spécialisée dans la production et la promotion de l’authentique Amlou marocain, un délicieux mélange d’amandes grillées, d’huile d’argan pure et de miel naturel. Leurs produits sont fabriqués artisanalement avec amour et soin par Monsieur et Madame Lou. Amlou a été fondée pour faire découvrir la saveur traditionnelle marocaine à un public plus large, en mettant l’accent sur des ingrédients naturels de haute qualité pour une expérience gustative inoubliable."
+    "sort": {
+      "title": "Trier",
+      "All": "toute",
+      "lowToHigh": "Prix : du plus bas au plus élevé",
+      "highToLow": "Prix : du plus élevé au plus bas"
     },
-  
-    "contactus": {
-      "primaryTitle": "Contactez-nous",
-      "paagraph": "Nous sommes là pour vous aider ! Si vous avez des questions ou besoin d’assistance, n’hésitez pas à nous contacter.",
-      "inputs": {
-        "name": "Nom",
-        "phone": "Téléphone",
-        "email": "E-mail",
-        "message": "Message",
-        "submitMessage": "Envoyer le message"
-      },
-      "address": "Adresse",
-      "contacts": "Contacts",
-      "email": "E-mail"
+    "priceRang": "Plage de prix",
+    "value": "Valeur",
+    "price": "DHS"
+  },
+
+  "dataProducts": {
+    "round_raw_almond": "Amande crue ronde",
+    "almond_bake": "Amande grillée",
+    "smoked_almond": "Amande fumée",
+    "marcona_almond": "Amande Marcona",
+    "roasted_almond": "Amande rôtie",
+    "Sicilian_Shelled_Almonds_1kg": "Amandes décortiquées de Sicile 1kg",
+    "flaked_almonds": "Amandes effilées",
+    "chopped_almonds": "Amandes hachées",
+    "almonds_rosemary": "Amandes au romarin",
+    "salted_almonds": "Amandes salées",
+    "Amlou_Amandes": "Amlou aux amandes",
+    "caramelized_cashews": "Noix de cajou caramélisées",
+    "cashew_chili": "Noix de cajou au piment",
+    "cashew_cheese": "Noix de cajou au fromage",
+    "salted_cashew": "Noix de cajou salées",
+    "WHOLE_ROASTED_UNSALT_CASHEW_NUTS_W1_1kg": "Noix de cajou rôties non salées 1kg",
+    "cashew_nuts": "Noix de cajou",
+    "cashew_nuts_with_rosemarys": "Noix de cajou au romarin",
+    "cashew_lemon": "Noix de cajou au citron",
+    "organic_truffle_cashew_nuts": "Noix de cajou bio à la truffe",
+    "amlou_peanuts_and_fleur_de_sel": "Amlou aux cacahuètes et fleur de sel",
+    "amlou_dark_chocolate": "Amlou au chocolat noir",
+    "amlou_cashew_nuts_dates": "Amlou aux noix de cajou et dattes",
+    "amlou_orange_chocolate": "Amlou à l’orange et chocolat",
+    "amlou_pistache": "Amlou à la pistache",
+
+    "category": {
+      "title": "Catégorie",
+      "driedFruits": "Fruits secs",
+      "amlou": "Amlou",
+      "preservedProduce": "Produits en conserve"
+    },
+    "addtocard": "Ajouter au panier",
+    "noResults": "Aucun produit trouvé."
+  },
+
+  "aboutPage": {
+    "primaryTitle": "À propos de Amlou Inno",
+    "description": "‘Amlou Inno’ est une marque spécialisée dans la production et la promotion de l’authentique Amlou marocain, un délicieux mélange d’amandes grillées, d’huile d’argan pure et de miel naturel. Leurs produits sont fabriqués artisanalement avec amour et soin par Monsieur et Madame Lou. Amlou a été fondée pour faire découvrir la saveur traditionnelle marocaine à un public plus large, en mettant l’accent sur des ingrédients naturels de haute qualité pour une expérience gustative inoubliable."
+  },
+
+  "contactus": {
+    "primaryTitle": "Contactez-nous",
+    "paagraph": "Nous sommes là pour vous aider ! Si vous avez des questions ou besoin d’assistance, n’hésitez pas à nous contacter.",
+    "inputs": {
+      "name": "Nom",
+      "phone": "Téléphone",
+      "email": "E-mail",
+      "message": "Message",
+      "submitMessage": "Envoyer le message"
+    },
+    "address": "Adresse",
+    "contacts": "Contacts",
+    "email": "E-mail"
+  },
+  "Oops...pagenotfound!": "Oups... page introuvable !",
+  "gobackhome": "Retour à l'accueil",
+
+  "home": {
+    "meta": {
+      "title": "Accueil | Amlou Inou",
+      "description": "Découvrez les meilleurs produits naturels d'Amlou pour votre santé et votre goût.",
+      "keywords": "accueil, amlou, produits naturels, huile d'argan, amandes"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contactez-nous | Amlou Inou",
+      "description": "Contactez Amlou Inou pour vos questions, support ou retours.",
+      "keywords": "contact, support client, questions, huile d'argan, produits naturels, Amlou Inou"
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "À propos | Amlou Inou",
+      "description": "Découvrez l'histoire, les valeurs et l'engagement qualité d'Amlou Inou.",
+      "keywords": "à propos, entreprise, histoire, qualité, naturel, amlou"
+    }
+  },
+  "products": {
+    "meta": {
+      "title": "Produits | Amlou Inou",
+      "description": "Explorez notre large gamme de produits naturels d'Amlou, fabriqués avec soin.",
+      "keywords": "produits, amlou, naturel, huile d'argan, amandes"
     }
   }
-  
+}

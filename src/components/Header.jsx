@@ -62,9 +62,6 @@ const Header = memo(() =>{
 
       <div className='flex items-center  gap-4  p-2'>
         {!isDarkMode ? (<FaMoon className='text-[1.15rem] cursor-pointer hover:text-[var(--primary)] transition-colors duration-500' onClick={toggleDarkTheme} />) : (<IoIosSunny className='text-[1.15rem] cursor-pointer hover:text-[var(--primary)] transition-colors duration-500'  onClick={toggleDarkTheme} />)}
-        {/* <NavLink to="/login" data-discover="true" aria-label="Login page">
-          <RiAccountCircleFill className='text-[1.25rem] cursor-pointer hover:text-[var(--primary)] transition-colors duration-500' />
-        </NavLink> */}
 
         <SwitcherLang/>
         <div className='relative'>  
