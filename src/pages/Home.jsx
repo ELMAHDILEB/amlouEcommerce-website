@@ -7,6 +7,7 @@ import Newsletter from '../components/Home/News.jsx';
 import Footer from '../components/Footer.jsx';
 import HeroSection from '../components/Home/HeroSection.jsx';
 import MetaTag from '../components/MetaTag.jsx';
+import ShoppingCart from '../components/ShoppingCart.jsx';
 
 
 
@@ -18,6 +19,7 @@ const Home = memo(() => {
       <section className='relative w-full  px-4 md:px-0  mx-auto my-0 '>
         <HeroSection />
       </section>
+    {/* <ShoppingCart/> */}
       <DiscoverCards />
       <WhyChooseUs />
       <FeaturedProducts />

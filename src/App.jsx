@@ -17,8 +17,7 @@ function App() {
       <Routes>
       <Route path="/" element={<MainWrapper />}>
         {
-          links.map((link, index) => {
-            const { path, element } = link;
+          links.map(({ path, element }, index) => {
             return (
               <Route key={index * 3} path={path} element={element} />
             )

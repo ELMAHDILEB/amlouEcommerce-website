@@ -27,8 +27,8 @@ const MetaTag = ({pageKey}) => {
         <meta property="og:type" content="website" />
         <meta property="og:image" content={image} />
         <meta property="og:url" content={url} />
-        <meta property="og:locale" content="fr_FR" /> {/* بدلها حسب اللغة */}
-        {/* <meta property="og:site_name" content="Amlou Inou" /> 
+        <meta property="og:locale" content="fr_FR" /> 
+        <meta property="og:site_name" content="Amlou Inou" /> 
       
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />

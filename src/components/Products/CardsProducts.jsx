@@ -26,8 +26,7 @@ const CardsProducts = ({products, isLoading, error}) => {
           isLoading ? (
                <SkeletonLoader count={5}/>
           ) : (
-            currentProducts.map((productItem) => {
-            const {id, nameKey, image, price, category} = productItem;
+            currentProducts.map(({id, nameKey, image, price, category}) => {
 
               return (
                 

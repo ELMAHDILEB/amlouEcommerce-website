@@ -57,8 +57,7 @@ const SwitcherLang = () => {
 
             <ul className="w-full  text-sm  flex flex-col items-center justify-center gap-2" onClick={handleOpen} >
               {
-                languages.map((lang, index) => {
-                  const { code, label } = lang;
+                languages.map(({ code, label } , index) => {
                   return (<li key={index * 3} className="w-full py-3 text-center hover:bg-gray-400 transition-all duration-1000 rounded-2xl">
                     <button onClick={() => handleChange(code)}>
                       <span className="cursor-pointer">{label}</span>

@@ -27,8 +27,6 @@ const Home = lazy(() => import("../pages/Home"));
 const Products = lazy(() => import("../pages/Products"));
 const About = lazy(() => import("../pages/About"));
 const Contact = lazy(() => import("../pages/Contact"));
-const Login = lazy(() => import("../pages/Login"));
-const SignUp = lazy(() => import("../pages/SignUp"));
 const NotFound = lazy(() => import("../pages/NotFound"));
 
 
@@ -38,8 +36,6 @@ export const links = [
   { path: "/products", element: <Products /> },
   { path: "/about", element: <About /> },
   { path: "/contact", element: <Contact /> },
-  { path: "/login", element: <Login /> },
-  { path: "/signup", element: <SignUp /> },
   { path: "*", element: <NotFound /> },
 ]
 

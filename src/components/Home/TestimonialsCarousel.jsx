@@ -27,8 +27,7 @@ function TestimonialsCarousel() {
                 }}
             >
                 {
-                    testimonials.map((item, index) => {
-                        const { text, author, imgSrc } = item;
+                    testimonials.map(({ text, author, imgSrc }, index) => {
                         return (
                             <SwiperSlide key={index} >
                                 <article className="w-full h-[22em] relative p-6   rounded-[15px] shadow flex flex-col  items-center justify-between gap-4 text-center cursor-pointer overflow-hidden font-montserrat">

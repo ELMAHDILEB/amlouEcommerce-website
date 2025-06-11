@@ -44,8 +44,7 @@ const Header = memo(() =>{
       <nav className={`navLinks ${openNav ? "open" : ""} `}>
         <ul className="w-full flex flex-col items-center  gap-5 lg:gap-10 md:static md:flex-row  ">
           {
-            labels.map((link, index) => {
-              const { to, label, ariaLabel } = link;
+            labels.map(({ to, label, ariaLabel }, index) => {
               return (
                 <li  key={index}>
                   <NavLink to={to} onClick={handleOut} className={({ isActive }) =>

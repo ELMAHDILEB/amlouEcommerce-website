@@ -32,8 +32,7 @@ function discoverCards() {
             <div className="w-[90%] md:w-full h-full grid grid-cols-1 md:grid-cols-2 gap-4">
             {
               
-                discoverCard.map((card, index)=>{
-                    const {srcImg, alt, title, className} = card;
+                discoverCard.map(({srcImg, alt, title, className}, index)=>{
                     return  <article
                     className={className}
                     onMouseOver={() => handleFocus(index)}

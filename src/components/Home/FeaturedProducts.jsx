@@ -10,8 +10,7 @@ const FeaturedProducts = () => {
       <h1 className="break-normal uppercase tracking-[4px] font-black text-[var(--primary)] leading-[32px] text-center py-10" style={{ fontSize: "clamp(20px, 4vw, 50px)" }}>{t("featuredProducts.primaryTitle")}</h1>
       <section className="w-full h-fit grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center font-montserrat">
   {
-    FeaProducts.map((item, index) => {
-      const { imgSrc, title, price } = item;
+    FeaProducts.map(({ imgSrc, title, price }, index) => {
       return (
         <article className="w-full  h-[350px] flex flex-col items-center justify-between bg-[var(--cardColor)] cursor-pointer rounded-[15px]" key={index * 4}>
           <div className="w-full h-[150px] lg:h-[200px] overflow-hidden flex items-center justify-center">
