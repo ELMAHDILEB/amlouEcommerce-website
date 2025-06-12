@@ -213,6 +213,13 @@
       "keywords": "about, company, story, quality, natural, amlou"
     }
   },
+  "ShoppingCart": {
+    "title": "Your Cart",
+    "removeItem": "Remove item",
+    "removeCart": "Remove Cart",
+    "checkout": "checkout",
+    "total": "total"
+  },
   "products": {
     "meta": {
       "title": "Products | Amlou Inou",

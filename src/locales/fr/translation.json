@@ -212,6 +212,13 @@
       "keywords": "à propos, entreprise, histoire, qualité, naturel, amlou"
     }
   },
+  "ShoppingCart": {
+    "title": "Votre Panier",
+    "removeItem": "Supprimer l'element",
+    "removeCart": "Supprimer Votre Panier",
+    "checkout": "verifier",
+    "total": "total"
+  },
   "products": {
     "meta": {
       "title": "Produits | Amlou Inou",
