@@ -15,11 +15,11 @@ const Home = memo(() => {
 
   return (
     <>
-    <MetaTag pageKey="home"/>
+      <MetaTag pageKey="home" />
       <section className='relative w-full  px-4 md:px-0  mx-auto my-0 '>
         <HeroSection />
       </section>
-    {/* <ShoppingCart/> */}
+      {/* <ShoppingCart /> */}
       <DiscoverCards />
       <WhyChooseUs />
       <FeaturedProducts />

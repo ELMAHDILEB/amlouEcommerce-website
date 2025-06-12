@@ -11,6 +11,7 @@ import SwitcherLang from './SwitcherLang';
 import { useLabels } from '../Routes/MainRoutes';
 import { useTranslation } from 'react-i18next';
 import useIsArabic from '../hooks/useIsArabic';
+import  ShoppingCart from "./ShoppingCart.jsx";
 
 
 
@@ -22,6 +23,7 @@ const Header = memo(() =>{
 
   const [openNav, setOpenNav] = useState(false);
   const [isDarkMode, toggleDarkTheme] = useDarkMode();
+  const [openPopUp, setOpenPopUp] = useState(false);
 
 
   const handleOpen = (e) => {
@@ -31,6 +33,16 @@ const Header = memo(() =>{
   const handleOut = () => {
     setOpenNav(false);
   }
+
+  const handleOpenPopUp = ()=>{
+            setOpenPopUp((prev)=>!prev);
+  }
+  const onClosePopUp = ()=>{
+            setOpenPopUp(false);
+  }
+
+  
+   
 
 
   return (
@@ -63,10 +75,16 @@ const Header = memo(() =>{
         {!isDarkMode ? (<FaMoon className='text-[1.15rem] cursor-pointer hover:text-[var(--primary)] transition-colors duration-500' onClick={toggleDarkTheme} />) : (<IoIosSunny className='text-[1.15rem] cursor-pointer hover:text-[var(--primary)] transition-colors duration-500'  onClick={toggleDarkTheme} />)}
 
         <SwitcherLang/>
-        <div className='relative'>  
+
+        {
+              openPopUp && <ShoppingCart onClosePopUp={()=>onClosePopUp()}/> 
+        }
+
+        <button className='relative  border-none bg-transparent' onClick={()=> handleOpenPopUp()}>  
         <span className='flex items-center justify-center absolute text-white  text-[12px]  -top-2 -right-4 w-5 h-5 bg-red-700 rounded-full'>0</span>
         <IoBagHandle className='text-[1.25rem] cursor-pointer hover:text-[var(--primary)] transition-colors duration-500' />
-        </div>
+        </button>
+      
         {!openNav ? (<CgMenuRightAlt className={`block md:hidden  text-[1.5rem] cursor-pointer hover:text-[var(--primary)] transition-colors duration-500 ${isArabic ? "rotate-180" : ""}`} onClick={handleOpen} />) : <IoClose className='block md:hidden  text-[1.5rem] cursor-pointer hover:text-[var(--primary)] transition-colors duration-500' onClick={handleOpen} />}
       </div>
 
