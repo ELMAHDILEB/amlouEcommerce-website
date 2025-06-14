@@ -213,11 +213,12 @@
     }
   },
   "ShoppingCart": {
-    "title": "Votre Panier",
-    "removeItem": "Supprimer l'element",
-    "removeCart": "Supprimer Votre Panier",
-    "checkout": "verifier",
-    "total": "total"
+    "title": "Panier",
+    "removeItem": "Supprimer",
+    "removeCart": "Vider le panier",
+    "checkout": "Paiement",
+    "total": "Total",
+    "dhs": "DHS"
   },
   "products": {
     "meta": {

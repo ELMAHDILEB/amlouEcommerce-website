@@ -5,6 +5,7 @@ import useFetchProducts from "../utils/useFetchProducts";
 import SearchInput from "../components/Products/SearchInput";
 import { useTranslation } from "react-i18next";
 import MetaTag from "../components/MetaTag";
+import { useOutletContext } from "react-router-dom";
 
 
 const Products = () => {
@@ -14,6 +15,8 @@ const Products = () => {
   const [selectedSort, setSelectedSort] = useState("All");
   const [priceValue, setPriceValue] = useState(200);
   const [searchTerm, setSearchTerm] = useState("");
+  
+  const { addToCart } = useOutletContext(); 
 
 
 
@@ -49,9 +52,12 @@ const Products = () => {
         {
           noDatFounded ?
             (<p className="w-full h-full flex items-center justify-center font-bold text-2xl">{t("dataProducts.noResults")}</p>) :
-            <CardsProducts products={filterProducts} isLoading={isLoading} />
+            <CardsProducts products={filterProducts} isLoading={isLoading} onAddToCart={addToCart}/>
         }
+
       </section>
+
+
     </>
 
   )

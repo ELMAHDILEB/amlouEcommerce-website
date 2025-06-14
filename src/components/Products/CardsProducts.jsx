@@ -4,7 +4,7 @@ import 'react-loading-skeleton/dist/skeleton.css';
 import Card from "./Card";
 import { useTranslation } from "react-i18next";
 
-const CardsProducts = ({products, isLoading, error}) => {
+const CardsProducts = ({products, isLoading, error, onAddToCart}) => {
 
   const {t} = useTranslation();
 
@@ -30,7 +30,7 @@ const CardsProducts = ({products, isLoading, error}) => {
 
               return (
                 
-                      <Card key={id} name={t(`dataProducts.${nameKey}`)} image={image} price={price} category={t(`dataProducts.category.${category}`)}  />
+                      <Card id={id} key={id} name={t(`dataProducts.${nameKey}`)} image={image} price={price} category={t(`dataProducts.category.${category}`)}  onAddToCart={onAddToCart} />
               )
             })
           )
@@ -42,6 +42,8 @@ const CardsProducts = ({products, isLoading, error}) => {
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
       />
+
+
     </section>
 
 

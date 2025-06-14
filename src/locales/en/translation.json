@@ -217,8 +217,9 @@
     "title": "Your Cart",
     "removeItem": "Remove item",
     "removeCart": "Remove Cart",
-    "checkout": "checkout",
-    "total": "total"
+    "checkout": "Checkout",
+    "total": "Total",
+    "dhs": "DHS"
   },
   "products": {
     "meta": {
