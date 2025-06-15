@@ -53,7 +53,6 @@ const MainWrapper = memo(() => {
       ]);
 
     }
-
     setShowCart(true);
   }
 
