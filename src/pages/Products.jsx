@@ -15,7 +15,6 @@ const Products = () => {
   const [selectedSort, setSelectedSort] = useState("All");
   const [priceValue, setPriceValue] = useState(200);
   const [searchTerm, setSearchTerm] = useState("");
-  
   const { addToCart } = useOutletContext(); 
 
 

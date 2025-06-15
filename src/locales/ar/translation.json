@@ -211,6 +211,7 @@
   },
   "ShoppingCart": {
     "title": "سلة التسوق الخاصة بك",
+    "noItems": "لا يوجد عناصر",
     "removeItem": "حذف العنصر",
     "removeCart": "حذف سلة التسوق",
     "checkout": "الدفع",

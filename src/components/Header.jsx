@@ -1,4 +1,4 @@
-import { memo, useEffect, useState } from 'react'
+import { memo, useState } from 'react'
 import { NavLink } from "react-router-dom";
 import { ImLeaf } from "react-icons/im";
 import { IoBagHandle } from "react-icons/io5";

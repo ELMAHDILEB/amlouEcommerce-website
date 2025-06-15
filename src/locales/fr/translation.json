@@ -214,6 +214,7 @@
   },
   "ShoppingCart": {
     "title": "Panier",
+    "noItems": "Aucun produit",
     "removeItem": "Supprimer",
     "removeCart": "Vider le panier",
     "checkout": "Paiement",

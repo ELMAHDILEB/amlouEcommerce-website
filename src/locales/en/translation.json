@@ -215,6 +215,7 @@
   },
   "ShoppingCart": {
     "title": "Your Cart",
+    "noItems": "No items",
     "removeItem": "Remove item",
     "removeCart": "Remove Cart",
     "checkout": "Checkout",

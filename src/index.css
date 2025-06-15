@@ -8,6 +8,7 @@
   --blackColor: black;
   --primary: #7c8c03;
   --cardColor: #dcdadd;
+  --removeButton:#583c3b;
   --font-poppins: "Poppins", sans-serif;
   --font-lobster: "Lobster", sans-serif;
 }
@@ -29,6 +30,7 @@ body.arabic-font span {
   --SubColor: #b2c4dd;
   --blackColor: white;
   --cardColor: #333333;
+  --removeButton:#ffaea9;
 }
 
 @theme {
