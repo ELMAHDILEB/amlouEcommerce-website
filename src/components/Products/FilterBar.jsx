@@ -33,6 +33,7 @@ const FilterBar = ({ selectedCategory, setSelectedCategory, selectedSort, setSel
     setOpenCategoriesDrop(false);
   }
 
+
   return (
 
     <section className="w-full grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-4 font-montserrat">
@@ -62,5 +63,6 @@ const FilterBar = ({ selectedCategory, setSelectedCategory, selectedSort, setSel
     </section>
   )
 }
+
 
 export default FilterBar;

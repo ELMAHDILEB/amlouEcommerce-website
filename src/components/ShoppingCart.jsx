@@ -18,11 +18,11 @@ const ShoppingCart = ({
   const items = cartItems.length > 0 ? cartItems : cartitems;
 
   // total price
-  const totalPrice = items.reduce((total, item) => {
+  const totalPrice = React.useMemo(items.reduce((total, item) => {
     const totalPrice = item?.price || 0
     const totalQuantity = item?.quantity || 0
     return total + totalQuantity * totalPrice
-  }, 0)
+  }, 0),[totalPrice]);
 
   return (
     <motion.section

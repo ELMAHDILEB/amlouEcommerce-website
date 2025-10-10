@@ -5,8 +5,6 @@ const Card = ({ id, nameKey, image, categoryKey, price, onAddToCart }) => {
 
 
   const product = { id, nameKey, image, categoryKey, price }
-
-
   const translateName = t(`dataProducts.${nameKey}`, nameKey)
   const displayname = translateName === nameKey ? translateName.replace(/_/g, " ") : translateName
 

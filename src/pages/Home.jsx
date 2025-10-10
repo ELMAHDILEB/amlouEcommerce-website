@@ -19,7 +19,6 @@ const Home = memo(() => {
       <section className='relative w-full  px-4 md:px-0  mx-auto my-0 '>
         <HeroSection />
       </section>
-      {/* <ShoppingCart /> */}
       <DiscoverCards />
       <WhyChooseUs />
       <FeaturedProducts />

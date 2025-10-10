@@ -10,17 +10,10 @@ function discoverCards() {
     const discoverCard = useDiscoverCard();
     const [isFocus, setIsFocus] = useState([false, false, false]);
 
-    const handleFocus = (index) => {
-        setIsFocus(prevState => {
+    const handleFocusChange = (index, value)=>{
+        setIsFocus(prevState=>{
             const newState = [...prevState];
-            newState[index] = true;
-            return newState
-        })
-    }
-    const handleOut = (index) => {
-        setIsFocus(prevState => {
-            const newState = [...prevState];
-            newState[index] = false;
+            newState[index] = value;
             return newState;
         })
     }
@@ -35,8 +28,8 @@ function discoverCards() {
                 discoverCard.map(({srcImg, alt, title, className}, index)=>{
                     return  <article
                     className={className}
-                    onMouseOver={() => handleFocus(index)}
-                    onMouseOut={() => handleOut(index)}
+                    onMouseOver={() => handleFocusChange(index,true)}
+                    onMouseOut={() => handleFocusChange(index,false)}
                     key={index}
                 >
                     <img

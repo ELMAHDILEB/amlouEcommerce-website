@@ -16,9 +16,7 @@ const Products = () => {
   const [priceValue, setPriceValue] = useState(200);
   const [searchTerm, setSearchTerm] = useState("");
   const { addToCart } = useOutletContext(); 
-
-
-
+  
   const filterProducts = products
     .filter((product) =>
       selectedCategory === "All" || product.category === selectedCategory
@@ -34,6 +32,7 @@ const Products = () => {
     })
 
   const noDatFounded = filterProducts.length === 0;
+
   return (
     <>
       <MetaTag pageKey="products" />

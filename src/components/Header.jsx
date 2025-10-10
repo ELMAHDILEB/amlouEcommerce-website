@@ -21,32 +21,21 @@ const Header = memo(({cart, decreaseItem  ,incrementItem ,removeItem, removeCart
   const labels = useLabels();
   const isArabic = useIsArabic()
 
-
   const [openNav, setOpenNav] = useState(false);
   const [isDarkMode, toggleDarkTheme] = useDarkMode();
   const [openPopUp, setOpenPopUp] = useState(false);
 
   const totalQuantity = cart.reduce((total, item) => total + item?.quantity, 0)
 
-
   const handleOpen = (e) => {
     e.preventDefault();
     setOpenNav((prev) => !prev);
   }
-  const handleOut = () => {
-    setOpenNav(false);
-  }
+  const handleOut = () => setOpenNav(false);
 
-  const handleOpenPopUp = () => {
-    setOpenPopUp((prev) => !prev);
-  }
-  const onClosePopUp = () => {
-    setOpenPopUp(false);
-  }
-
-
-
-
+  const handleOpenPopUp = () => setOpenPopUp((prev) => !prev);
+  
+  const onClosePopUp = () => setOpenPopUp(false);
 
   return (
     <header className='sticky z-[10000000] w-full  h-20 mx-auto my-0 flex items-center justify-between px-4 md:px-0 '>
