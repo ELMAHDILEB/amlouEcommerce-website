@@ -41,7 +41,7 @@ const Header = memo(({cart, decreaseItem  ,incrementItem ,removeItem, removeCart
     <header className='sticky z-[10000000] w-full  h-20 mx-auto my-0 flex items-center justify-between px-4 md:px-0 '>
 
       <NavLink to="/" className='flex items-center gap-2 text-2xl '>
-        <ImLeaf className='text-bold text-[var(--primary)] text-[12px] ' data-discover="true" aria-label="Logo" />
+        <ImLeaf className='text-bold text-var(--primary) text-[12px] ' data-discover="true" aria-label="Logo" />
         <h1 className='uppercase text-[15px]  xl:text-[24px] font-lobster tracking-[4px]'>{t("header.logo")}</h1>
       </NavLink>
 

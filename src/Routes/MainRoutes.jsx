@@ -61,9 +61,9 @@ export const useLabels = () => {
 export const useDiscoverCard =()=>{
   const {t} = useTranslation();
   return [
-    { srcImg: amandes1, alt: "amandes", title: t("discoverCards.titleProductOne"), className: "w-full h-full md:grid-col-2 md:row-span-2 overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[15px] relative" },
-    { srcImg: cajou1, alt: "cajou1", title:  t("discoverCards.titleProductTwo"), className: "w-full  md:grid-col-1   overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[15px] relative" },
-    { srcImg: amlouBloz, alt: "amlouBloz", title:  t("discoverCards.titleProductThree"), className: "w-full  md:grid-col-1   overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[15px] relative" }
+    { srcImg: amandes1, alt: "amandes", title: t("discoverCards.titleProductOne"), className: "w-full h-full md:grid-col-2 md:row-span-2 overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[15px] relative" , link:"/products?category=preservedProduce"},
+    { srcImg: cajou1, alt: "cajou1", title:  t("discoverCards.titleProductTwo"), className: "w-full  md:grid-col-1   overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[15px] relative" , link:"/products?category=driedFruits"},
+    { srcImg: amlouBloz, alt: "amlouBloz", title:  t("discoverCards.titleProductThree"), className: "w-full  md:grid-col-1   overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[15px] relative" , link:"/products?category=amlou"}
   ]
 } 
 
@@ -82,9 +82,9 @@ export const useAccordions = ()=>{
 export const useFeaProducts =()=>{
   const {t} = useTranslation();
   return [
-    { imgSrc: amandesRomarin, title: t("featuredProducts.products.almonds_rosemary"), price: "80" },
-    { imgSrc: amlouAmandes, title: t("featuredProducts.products.almond_amlou"), price: "120" },
-    { imgSrc: noixCajouTruffeBio, title: t("featuredProducts.products.organic_truffle_cashew_nuts"), price: "45" },
+    { imgSrc: amandesRomarin, title: t("featuredProducts.products.almonds_rosemary"), price: "80", link:"/products?category=driedFruits&_page=1" },
+    { imgSrc: amlouAmandes, title: t("featuredProducts.products.almond_amlou"), price: "120", link:"/products?category=amlou&_page=1" },
+    { imgSrc: noixCajouTruffeBio, title: t("featuredProducts.products.organic_truffle_cashew_nuts"), price: "45", link:"/products?category=driedFruits&_page=1" },
   ]
 } 
 

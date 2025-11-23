@@ -37,7 +37,7 @@ const Card = ({ id, nameKey, image, categoryKey, price, onAddToCart }) => {
 
       <button
         className="cursor-pointer px-7 py-3 lg:px-10 lg:py-3 bg-[var(--primary)] rounded-[10px] font-semibold uppercase text-[12px] lg:text-[15px]"
-        onClick={() => onAddToCart(product)} // ← هنا سيمرر المفاتيح الأصلية
+        onClick={() => onAddToCart(product)} 
       >
         {t("dataProducts.addtocard")}
       </button>

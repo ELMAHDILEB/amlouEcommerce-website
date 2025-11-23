@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import useIsArabic from "../../hooks/useIsArabic";
 
 const SearchInput = ({ searchTerm, setSearchTerm }) => {
   const { t } = useTranslation();
+
 
   return (
     <section className="w-full">
