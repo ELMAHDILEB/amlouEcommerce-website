@@ -1,28 +1,25 @@
 import { useTranslation } from "react-i18next"
 import useArabic from "../hooks/useIsArabic"
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
+import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { decreaseItem, increaseItem, removeFromCart, removeCart } from "../features/cart/cartSlice";
+
 
 const ShoppingCart = ({
   onClosePopUp,
-  cartItems = [],
-  cartitems = [],
-  decreaseItem,
-  incrementItem,
-  removeItem,
-  removeCart,
 }) => {
   const { t } = useTranslation();
   const isArabic = useArabic();
-
- 
-  const items = cartItems.length > 0 ? cartItems : cartitems;
+  const items = useSelector((state)=> state.cart.items);
+  const dispatch = useDispatch();
 
   // total price
-  const totalPrice = React.useMemo(items.reduce((total, item) => {
-    const totalPrice = item?.price || 0
-    const totalQuantity = item?.quantity || 0
-    return total + totalQuantity * totalPrice
-  }, 0),[totalPrice]);
+  const totalPrice = React.useMemo(() => {
+    return items.reduce((total, item) => {
+      return total + (item.price || 0) * (item.quantity || 0);
+    }, 0);
+  }, [items]);
 
   return (
     <motion.section
@@ -52,8 +49,6 @@ const ShoppingCart = ({
           </svg>
         </header>
 
-
-
         <div
           className={`w-full max-h-[68vh] space-y-4 flex flex-col ${items.length <= 0 ? "overflow-y-none" : "overflow-y-auto"}`}
         >
@@ -62,13 +57,7 @@ const ShoppingCart = ({
           ) : (
             items.map((item, index) => {
 
-              let productName;
-
-              if (item.nameKey.startsWith("dataProducts.") || item.nameKey.includes("_")) {
-                productName = t(`dataProducts.${item.nameKey}`, item.nameKey)
-              } else {
-                productName = item.nameKey
-              }
+              let productName = item.nameKey ? (item.nameKey.startsWith("dataProducts.") || item.nameKey.includes("_") ? t(`dataProducts.${item.nameKey}`, item.nameKey) : item.nameKey) : "Unknown Name";
 
               return (
                 <div
@@ -90,14 +79,14 @@ const ShoppingCart = ({
                     <div className="w-full flex justify-between items-center">
                       <button
                         className="border-none outline-none cursor-pointer w-[20px] h-[20px] bg-[--SubColor] rounded-full flex items-center justify-center"
-                        onClick={() => decreaseItem(item.id)}
+                        onClick={() => dispatch(decreaseItem({id: item.id}))}
                       >
                         -
                       </button>
                       <span>{item.quantity}</span>
                       <button
                         className="border-none outline-none cursor-pointer w-[20px] h-[20px] bg-[--SubColor] rounded-full flex items-center justify-center"
-                        onClick={() => incrementItem(item.id)}
+                        onClick={() => dispatch(increaseItem({id: item.id}))}
                       >
                         +
                       </button>
@@ -105,7 +94,7 @@ const ShoppingCart = ({
 
                     <button
                       className="capitalize text-[var(--removeButton)] underline text-[14px] cursor-pointer"
-                      onClick={() => removeItem(item.id)}
+                      onClick={() => dispatch(removeFromCart({id: item.id}))}
                     >
                       {t("ShoppingCart.removeItem")}
                     </button>
@@ -119,7 +108,7 @@ const ShoppingCart = ({
         {items.length > 0 && (
           <button
             className="capitalize text-[var(--removeButton)] underline text-[14px] cursor-pointer"
-            onClick={removeCart}
+            onClick={()=> dispatch(removeCart())}
           >
             {t("ShoppingCart.removeCart")}
           </button>

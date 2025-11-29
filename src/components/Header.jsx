@@ -13,19 +13,20 @@ import { useTranslation } from 'react-i18next';
 import useIsArabic from '../hooks/useIsArabic';
 import ShoppingCart from "./ShoppingCart.jsx";
 import { AnimatePresence } from "framer-motion";
+import { useSelector } from 'react-redux';
 
 
 
-const Header = memo(({cart, decreaseItem  ,incrementItem ,removeItem, removeCart}) => {
+const Header = memo(() => {
   const { t } = useTranslation();
   const labels = useLabels();
-  const isArabic = useIsArabic()
-
+  const isArabic = useIsArabic();
+ const cart = useSelector((state)=> state.cart.items)
   const [openNav, setOpenNav] = useState(false);
   const [isDarkMode, toggleDarkTheme] = useDarkMode();
   const [openPopUp, setOpenPopUp] = useState(false);
 
-  const totalQuantity = cart.reduce((total, item) => total + item?.quantity, 0)
+  const totalQuantity = cart.reduce((total, item) => total + (item?.quantity || 0), 0)
 
   const handleOpen = (e) => {
     e.preventDefault();
@@ -72,7 +73,7 @@ const Header = memo(({cart, decreaseItem  ,incrementItem ,removeItem, removeCart
        <AnimatePresence>
 
         {
-          openPopUp && <ShoppingCart onClosePopUp={() => onClosePopUp()}   cartitems={cart} incrementItem={incrementItem} decreaseItem={decreaseItem}  removeItem={removeItem} removeCart={removeCart}/>
+          openPopUp && <ShoppingCart onClosePopUp={() => onClosePopUp()}  />
         }
          
        </AnimatePresence>

@@ -1,7 +1,10 @@
 import { useTranslation } from "react-i18next"
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../features/cart/cartSlice";
 
-const Card = ({ id, nameKey, image, categoryKey, price, onAddToCart }) => {
-  const { t } = useTranslation()
+const Card = ({ id, nameKey, image, categoryKey, price }) => {
+  const { t } = useTranslation();
+  const dispatch = useDispatch();
 
 
   const product = { id, nameKey, image, categoryKey, price }
@@ -37,7 +40,7 @@ const Card = ({ id, nameKey, image, categoryKey, price, onAddToCart }) => {
 
       <button
         className="cursor-pointer px-7 py-3 lg:px-10 lg:py-3 bg-[var(--primary)] rounded-[10px] font-semibold uppercase text-[12px] lg:text-[15px]"
-        onClick={() => onAddToCart(product)} 
+        onClick={() => dispatch(addToCart(product))} 
       >
         {t("dataProducts.addtocard")}
       </button>

@@ -5,9 +5,9 @@ import Card from "./Card"
 import { useTranslation } from "react-i18next"
 import SkeletonLoader from "./SkeletonLoader"
 import useFilters from "../../hooks/useFilters"
-import { useSearchParams } from "react-router-dom"
+import { useSearchParams } from "react-router-dom";
 
-const CardsProducts = ({ products, isLoading, error, onAddToCart }) => {
+const CardsProducts = ({ products, isLoading }) => {
   const { t } = useTranslation();
   const [searchParams] = useSearchParams()
   const [currentPage, setCurrentPage] = useState(Number(searchParams.get("_page")) || 1);
@@ -35,7 +35,6 @@ const CardsProducts = ({ products, isLoading, error, onAddToCart }) => {
                 image={image}
                 price={price}
                 categoryKey={category}
-                onAddToCart={onAddToCart}
               />
             )
           })
