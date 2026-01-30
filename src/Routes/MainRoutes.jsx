@@ -19,6 +19,13 @@ import men3 from "../assets/testimonialsPicture/men-3.jpg";
 import women1 from "../assets/testimonialsPicture/women-1.jpg";
 import women2 from "../assets/testimonialsPicture/women-2.jpg";
 import women3 from "../assets/testimonialsPicture/women-3.jpg";
+import Login from "../pages/auth/Login";
+import Register from "../pages/auth/Register";
+import Dashboard from "../pages/dashboard/Dashboard";
+import UserDashboard from "../pages/dashboard/UserDashboard";
+import AdminAddProduct from "../pages/dashboard/AdminAddProduct";
+import AdminOrders from "../pages/dashboard/AdminOrders";
+import AdminUsers from "../pages/dashboard/AdminUsers";
 
 
 
@@ -36,6 +43,15 @@ export const links = [
   { path: "/products", element: <Products /> },
   { path: "/about", element: <About /> },
   { path: "/contact", element: <Contact /> },
+  { path: "/login", element: <Login /> },
+  { path: "/register", element: <Register /> },
+
+  { path: "/dashboard", element: <Dashboard /> },
+  { path: "/dashboard/add-product", element: <AdminAddProduct /> },
+  { path: "/dashboard/orders", element: <AdminOrders /> },
+  { path: "/dashboard/users", element: <AdminUsers /> },
+
+  { path: "/userdashboard", element: <UserDashboard /> },
   { path: "*", element: <NotFound /> },
 ]
 

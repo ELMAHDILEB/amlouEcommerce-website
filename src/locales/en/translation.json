@@ -228,5 +228,86 @@
       "description": "Explore our wide range of natural Amlou products, made with care.",
       "keywords": "products, amlou, natural, argan oil, almonds"
     }
+  },
+  "register": {
+    "title": "Create Account",
+    "username": "Username",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "submit": "Register"
+  },
+  "login": {
+    "title": "Login",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Login"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "logout": "Logout",
+    "users": "Users",
+    "orders": "Orders",
+    "products": "Products",
+    "recentOrders": "Recent Orders",
+    "orderId": "Order ID",
+    "customer": "Customer",
+    "product": "Product",
+    "date": "Date",
+    "status": "Status",
+    "completed": "Completed",
+    "pending": "Pending",
+    "processing": "Processing"
+  },
+  "userDashboard": {
+    "title": "My Dashboard",
+    "logout": "Logout",
+    "profile": "Profile",
+    "username": "Username",
+    "email": "Email",
+    "orders": "Orders",
+    "orderId": "Order ID",
+    "product": "Product",
+    "date": "Date",
+    "status": "Status",
+    "favorites": "Favorites",
+    "noFavorites": "You have no favorite items yet."
+  },
+  "adminAddProduct": {
+    "title": "Add Product",
+    "productName": "Product Name",
+    "price": "Price",
+    "stock": "Stock",
+    "category": "Category",
+    "selectCategory": "Select Category",
+    "image": "Product Image",
+    "preview": "Image Preview",
+    "addProduct": "Add Product",
+    "success": "Product added successfully!",
+    "categories": {
+      "driedFruits": "Dried Fruits",
+      "preservedProduce": "Preserved Produce",
+      "amlou": "Amlou"
+    }
+  },
+  "adminOrders": {
+    "title": "Orders",
+    "orderId": "Order ID",
+    "customer": "Customer",
+    "status": "Status",
+    "statusValues": {
+      "Completed": "Completed",
+      "Pending": "Pending",
+      "Processing": "Processing"
+    }
+  },
+  "adminUsers": {
+    "title": "Users",
+    "username": "Username",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email"
   }
 }

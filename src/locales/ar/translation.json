@@ -184,9 +184,8 @@
     "contacts": "جهات الاتصال",
     "email": "بريد إلكتروني"
   },
-  "Oops...pagenotfound!":"عفواً...لم يتم العثور على الصفحة!",
+  "Oops...pagenotfound!": "عفواً...لم يتم العثور على الصفحة!",
   "gobackhome": "العودة للصفحة الرئيسية",
-
 
   "home": {
     "meta": {
@@ -217,7 +216,6 @@
     "checkout": "الدفع",
     "total": "المجموع",
     "dhs": "درهم"
-
   },
   "products": {
     "meta": {
@@ -225,6 +223,86 @@
       "description": "استكشف مجموعة واسعة من منتجات أملو الطبيعية المصنوعة بعناية.",
       "keywords": "منتجات, أملو, طبيعي, زيت أركان, لوز"
     }
+  },
+  "register": {
+    "title": "إنشاء حساب",
+    "username": "اسم المستخدم",
+    "firstName": "الاسم الشخصي",
+    "lastName": "الاسم العائلي",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "submit": "تسجيل"
+  },
+  "login": {
+    "title": "تسجيل الدخول",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "submit": "دخول"
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "logout": "تسجيل الخروج",
+    "users": "المستخدمون",
+    "orders": "الطلبات",
+    "products": "المنتجات",
+    "recentOrders": "أحدث الطلبات",
+    "orderId": "رقم الطلب",
+    "customer": "الزبون",
+    "product": "المنتج",
+    "date": "التاريخ",
+    "status": "الحالة",
+    "completed": "مكتمل",
+    "pending": "قيد الانتظار",
+    "processing": "قيد المعالجة"
+  },
+  "userDashboard": {
+    "title": "لوحة التحكم",
+    "logout": "تسجيل الخروج",
+    "profile": "الملف الشخصي",
+    "username": "اسم المستخدم",
+    "email": "البريد الإلكتروني",
+    "orders": "الطلبات",
+    "orderId": "رقم الطلب",
+    "product": "المنتج",
+    "date": "التاريخ",
+    "status": "الحالة",
+    "favorites": "المفضلة",
+    "noFavorites": "ليس لديك أي منتجات مفضلة بعد."
+  },
+  "adminAddProduct": {
+    "title": "إضافة منتج",
+    "productName": "اسم المنتج",
+    "price": "السعر",
+    "stock": "الكمية",
+    "category": "الصنف",
+    "selectCategory": "اختر الصنف",
+    "image": "صورة المنتج",
+    "preview": "معاينة الصورة",
+    "addProduct": "أضف المنتج",
+    "success": "تم إضافة المنتج بنجاح!",
+    "categories": {
+      "driedFruits": "الفواكه المجففة",
+      "preservedProduce": "منتجات محفوظة",
+      "amlou": "أملو"
+    }
+  },
+  "adminOrders": {
+    "title": "الطلبات",
+    "orderId": "رقم الطلب",
+    "customer": "الزبون",
+    "status": "الحالة",
+    "statusValues": {
+      "Completed": "مكتمل",
+      "Pending": "معلق",
+      "Processing": "قيد المعالجة"
+    }
+  },
+  "adminUsers": {
+    "title": "المستخدمون",
+    "username": "اسم المستخدم",
+    "firstName": "الاسم",
+    "lastName": "اللقب",
+    "email": "البريد الإلكتروني"
   }
-  
 }

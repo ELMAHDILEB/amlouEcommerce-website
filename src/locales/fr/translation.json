@@ -227,5 +227,86 @@
       "description": "Explorez notre large gamme de produits naturels d'Amlou, fabriqués avec soin.",
       "keywords": "produits, amlou, naturel, huile d'argan, amandes"
     }
+  },
+  "register": {
+    "title": "Créer un compte",
+    "username": "Nom d'utilisateur",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "Email",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "submit": "S'inscrire"
+  },
+    "login": {
+    "title": "Connexion",
+    "email": "Email",
+    "password": "Mot de passe",
+    "submit": "Se connecter"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "logout": "Déconnexion",
+    "users": "Utilisateurs",
+    "orders": "Commandes",
+    "products": "Produits",
+    "recentOrders": "Commandes récentes",
+    "orderId": "ID de commande",
+    "customer": "Client",
+    "product": "Produit",
+    "date": "Date",
+    "status": "Statut",
+    "completed": "Terminé",
+    "pending": "En attente",
+    "processing": "En cours"
+  },
+  "userDashboard": {
+    "title": "Mon Tableau",
+    "logout": "Déconnexion",
+    "profile": "Profil",
+    "username": "Nom d'utilisateur",
+    "email": "Email",
+    "orders": "Commandes",
+    "orderId": "ID commande",
+    "product": "Produit",
+    "date": "Date",
+    "status": "Statut",
+    "favorites": "Favoris",
+    "noFavorites": "Vous n'avez aucun produit favori."
+  },
+  "adminAddProduct": {
+    "title": "Ajouter un produit",
+    "productName": "Nom du produit",
+    "price": "Prix",
+    "stock": "Stock",
+    "category": "Catégorie",
+    "selectCategory": "Sélectionnez une catégorie",
+    "image": "Image du produit",
+    "preview": "Aperçu de l'image",
+    "addProduct": "Ajouter le produit",
+    "success": "Produit ajouté avec succès !",
+    "categories": {
+      "driedFruits": "Fruits secs",
+      "preservedProduce": "Produits conservés",
+      "amlou": "Amlou"
+    }
+  },
+  "adminOrders": {
+    "title": "Commandes",
+    "orderId": "ID commande",
+    "customer": "Client",
+    "status": "Statut",
+    "statusValues": {
+      "Completed": "Terminé",
+      "Pending": "En attente",
+      "Processing": "En cours"
+    }
+  },
+  "adminUsers": {
+    "title": "Utilisateurs",
+    "username": "Nom d'utilisateur",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "Email"
   }
 }
