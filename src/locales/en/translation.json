@@ -294,13 +294,21 @@
   },
   "adminOrders": {
     "title": "Orders",
-    "orderId": "Order ID",
-    "customer": "Customer",
-    "status": "Status",
-    "statusValues": {
-      "Completed": "Completed",
-      "Pending": "Pending",
-      "Processing": "Processing"
+    "search": "Search orders...",
+    "showing": "Showing 1–3 of 50 orders",
+    "prev": "Prev",
+    "next": "Next",
+    "table": {
+      "orderId": "Order ID",
+      "customer": "Customer",
+      "product": "Product",
+      "date": "Date",
+      "status": "Status"
+    },
+    "status": {
+      "completed": "Completed",
+      "pending": "Pending",
+      "processing": "Processing"
     }
   },
   "adminUsers": {
@@ -309,5 +317,23 @@
     "firstName": "First Name",
     "lastName": "Last Name",
     "email": "Email"
+  },
+  "userOrders": {
+    "title": "My Orders",
+    "searchPlaceholder": "Search your orders...",
+    "table": {
+      "orderId": "Order ID",
+      "product": "Product",
+      "date": "Date",
+      "status": "Status"
+    },
+    "status": {
+      "delivered": "Delivered",
+      "processing": "Processing",
+      "pending": "Pending"
+    },
+    "showing": "Showing {{from}}-{{to}} of {{total}} orders",
+    "prev": "Prev",
+    "next": "Next"
   }
 }

@@ -3,7 +3,7 @@ import { div } from "framer-motion/client";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-export default function AdminAddProduct() {
+export default function AddProduct() {
   const { t } = useTranslation();
 
   const [product, setProduct] = useState({

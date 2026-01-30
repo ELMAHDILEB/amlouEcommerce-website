@@ -289,20 +289,46 @@
   },
   "adminOrders": {
     "title": "الطلبات",
-    "orderId": "رقم الطلب",
-    "customer": "الزبون",
-    "status": "الحالة",
-    "statusValues": {
-      "Completed": "مكتمل",
-      "Pending": "معلق",
-      "Processing": "قيد المعالجة"
+    "search": "البحث عن الطلبات...",
+    "showing": "عرض 1 إلى 3 من أصل 50 طلب",
+    "prev": "السابق",
+    "next": "التالي",
+    "table": {
+      "orderId": "رقم الطلب",
+      "customer": "الزبون",
+      "product": "المنتج",
+      "date": "التاريخ",
+      "status": "الحالة"
+    },
+    "status": {
+      "completed": "مكتمل",
+      "pending": "قيد الانتظار",
+      "processing": "قيد المعالجة"
     }
-  },
+  },  
   "adminUsers": {
     "title": "المستخدمون",
     "username": "اسم المستخدم",
     "firstName": "الاسم",
     "lastName": "اللقب",
     "email": "البريد الإلكتروني"
+  },
+  "userOrders": {
+    "title": "طلباتي",
+    "searchPlaceholder": "ابحث في طلباتك...",
+    "table": {
+      "orderId": "رقم الطلب",
+      "product": "المنتج",
+      "date": "التاريخ",
+      "status": "الحالة"
+    },
+    "status": {
+      "delivered": "تم التسليم",
+      "processing": "قيد المعالجة",
+      "pending": "قيد الانتظار"
+    },
+    "showing": "عرض {{from}}-{{to}} من أصل {{total}} طلبات",
+    "prev": "السابق",
+    "next": "التالي"
   }
 }

@@ -21,11 +21,12 @@ import women2 from "../assets/testimonialsPicture/women-2.jpg";
 import women3 from "../assets/testimonialsPicture/women-3.jpg";
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
-import Dashboard from "../pages/dashboard/Dashboard";
-import UserDashboard from "../pages/dashboard/UserDashboard";
-import AdminAddProduct from "../pages/dashboard/AdminAddProduct";
-import AdminOrders from "../pages/dashboard/AdminOrders";
-import AdminUsers from "../pages/dashboard/AdminUsers";
+import Dashboard from "../pages/dashboard/admin";
+import UserDashboard from "../pages/dashboard/user";
+import AdminUsers from "../pages/dashboard/admin/AdminUsers";
+import UserOrders from "../pages/dashboard/user/Orders";
+import AddProduct from "../pages/dashboard/admin/AddProduct";
+import Orders from "../pages/dashboard/admin/Orders";
 
 
 
@@ -46,12 +47,14 @@ export const links = [
   { path: "/login", element: <Login /> },
   { path: "/register", element: <Register /> },
 
-  { path: "/dashboard", element: <Dashboard /> },
-  { path: "/dashboard/add-product", element: <AdminAddProduct /> },
-  { path: "/dashboard/orders", element: <AdminOrders /> },
-  { path: "/dashboard/users", element: <AdminUsers /> },
+  { path: "/dashboard/admin", element: <Dashboard /> },
+  { path: "/dashboard/admin/add-product", element: <AddProduct /> },
+  { path: "/dashboard/admin/orders", element: <Orders /> },
+  { path: "/dashboard/admin/users", element: <AdminUsers /> },
 
-  { path: "/userdashboard", element: <UserDashboard /> },
+  { path: "/dashboard/user/", element: <UserDashboard /> },
+  { path: "/dashboard/user/orders", element: <UserOrders /> },
+  
   { path: "*", element: <NotFound /> },
 ]
 
