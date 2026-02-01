@@ -1,4 +1,3 @@
-import { store } from "../store.js";
 
 export const cartMiddleware = store => next => action =>{
     const result = next(action);
