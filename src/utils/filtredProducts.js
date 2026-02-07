@@ -1,12 +1,12 @@
-export const filtredProducts = (products, category, sort, search, price)=>{
+export const filtredProducts = (products, categoryKey, sort, search, price)=>{
    if(!products) return [];
 
    return products
 
    // filter category
    .filter(product => {
-      if(category === "All") return true;
-      return product.category === category
+      if(categoryKey === "All") return true;
+      return product.categoryKey === categoryKey
    })
    // filter price
    .filter(product => product.price <= price)

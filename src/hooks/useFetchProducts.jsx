@@ -18,7 +18,7 @@ const useFetchProducts = () => {
             abortControllerRef.current = new AbortController();
             try {
                 setIsLoading(true);
-                const response = await axios.get("/data/products.json", {
+                const response = await axios.get("http://localhost:5000/api/products", {
                     signal: abortControllerRef.current?.signal 
                 })
                 if(!response.data) throw new  Error("failed fetch data")
@@ -42,3 +42,4 @@ const useFetchProducts = () => {
 }
 
 export default useFetchProducts;
+

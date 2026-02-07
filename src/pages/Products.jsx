@@ -50,10 +50,13 @@ const Products = () => {
           priceValue={priceValue}
           setPriceValue={(val) => handleFilterChange("price", val)}
         />
+
         {
+          
           isLoading ? <div><HashLoader /></div> :
             error ? <p>Error Laoding Products</p> : noDatFounded ?
               (<p className="w-full h-full flex items-center justify-center font-bold text-2xl">{t("dataProducts.noResults")}</p>) :
+             
               <CardsProducts products={filterProducts} isLoading={isLoading} onAddToCart={addToCart} />
         }
 

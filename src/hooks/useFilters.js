@@ -3,11 +3,12 @@ import { useSearchParams } from "react-router-dom";
 const useFilters = (setSelectedCategory, setSelectedSort, setSearchTerm, setPriceValue, setCurrentPage) => {
     const [searchParams, setSearchParams] = useSearchParams();
     
+    
     const handleFilterChange = (key, value) => {
       const params = new URLSearchParams(searchParams);
 
       switch (key) {
-        case "category":
+        case "categoryKey":
           setSelectedCategory && setSelectedCategory(value);
           break;
         case "sort":

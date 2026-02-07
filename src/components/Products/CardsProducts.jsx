@@ -26,15 +26,15 @@ const CardsProducts = ({ products, isLoading }) => {
         {isLoading ? (
           <SkeletonLoader count={5} />
         ) : (
-          currentProducts.map(({ id, nameKey, image, price, category }) => {
+          currentProducts.map(({ _id, nameKey, imageUrl, price, categoryKey }) => {
             return (
               <Card
-                id={id}
-                key={id}
+                id={_id}
+                key={_id}
                 nameKey={nameKey} 
-                image={image}
+                image={imageUrl}
                 price={price}
-                categoryKey={category}
+                categoryKey={categoryKey}
               />
             )
           })
@@ -45,4 +45,4 @@ const CardsProducts = ({ products, isLoading }) => {
   )
 }
 
-export default CardsProducts
+export default CardsProducts;
