@@ -27,6 +27,7 @@ import AdminUsers from "../pages/dashboard/admin/AdminUsers";
 import UserOrders from "../pages/dashboard/user/Orders";
 import AddProduct from "../pages/dashboard/admin/AddProduct";
 import Orders from "../pages/dashboard/admin/Orders";
+import VerifyEmail from "../pages/VerifyEmail";
 
 
 
@@ -46,6 +47,7 @@ export const links = [
   { path: "/contact", element: <Contact /> },
   { path: "/login", element: <Login /> },
   { path: "/register", element: <Register /> },
+  { path: "/register/verify", element: <VerifyEmail /> },
 
   { path: "/dashboard/admin", element: <Dashboard /> },
   { path: "/dashboard/admin/add-product", element: <AddProduct /> },
@@ -54,7 +56,7 @@ export const links = [
 
   { path: "/dashboard/user/", element: <UserDashboard /> },
   { path: "/dashboard/user/orders", element: <UserOrders /> },
-  
+
   { path: "*", element: <NotFound /> },
 ]
 
@@ -77,40 +79,40 @@ export const useLabels = () => {
 };
 
 
-export const useDiscoverCard =()=>{
-  const {t} = useTranslation();
+export const useDiscoverCard = () => {
+  const { t } = useTranslation();
   return [
-    { srcImg: amandes1, alt: "amandes", title: t("discoverCards.titleProductOne"), className: "w-full h-full md:grid-col-2 md:row-span-2 overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[15px] relative" , link:"/products?category=preservedProduce"},
-    { srcImg: cajou1, alt: "cajou1", title:  t("discoverCards.titleProductTwo"), className: "w-full  md:grid-col-1   overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[15px] relative" , link:"/products?category=driedFruits"},
-    { srcImg: amlouBloz, alt: "amlouBloz", title:  t("discoverCards.titleProductThree"), className: "w-full  md:grid-col-1   overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[15px] relative" , link:"/products?category=amlou"}
-  ]
-} 
-
-export const useAccordions = ()=>{
-   const {t} = useTranslation();
-
-   return  [
-    { icon: <LuLeaf />, title: t("whychooseus.accordion.highQuality.title"), description:t("whychooseus.accordion.highQuality.description")},
-    { icon: <LuHandCoins />, title:  t("whychooseus.accordion.affordablePrice.title"), description:t("whychooseus.accordion.affordablePrice.description") },
-    { icon: <LuFlaskConical />, title:  t("whychooseus.accordion.noPreservatives.title"), description:t("whychooseus.accordion.noPreservatives.description") },
-    { icon: <LuTruck />, title:  t("whychooseus.accordion.fastDelivery.title"), description:t("whychooseus.accordion.fastDelivery.description")},
-    { icon: <LuUsersRound />, title:  t("whychooseus.accordion.customerTrust.title"), description:t("whychooseus.accordion.customerTrust.description") },
+    { srcImg: amandes1, alt: "amandes", title: t("discoverCards.titleProductOne"), className: "w-full h-full md:grid-col-2 md:row-span-2 overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[15px] relative", link: "/products?category=preservedProduce" },
+    { srcImg: cajou1, alt: "cajou1", title: t("discoverCards.titleProductTwo"), className: "w-full  md:grid-col-1   overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[15px] relative", link: "/products?category=driedFruits" },
+    { srcImg: amlouBloz, alt: "amlouBloz", title: t("discoverCards.titleProductThree"), className: "w-full  md:grid-col-1   overflow-hidden text-black cursor-pointer bg-[var(--cardColor)] rounded-[15px] relative", link: "/products?category=amlou" }
   ]
 }
 
-export const useFeaProducts =()=>{
-  const {t} = useTranslation();
+export const useAccordions = () => {
+  const { t } = useTranslation();
+
   return [
-    { imgSrc: amandesRomarin, title: t("featuredProducts.products.almonds_rosemary"), price: "80", link:"/products?category=driedFruits&_page=1" },
-    { imgSrc: amlouAmandes, title: t("featuredProducts.products.almond_amlou"), price: "120", link:"/products?category=amlou&_page=1" },
-    { imgSrc: noixCajouTruffeBio, title: t("featuredProducts.products.organic_truffle_cashew_nuts"), price: "45", link:"/products?category=driedFruits&_page=1" },
+    { icon: <LuLeaf />, title: t("whychooseus.accordion.highQuality.title"), description: t("whychooseus.accordion.highQuality.description") },
+    { icon: <LuHandCoins />, title: t("whychooseus.accordion.affordablePrice.title"), description: t("whychooseus.accordion.affordablePrice.description") },
+    { icon: <LuFlaskConical />, title: t("whychooseus.accordion.noPreservatives.title"), description: t("whychooseus.accordion.noPreservatives.description") },
+    { icon: <LuTruck />, title: t("whychooseus.accordion.fastDelivery.title"), description: t("whychooseus.accordion.fastDelivery.description") },
+    { icon: <LuUsersRound />, title: t("whychooseus.accordion.customerTrust.title"), description: t("whychooseus.accordion.customerTrust.description") },
   ]
-} 
+}
 
-export const useTestimonials = ()=>{
-  const {t} = useTranslation();
+export const useFeaProducts = () => {
+  const { t } = useTranslation();
+  return [
+    { imgSrc: amandesRomarin, title: t("featuredProducts.products.almonds_rosemary"), price: "80", link: "/products?category=driedFruits&_page=1" },
+    { imgSrc: amlouAmandes, title: t("featuredProducts.products.almond_amlou"), price: "120", link: "/products?category=amlou&_page=1" },
+    { imgSrc: noixCajouTruffeBio, title: t("featuredProducts.products.organic_truffle_cashew_nuts"), price: "45", link: "/products?category=driedFruits&_page=1" },
+  ]
+}
 
-   return [
+export const useTestimonials = () => {
+  const { t } = useTranslation();
+
+  return [
     {
       text: t("testimonials.1.text"),
       author: t("testimonials.1.author"),
@@ -141,11 +143,11 @@ export const useTestimonials = ()=>{
       author: t("testimonials.6.author"),
       imgSrc: women3,
     }
-  
-  ];
-} 
 
- 
+  ];
+}
+
+
 
 export const data = [
   {
