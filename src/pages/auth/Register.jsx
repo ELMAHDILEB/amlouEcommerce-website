@@ -34,12 +34,12 @@ export default function Register() {
       {
         field: "firstName",
         regex: /^[A-Za-z\s'-]+$/,
-        message: "First name can contain only letters and symbols like - '"
+        message: "First name can contain only letters and symbols like  '"
       },
       {
         field: "lastName",
         regex: /^[A-Za-z\s'-]+$/,
-        message: "Last name can contain only letters and symbols like - '"
+        message: "Last name can contain only letters and symbols like  '"
       }
     ];
 

@@ -3,18 +3,37 @@ import { useTranslation } from "react-i18next";
 
 export default function Login() {
   const { t } = useTranslation();
+  
+  const [errors, setErrors] = useState("");
 
-  const [form, setForm] = useState({
-    email: "",
-    password: "",
-  });
+  const validate = (data) => {
+    const newErrors = {};
 
-  const handleChange = (e) =>
-    setForm({ ...form, [e.target.name]: e.target.value });
+    if (!data?.email?.includes("@")) {
+      newErrors.email = "invalid email format";
+    }
+
+    if (data?.password.length < 8) {
+      newErrors.password = "Password must be at least 8 characters";
+    }
+
+    if (data?.password !== data?.confirmPassword) {
+      newErrors.confirmPassword = "Passwords not match";
+    }
+    return newErrors;
+  }
+
+
+
+  // const handleChange = (e) =>
+  //   setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(form);
+    const formData = new FormData();
+    const data = Object.fromEntries(formData.entries());
+    const validationErrors = validate(data);
+
   };
 
   return (
@@ -29,8 +48,8 @@ export default function Login() {
             type="email"
             name="email"
             placeholder={t("login.email")}
-            value={form.email}
-            onChange={handleChange}
+            // value={form.email}
+            // onChange={handleChange}
             className="w-full px-4 py-2 rounded-xl bg-[var(--colorBody)] border border-[var(--SubColor)] text-[var(--blackColor)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
           />
 
@@ -38,14 +57,14 @@ export default function Login() {
             type="password"
             name="password"
             placeholder={t("login.password")}
-            value={form.password}
-            onChange={handleChange}
+            // value={form.password}
+            // onChange={handleChange}
             className="w-full px-4 py-2 rounded-xl bg-[var(--colorBody)] border border-[var(--SubColor)] text-[var(--blackColor)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
           />
 
           <button
             type="submit"
-            className="w-full bg-[var(--primary)] text-white py-2 rounded-xl hover:opacity-90 transition"
+            className="w-full bg-[var(--primary)] text-white py-2 rounded-xl hover:opacity-90 transition cursor-pointer"
           >
             {t("login.submit")}
           </button>
