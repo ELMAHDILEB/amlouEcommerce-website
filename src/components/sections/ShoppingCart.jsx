@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next"
-import useArabic from "../hooks/useIsArabic"
+import useArabic from "../../hooks/useIsArabic"
 import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import React from "react";
-import { decreaseItem, increaseItem, removeFromCart, removeCart } from "../features/cart/cartSlice";
+import { decreaseItem, increaseItem, removeFromCart, removeCart } from "../../features/cart/cartSlice";
 
 
 const ShoppingCart = ({

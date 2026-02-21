@@ -4,16 +4,23 @@ import { loginUser } from "./authThunk";
 export const authSlice = createSlice({
     name:"auth",
     initialState:{
-        user:null,
-        token:null,
+        user: JSON.stringify( localStorage.getItem("user", ) ) || null,
+        token:localStorage.getItem("token") || null,
         loading: false,
         error:null,
     },
     reducers:{
+        setCredentials: (state, action)=>{
+              state.user = action.payload.user;
+              state.token = action.payload.token;
+              localStorage.setItem("token", action.payload.token);
+              localStorage.setItem("user", JSON.stringify(action.payload.user));
+        },
         logout:(state)=>{
             state.user = null;
             state.token = null,
-            localStorage.removeItem("token")
+            localStorage.removeItem("token");
+            localStorage.removeItem("user");
         },
     },
     extraReducers:(builder)=>{
@@ -33,5 +40,5 @@ export const authSlice = createSlice({
     }
 })
 
-export const { logout } = authSlice.actions;
+export const { setCredentials ,logout } = authSlice.actions;
 export default authSlice.reducer;

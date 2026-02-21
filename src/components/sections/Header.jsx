@@ -6,11 +6,11 @@ import { FaMoon } from "react-icons/fa";
 import { IoIosSunny } from "react-icons/io";
 import { CgMenuRightAlt } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
-import useDarkMode from '../hooks/useDarkMode';
-import SwitcherLang from './SwitcherLang';
-import { useLabels } from '../Routes/MainRoutes';
+import useDarkMode from '../../hooks/useDarkMode.jsx';
+import SwitcherLang from '../ui/SwitcherLang';
+import { useLabels } from '../../routes/MainRoutes.jsx';
 import { useTranslation } from 'react-i18next';
-import useIsArabic from '../hooks/useIsArabic';
+import useIsArabic from '../../hooks/useIsArabic.jsx';
 import ShoppingCart from "./ShoppingCart.jsx";
 import { AnimatePresence } from "framer-motion";
 import { useSelector } from 'react-redux';
@@ -39,7 +39,7 @@ const Header = memo(() => {
   const onClosePopUp = () => setOpenPopUp(false);
 
   return (
-    <header className='sticky z-[10000000] w-full  h-20 mx-auto my-0 flex items-center justify-between px-4 md:px-0 '>
+    <header className='sticky z-[10000000] w-full  h-20 mx-auto my-0 flex items-center justify-between px-2 md:px-0 '>
 
       <NavLink to="/" className='flex items-center gap-2 text-2xl '>
         <ImLeaf className='text-bold text-[var(--primary)] text-[12px] ' data-discover="true" aria-label="Logo" />

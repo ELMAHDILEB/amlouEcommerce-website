@@ -4,10 +4,9 @@ import WhyChooseUs from '../components/Home/WhyChooseUs.jsx';
 import FeaturedProducts from '../components/Home/FeaturedProducts.jsx';
 import Testimonials from '../components/Home/Testimonials.jsx';
 import Newsletter from '../components/Home/News.jsx';
-import Footer from '../components/Footer.jsx';
+import Footer from '../components/sections/Footer.jsx';
 import HeroSection from '../components/Home/HeroSection.jsx';
-import MetaTag from '../components/MetaTag.jsx';
-import ShoppingCart from '../components/ShoppingCart.jsx';
+import MetaTag from '../components/ui/MetaTag.jsx';
 
 
 

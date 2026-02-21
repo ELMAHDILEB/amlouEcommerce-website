@@ -1,10 +1,10 @@
 import { useState } from "react";
-import FilterBar from "../components/Products/FilterBar";
-import CardsProducts from "../components/Products/CardsProducts";
-import SearchInput from "../components/Products/SearchInput";
+import FilterBar from "../components/sections/Products/FilterBar";
+import CardsProducts from "../components/sections/Products/CardsProducts";
+import SearchInput from "../components/sections/Products/SearchInput";
 import { useTranslation } from "react-i18next";
-import MetaTag from "../components/MetaTag";
-import { useNavigate, useOutletContext, useParams, useSearchParams } from "react-router-dom";
+import MetaTag from "../components/ui/MetaTag";
+import { useOutletContext, useSearchParams } from "react-router-dom";
 import useFetchProducts from "../hooks/useFetchProducts"
 import { filtredProducts } from "../utils/filtredProducts";
 import useDebounced from "../hooks/useDebounced";

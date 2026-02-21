@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { TbSquareRoundedArrowRightFilled } from "react-icons/tb";
-import { useAccordions } from "../../Routes/MainRoutes.jsx";
+import { useAccordions } from "../../routes/MainRoutes.jsx";
 import { useTranslation } from "react-i18next";
 
 const WhyChooseUs = () => {

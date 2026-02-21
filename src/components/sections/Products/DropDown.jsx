@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import useIsArabic from "../../hooks/useIsArabic"
+import useIsArabic from "../../../hooks/useIsArabic";
+
 
 const DropDown = ({ title, subTitle, items, selectedItem, setSelectedItem }) => {
     const [isOpen, setIsOpen] = useState(false);

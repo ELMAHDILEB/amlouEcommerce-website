@@ -236,13 +236,15 @@
     "email": "Email",
     "password": "Mot de passe",
     "confirmPassword": "Confirmer le mot de passe",
-    "submit": "S'inscrire"
+    "submit": "S'inscrire",
+    "isLoading": "Inscription en cours..."
   },
     "login": {
     "title": "Connexion",
     "email": "Email",
     "password": "Mot de passe",
-    "submit": "Se connecter"
+    "submit": "Se connecter",
+    "isLoading": "Connexion en cours..."
   },
   "dashboard": {
     "title": "Tableau de bord",
@@ -334,5 +336,11 @@
     "showing": "Affichage {{from}}-{{to}} sur {{total}} commandes",
     "prev": "Précédent",
     "next": "Suivant"
+  },
+  "unauthorized": {
+    "title": "Accès refusé",
+    "message": "Vous n'avez pas la permission de voir cette page.",
+    "goHome": "Aller à l'accueil",
+    "goBack": "Retourner"
   }
 }

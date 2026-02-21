@@ -8,7 +8,7 @@ const useFilters = (setSelectedCategory, setSelectedSort, setSearchTerm, setPric
       const params = new URLSearchParams(searchParams);
 
       switch (key) {
-        case "categoryKey":
+        case "category":
           setSelectedCategory && setSelectedCategory(value);
           break;
         case "sort":

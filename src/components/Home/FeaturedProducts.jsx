@@ -1,5 +1,5 @@
 import  {NavLink, useNavigate} from "react-router-dom"
-import {useFeaProducts} from "../../Routes/MainRoutes";
+import {useFeaProducts} from "../../routes/MainRoutes";
 import { useTranslation } from "react-i18next";
 
 const FeaturedProducts = () => {

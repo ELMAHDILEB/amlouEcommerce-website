@@ -3,8 +3,8 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-import { useTestimonials } from "../../Routes/MainRoutes";
-import bg from "../../assets/testimonialsPicture/bg.jpg";
+import { useTestimonials } from "../../routes/MainRoutes";
+import bg from "../../assets/testimonials/bg.jpg";
 import { useTranslation } from 'react-i18next';
 
 function TestimonialsCarousel() {

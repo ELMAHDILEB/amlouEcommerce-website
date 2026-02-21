@@ -237,13 +237,15 @@
     "email": "Email",
     "password": "Password",
     "confirmPassword": "Confirm Password",
-    "submit": "Register"
+    "submit": "Register",
+    "isLoading": "Registering..."
   },
   "login": {
     "title": "Login",
     "email": "Email",
     "password": "Password",
-    "submit": "Login"
+    "submit": "Login",
+    "isLoading": "Logging in..."
   },
   "dashboard": {
     "title": "Dashboard",
@@ -335,5 +337,11 @@
     "showing": "Showing {{from}}-{{to}} of {{total}} orders",
     "prev": "Prev",
     "next": "Next"
+  },
+  "unauthorized": {
+    "title": "Access Denied",
+    "message": "You don't have permission to view this page.",
+    "goHome": "Go to Home",
+    "goBack": "Go Back"
   }
 }

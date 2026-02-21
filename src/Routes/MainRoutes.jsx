@@ -13,12 +13,12 @@ import amlouAmandes from "/assets/productsImg/amlouAmandes.png";
 import amandesRomarin from "/assets/productsImg/amandes-romarin.png";
 import noixCajouTruffeBio from "/assets/productsImg/noix-de-cajou-truffe-bio.png";
 
-import men1 from "../assets/testimonialsPicture/men-1.jpg";
-import men2 from "../assets/testimonialsPicture/men-2.jpg";
-import men3 from "../assets/testimonialsPicture/men-3.jpg";
-import women1 from "../assets/testimonialsPicture/women-1.jpg";
-import women2 from "../assets/testimonialsPicture/women-2.jpg";
-import women3 from "../assets/testimonialsPicture/women-3.jpg";
+import men1 from "../assets/testimonials/men-1.jpg";
+import men2 from "../assets/testimonials/men-2.jpg";
+import men3 from "../assets/testimonials/men-3.jpg";
+import women1 from "../assets/testimonials/women-1.jpg";
+import women2 from "../assets/testimonials/women-2.jpg";
+import women3 from "../assets/testimonials/women-3.jpg";
 import Login from "../pages/auth/Login";
 import Register from "../pages/auth/Register";
 import Dashboard from "../pages/dashboard/admin";
@@ -28,6 +28,9 @@ import UserOrders from "../pages/dashboard/user/Orders";
 import AddProduct from "../pages/dashboard/admin/AddProduct";
 import Orders from "../pages/dashboard/admin/Orders";
 import VerifyEmail from "../pages/VerifyEmail";
+import { ProtectedRoute } from "../components/sections/ProtectedRoute";
+import Unauthorized from "../pages/Unauthorized";
+import GuestRoute from "../components/GuestRoute";
 
 
 
@@ -45,18 +48,31 @@ export const links = [
   { path: "/products", element: <Products /> },
   { path: "/about", element: <About /> },
   { path: "/contact", element: <Contact /> },
-  { path: "/login", element: <Login /> },
-  { path: "/register", element: <Register /> },
+  {
+    element: <GuestRoute />,
+    children: [
+      { path: "/login", element: <Login /> },
+      { path: "/register", element: <Register /> },
+    ]
+  },
   { path: "/register/verify", element: <VerifyEmail /> },
-
-  { path: "/dashboard/admin", element: <Dashboard /> },
-  { path: "/dashboard/admin/add-product", element: <AddProduct /> },
-  { path: "/dashboard/admin/orders", element: <Orders /> },
-  { path: "/dashboard/admin/users", element: <AdminUsers /> },
-
-  { path: "/dashboard/user/", element: <UserDashboard /> },
-  { path: "/dashboard/user/orders", element: <UserOrders /> },
-
+  {
+    element: <ProtectedRoute allowedRoles={["admin"]} />,
+    children: [
+      { path: "/dashboard/admin", element: <Dashboard /> },
+      { path: "/dashboard/admin/add-product", element: <AddProduct /> },
+      { path: "/dashboard/admin/orders", element: <Orders /> },
+      { path: "/dashboard/admin/users", element: <AdminUsers /> },
+    ],
+  },
+  {
+    element: <ProtectedRoute allowedRoles={["user", "admin"]} />,
+    children: [
+      { path: "/dashboard/user", element: <UserDashboard /> },
+      { path: "/dashboard/user/orders", element: <UserOrders /> },
+    ],
+  },
+  { path: "/unauthorized", element: <Unauthorized /> },
   { path: "*", element: <NotFound /> },
 ]
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./Slider.css";
-import { data } from "../../Routes/MainRoutes";
+import { data } from "../../../routes/MainRoutes";
 
 const Slider = () => {
 

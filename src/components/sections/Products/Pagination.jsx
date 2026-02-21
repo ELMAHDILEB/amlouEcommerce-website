@@ -1,4 +1,4 @@
-import useIsArabic from "../../hooks/useIsArabic";
+import useIsArabic from "../../../hooks/useIsArabic";
 
 const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
 

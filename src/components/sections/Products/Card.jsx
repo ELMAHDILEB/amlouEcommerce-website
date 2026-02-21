@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next"
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../features/cart/cartSlice";
+import { addToCart } from "../../../features/cart/cartSlice";
 
 const Card = ({ id, nameKey, image, categoryKey, price }) => {
   const { t } = useTranslation();

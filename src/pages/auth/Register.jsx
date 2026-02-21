@@ -1,82 +1,22 @@
-import axios from "axios";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+// import { useRegisterMutation } from "../../redux/auth/authApi";
+import { validateRegister } from "../../utils/validators";;
 
 export default function Register() {
   const { t } = useTranslation();
+  const [register, {isLoading, error}] = useRegisterMutation();
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
 
-  const validate = (data) => {
-
-    const newErrors = {};
-
-    const labels = {
-      username: "Username",
-      firstName: "First name",
-      lastName: "Last name"
-    };
-
-
-    Object.keys(labels).forEach(field => {
-      if (!data[field]?.trim()) {
-        newErrors[field] = `${labels[field]} is required`;
-      }
-    });
-
-    const rules = [
-      {
-        field: "username",
-        regex: /^[A-Za-z0-9]{8,}$/,
-        message: "Username must be at least 8 characters, letters and numbers only, no symbols"
-      },
-      {
-        field: "firstName",
-        regex: /^[A-Za-z\s'-]+$/,
-        message: "First name can contain only letters and symbols like  '"
-      },
-      {
-        field: "lastName",
-        regex: /^[A-Za-z\s'-]+$/,
-        message: "Last name can contain only letters and symbols like  '"
-      }
-    ];
-
-
-    rules.forEach(rule => {
-      const value = data[rule.field];
-
-      if (value && !rule.regex.test(value)) {
-        newErrors[rule.field] = value.message;
-      }
-    })
-
-    if (!data?.username || data?.username?.trim().length < 8) {
-      newErrors.username = "Username must be at least 8 characters";
-    }
-
-    if (!data?.email?.includes("@")) {
-      newErrors.email = "invalid email format";
-    }
-
-
-    if (data?.password.length < 8) {
-      newErrors.password = "Password must be at least 8 characters";
-    }
-
-    if (data?.password !== data?.confirmPassword) {
-      newErrors.confirmPassword = "Passwords not match";
-    }
-    return newErrors;
-  }
 
   const handleSubmit = async (e) => {
 
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
-    const validationErrors = validate(data);
+    const validationErrors = validateRegister(data);
 
 
     if (Object.keys(validationErrors).length > 0) {
@@ -86,8 +26,9 @@ export default function Register() {
     setErrors({});
 
     try {
-      await axios.post("http://localhost:5000/api/auth/register", data);
-      
+
+       const res = await register(data).unwrap();
+       console.log(res);      
       navigate("/register/verify", {
         state: { fromRegister: true, email: data.email }
       });
@@ -242,8 +183,8 @@ export default function Register() {
 
 
 
-          <button className="w-full bg-[var(--primary)] text-white py-2.5 rounded-xl hover:opacity-90 transition cursor-pointer">
-            {t("register.submit")}
+          <button className="w-full bg-[var(--primary)] text-white py-2.5 rounded-xl hover:opacity-90 transition cursor-pointer" disabled={isLoading}>
+            {isLoading ? t("register.isLoading ") : t("register.submit")}
           </button>
 
         </form>

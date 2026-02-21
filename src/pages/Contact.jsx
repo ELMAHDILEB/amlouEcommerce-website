@@ -1,6 +1,6 @@
-import ContactForm from "../components/Contact/ContactForm";
-import ContactInfo from "../components/Contact/ContactInfo";
-import MetaTag from "../components/MetaTag"
+import ContactForm from "../components/sections/Contact/ContactForm";
+import ContactInfo from "../components/sections/Contact/ContactInfo";
+import MetaTag from "../components/ui/MetaTag"
 
 
 function Contact() {

@@ -1,7 +1,7 @@
 import ResponsiveImage from "../Home/ResponsiveImage";
 import shape from "../../assets/img1/shape.webp";
 import { motion } from "framer-motion";
-import { images } from "../../Routes/MainRoutes";
+import { images } from "../../routes/MainRoutes";
 
 function WrapperResponsiveImage() {
   return (

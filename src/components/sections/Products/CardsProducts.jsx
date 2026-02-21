@@ -4,8 +4,8 @@ import "react-loading-skeleton/dist/skeleton.css"
 import Card from "./Card"
 import { useTranslation } from "react-i18next"
 import SkeletonLoader from "./SkeletonLoader"
-import useFilters from "../../hooks/useFilters"
 import { useSearchParams } from "react-router-dom";
+import useFilters from "../../../hooks/useFilters"
 
 const CardsProducts = ({ products, isLoading }) => {
   const { t } = useTranslation();

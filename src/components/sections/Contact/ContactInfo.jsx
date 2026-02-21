@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import useIsArabic from '../../hooks/useIsArabic';
+import useIsArabic from '../../../hooks/useIsArabic';
 
 const ContactInfo = () => {
     const {t} = useTranslation();
