@@ -48,6 +48,7 @@
 
 
 
+
 ```
 amlouEcommerce-website
 ├─ eslint.config.js
@@ -119,6 +120,7 @@ amlouEcommerce-website
 │  │     ├─ women-2.jpg
 │  │     └─ women-3.jpg
 │  ├─ components
+│  │  ├─ GuestRoute.jsx
 │  │  ├─ Home
 │  │  │  ├─ DiscoverCards.jsx
 │  │  │  ├─ FeaturedProducts.jsx
@@ -151,7 +153,8 @@ amlouEcommerce-website
 │  │  │  │  └─ SkeletonLoader.jsx
 │  │  │  ├─ ProtectedRoute.jsx
 │  │  │  └─ ShoppingCart.jsx
-│  │  └─ ui
+│  │  └─ UI
+│  │     ├─ AuthInput.jsx
 │  │     ├─ MetaTag.jsx
 │  │     └─ SwitcherLang.jsx
 │  ├─ features
@@ -169,11 +172,13 @@ amlouEcommerce-website
 │  │  ├─ Poppins.ttf
 │  │  └─ Xander.ttf
 │  ├─ hooks
+│  │  ├─ useAuthForm.jsx
 │  │  ├─ useDarkMode.jsx
 │  │  ├─ useDebounced.jsx
 │  │  ├─ useFetchProducts.jsx
 │  │  ├─ useFilters.js
-│  │  └─ useIsArabic.jsx
+│  │  ├─ useIsArabic.jsx
+│  │  └─ useLogout.jsx
 │  ├─ i18n.js
 │  ├─ index.css
 │  ├─ locales
