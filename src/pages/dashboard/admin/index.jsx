@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next";
+import useLogout from "../../../hooks/useLogout";
 
 export default function Dashboard() {
   const { t } = useTranslation();
+  const logout = useLogout();
 
   return (
     <div className="min-h-screen bg-[var(--colorBody)] font-[var(--font-poppins)] p-4 md:p-6">
@@ -10,7 +12,7 @@ export default function Dashboard() {
         <h1 className="text-xl md:text-2xl font-bold text-[var(--primary)]">
           {t("dashboard.title")}
         </h1>
-        <button className="bg-[var(--primary)] text-white px-4 py-2 rounded-lg hover:opacity-90 transition cursor-pointer">
+        <button className="bg-[var(--primary)] text-white px-4 py-2 rounded-lg hover:opacity-90 transition cursor-pointer" onClick={logout}>
           {t("dashboard.logout")}
         </button>
       </header>

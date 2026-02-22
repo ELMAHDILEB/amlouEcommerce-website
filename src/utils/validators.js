@@ -1,75 +1,82 @@
 export const validateRegister = (data) => {
-
     const errors = {};
 
     const labels = {
         username: "Username",
         firstName: "First name",
-        lastName: "Last name"
+        lastName: "Last name",
+        email: "Email",
+        password: "Password"
     };
 
-
+  
     Object.keys(labels).forEach(field => {
         if (!data[field]?.trim()) {
             errors[field] = `${labels[field]} is required`;
         }
     });
 
-    const rules = [
+       const rules = [
         {
             field: "username",
             regex: /^[A-Za-z0-9]{8,}$/,
-            message: "Username must be at least 8 characters, letters and numbers only, no symbols"
+            message: "Username must be at least 8 characters, letters and numbers only"
         },
         {
             field: "firstName",
             regex: /^[A-Za-z\s'-]+$/,
-            message: "First name can contain only letters and symbols like  '"
+            message: "First name can contain only letters"
         },
         {
             field: "lastName",
             regex: /^[A-Za-z\s'-]+$/,
-            message: "Last name can contain only letters and symbols like  '"
+            message: "Last name can contain only letters"
         }
     ];
 
-
     rules.forEach(rule => {
-        const value = data[rule.field];
-
-        if (value && !rule.regex.test(value)) {
-            errors[rule.field] = value.message;
+      
+        if (data[rule.field] && !errors[rule.field] && !rule.regex.test(data[rule.field])) {
+            errors[rule.field] = rule.message;
         }
-    })
+    });
 
-    if (!data?.username || data?.username?.trim().length < 8) {
-        errors.username = "Username must be at least 8 characters";
+   // email validation
+    if (data.email && !errors.email && !data.email.includes("@")) {
+        errors.email = "Invalid email format";
     }
 
-    if (!data?.email?.includes("@")) {
-        errors.email = "invalid email format";
-    }
-
-
-    if (data?.password?.length < 8) {
+    // password valdiation
+    if (data.password && !errors.password && data.password.length < 8) {
         errors.password = "Password must be at least 8 characters";
     }
 
-    if (data?.password !== data?.confirmPassword) {
-        errors.confirmPassword = "Passwords not match";
+    // compare password
+    if (data.password && data.confirmPassword && data.password !== data.confirmPassword) {
+        errors.confirmPassword = "Passwords do not match";
+    } else if (data.password && !data.confirmPassword) {
+        errors.confirmPassword = "Please confirm your password";
     }
+
     return errors;
 }
 
 export const validateLogin = (data) => {
     const errors = {};
-    if (!data?.email?.trim()) errors.email = "Email is Required";
-    else if (!data?.email?.includes("@")) {
-        errors.email = "invalid email format";
+    
+    // Email
+    if (!data?.email?.trim()) {
+        errors.email = "Email is required";
+    } else if (!data.email.includes("@")) {
+        errors.email = "Invalid email format";
     }
 
-    if (!data?.password?.trim()) errors.password = "Password is Required";
-    else if (data?.password?.length < 8) errors.password = "Password must be at least 8 characters";
+    // Password
+    if (!data?.password?.trim()) {
+        errors.password = "Password is required";
+    } else if (data.password.length < 8) {
+        errors.password = "Password must be at least 8 characters";
+    }
 
     return errors;
 }

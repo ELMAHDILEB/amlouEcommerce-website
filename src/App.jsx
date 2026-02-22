@@ -1,6 +1,6 @@
 import { lazy, useEffect } from 'react';
 import { Routes, Route } from "react-router-dom";
-import { links } from "./routes/MainRoutes";
+import { links } from "./routes/MainRoutes.jsx";
 import { useTranslation } from 'react-i18next';
 const MainWrapper = lazy(() => import("./components/sections/MainWrapper"));
 

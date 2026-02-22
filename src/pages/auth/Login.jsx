@@ -1,34 +1,25 @@
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { validateLogin } from "../../utils/validators";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useLoginMutation } from "../../features/auth/authApi";
 import { setCredentials } from "../../features/auth/authSlice";
+import { useAuthForm } from "../../hooks/useAuthForm";
+import AuthInput from "../../components/UI/AuthInput";
 
 export default function Login() {
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  
-
 
   const [login, { isLoading }] = useLoginMutation();
-  const [errors, setErrors] = useState({});
-  const [serverError, setServerError] = useState("");
-  
-
+  const { errors, serverErrors, setServerErrors, handleChange, handleValidationForm } = useAuthForm();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
-    const validationErrors = validateLogin(data);
 
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-      return;
-    }
+    if (!handleValidationForm(data)) return;
 
     try {
       const res = await login(data).unwrap();
@@ -41,24 +32,12 @@ export default function Login() {
 
       navigate(targetPath, { replace: true });
     } catch (error) {
-      setServerError(error?.data?.message || "Login Failed");
+      setServerErrors(error?.data?.message || "Login Failed");
     }
 
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
 
-    setServerError("");
-
-    setErrors((prev) => {
-      const newErrors = { ...prev };
-      if (value.trim()) {
-        delete newErrors[name];
-      }
-      return newErrors;
-    })
-  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-[var(--colorBody)] font-[var(--font-poppins)]">
@@ -68,32 +47,34 @@ export default function Login() {
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          {serverError && (
-            <p className="text-red-600 text-center mb-3">
-              {serverError}
-            </p>
+          {serverErrors && (
+            <div className="mb-6 p-4 rounded-2xl bg-red-50/80 border border-red-100 shadow-sm">
+              <div className="flex flex-col gap-2.5">
+                {serverErrors.toString().split(',').map((err, index) => (
+                  <div key={index} className="flex items-start gap-2 text-red-600 text-[12px] font-semibold leading-tight">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-red-500 shrink-0" />
+
+                    <span className="flex-1 capitalize">{err.trim()}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           )}
-          <input
+          <AuthInput
             type="email"
             name="email"
-            placeholder={t("login.email")}
-            // value={form.email}
-            onChange={handleChange}
-            className="w-full px-4 py-2 rounded-xl bg-[var(--colorBody)] border border-[var(--SubColor)] text-[var(--blackColor)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
+            placeholder={t("register.email")}
+            error={errors.email}
+            handleChange={handleChange}
           />
-          <p className="text-red-600 text-sm mt-1 min-h-[20px]">
-            {errors.email || ""}
-          </p>
 
-          <input
+          <AuthInput
             type="password"
             name="password"
-            placeholder={t("login.password")}
-            // value={form.password}
-            onChange={handleChange}
-            className="w-full px-4 py-2 rounded-xl bg-[var(--colorBody)] border border-[var(--SubColor)] text-[var(--blackColor)] focus:ring-2 focus:ring-[var(--primary)] outline-none"
+            placeholder={t("register.password")}
+            error={errors.password}
+            handleChange={handleChange}
           />
-          {errors.password && <p className="text-red-600 text-sm mt-1 min-h-[20px]">{errors.password}</p>}
           <button
             type="submit"
             className="w-full bg-[var(--primary)] text-white py-2 rounded-xl hover:opacity-90 transition cursor-pointer"

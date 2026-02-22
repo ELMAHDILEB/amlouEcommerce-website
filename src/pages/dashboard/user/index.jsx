@@ -1,18 +1,9 @@
-// UserDashboard.jsx
 import { useTranslation } from "react-i18next";
-import { useDispatch } from "react-redux";
-import { replace, useNavigate } from "react-router-dom";
-import { logout } from "../../../features/auth/authSlice";
+import useLogout from "../../../hooks/useLogout";
 
 export default function UserDashboard() {
   const { t } = useTranslation();
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-
-  const handleLogout = ()=>{
-    dispatch(logout());
-    navigate("/login", {replace: true});
-  }
+  const logout = useLogout();
 
   const orders = [
     { id: "#1001", product: "Amlou Jar", date: "2026-01-25", status: "Delivered" },
@@ -24,7 +15,7 @@ export default function UserDashboard() {
       {/* Header */}
       <header className="bg-[var(--cardColor)] shadow rounded-xl px-4 md:px-6 py-4 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 md:gap-0 mb-6">
         <h1 className="text-xl md:text-2xl font-bold text-[var(--primary)]">{t("userDashboard.title")}</h1>
-        <button className="bg-[var(--primary)] text-white px-4 py-2 rounded-lg hover:opacity-90 transition cursor-pointer" onClick={handleLogout}>
+        <button className="bg-[var(--primary)] text-white px-4 py-2 rounded-lg hover:opacity-90 transition cursor-pointer" onClick={logout}>
           {t("userDashboard.logout")}
         </button>
       </header>

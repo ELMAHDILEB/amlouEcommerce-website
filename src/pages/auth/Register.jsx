@@ -1,13 +1,13 @@
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-// import { useRegisterMutation } from "../../redux/auth/authApi";
-import { validateRegister } from "../../utils/validators";;
+import { useRegisterMutation } from "../../features/auth/authApi";
+import { useAuthForm } from "../../hooks/useAuthForm";
+import AuthInput from "../../components/UI/AuthInput";
 
 export default function Register() {
   const { t } = useTranslation();
-  const [register, {isLoading, error}] = useRegisterMutation();
-  const [errors, setErrors] = useState({});
+  const [register, { isLoading }] = useRegisterMutation();
+  const { errors, serverErrors, setServerErrors, handleChange, handleValidationForm } = useAuthForm();
   const navigate = useNavigate();
 
 
@@ -16,180 +16,106 @@ export default function Register() {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
-    const validationErrors = validateRegister(data);
-
-
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-      return
-    }
-    setErrors({});
+    if (!handleValidationForm(data)) return;
 
     try {
 
-       const res = await register(data).unwrap();
-       console.log(res);      
+      await register(data).unwrap();
       navigate("/register/verify", {
         state: { fromRegister: true, email: data.email }
       });
-      
-      setErrors({});
+
     } catch (error) {
-      const errorMsg = error?.response?.data?.message;
-
-      if (errorMsg) {
-        setErrors(prev => ({
-          ...prev,
-          email: errorMsg
-        }));
-      } else {
-        console.error(error.message);
-      }
+      setServerErrors(error.data?.message || "Registration failed");
     }
-
-  }
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setErrors(prev => {
-      const newErrors = { ...prev };
-
-      if (value.trim()) {
-        delete newErrors[name];
-      }
-      return newErrors;
-    })
   }
 
   return (
-    <div className="min-h-screen flex items-start md:items-center justify-center p-4 bg-[var(--colorBody)] font-[var(--font-poppins)]">
-      <div className="w-full max-w-md bg-[var(--cardColor)] p-6 md:p-8 rounded-2xl shadow-lg">
 
-        <h2 className="text-xl md:text-2xl font-bold text-center text-[var(--primary)] mb-6">
-          {t("register.title")}
-        </h2>
+    <div className="min-h-screen flex items-center justify-center p-4 bg-[var(--colorBody)] font-[var(--font-poppins)]">
+      <div className="w-full max-w-md bg-[var(--cardColor)] p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100/50">
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <header className="mb-6 text-center">
+          <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--primary)] tracking-tight">
+            {t("register.title")}
+          </h2>
+        </header>
 
-          {/* USERNAME */}
-          <div>
-            <input
-              name="username"
-              onChange={handleChange}
-              placeholder={t("register.username")}
-              className={`w-full px-4 py-2 rounded-xl bg-[var(--colorBody)] border outline-none focus:ring-2
-                ${errors.username
-                  ? "border-red-400 focus:ring-red-400"
-                  : "border-[var(--SubColor)] focus:ring-[var(--primary)]"}
-              `}
-            />
-            <p className="text-red-600 text-sm mt-1 min-h-[20px]">
-              {errors.username || ""}
-            </p>
-          </div>
+        {serverErrors && (
+          <div className="mb-6 p-4 rounded-2xl bg-red-50/80 border border-red-100 shadow-sm">
+            <div className="flex flex-col gap-2.5">
+              {serverErrors.toString().split(',').map((err, index) => (
+                <div key={index} className="flex items-start gap-2 text-red-600 text-[12px] font-semibold leading-tight">
+                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-red-500 shrink-0" />
 
-
-          {/* FIRST + LAST NAME */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-
-            <div>
-              <input
-                name="firstName"
-                onChange={handleChange}
-                placeholder={t("register.firstName")}
-                className={`w-full px-4 py-2 rounded-xl bg-[var(--colorBody)] border outline-none focus:ring-2
-                  ${errors.firstName
-                    ? "border-red-400 focus:ring-red-400"
-                    : "border-[var(--SubColor)] focus:ring-[var(--primary)]"}
-                `}
-              />
-              <p className="text-red-600 text-sm mt-1 min-h-[20px]">
-                {errors.firstName || ""}
-              </p>
+                  <span className="flex-1 capitalize">{err.trim()}</span>
+                </div>
+              ))}
             </div>
+          </div>
+        )}
 
-            <div>
-              <input
-                name="lastName"
-                onChange={handleChange}
-                placeholder={t("register.lastName")}
-                className={`w-full px-4 py-2 rounded-xl bg-[var(--colorBody)] border outline-none focus:ring-2
-                  ${errors.lastName
-                    ? "border-red-400 focus:ring-red-400"
-                    : "border-[var(--SubColor)] focus:ring-[var(--primary)]"}
-                `}
-              />
-              <p className="text-red-600 text-sm mt-1 min-h-[20px]">
-                {errors.lastName || ""}
-              </p>
-            </div>
+        <form onSubmit={handleSubmit} className="space-y-0.5">
+          <AuthInput
+            name="username"
+            placeholder={t("register.username")}
+            error={errors.username}
+            handleChange={handleChange}
+          />
 
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4">
+            <AuthInput
+              name="firstName"
+              placeholder={t("register.firstName")}
+              error={errors.firstName}
+              handleChange={handleChange}
+            />
+            <AuthInput
+              name="lastName"
+              placeholder={t("register.lastName")}
+              error={errors.lastName}
+              handleChange={handleChange}
+            />
           </div>
 
+          <AuthInput
+            type="email"
+            name="email"
+            placeholder={t("register.email")}
+            error={errors.email}
+            handleChange={handleChange}
+          />
 
-          {/* EMAIL */}
-          <div>
-            <input
-              type="email"
-              name="email"
-              onChange={handleChange}
-              placeholder={t("register.email")}
-              className={`w-full px-4 py-2 rounded-xl bg-[var(--colorBody)] border outline-none focus:ring-2
-                ${errors.email
-                  ? "border-red-400 focus:ring-red-400"
-                  : "border-[var(--SubColor)] focus:ring-[var(--primary)]"}
-              `}
-            />
-            <p className="text-red-600 text-sm mt-1 min-h-[20px]">
-              {errors.email || ""}
-            </p>
-          </div>
+          <AuthInput
+            type="password"
+            name="password"
+            placeholder={t("register.password")}
+            error={errors.password}
+            handleChange={handleChange}
+          />
 
+          <AuthInput
+            type="password"
+            name="confirmPassword"
+            placeholder={t("register.confirmPassword")}
+            error={errors.confirmPassword}
+            handleChange={handleChange}
+          />
 
-          {/* PASSWORD + CONFIRM PASSWORD */}
-          <div className="flex flex-col">
-            <input
-              type="password"
-              name="password"
-              onChange={handleChange}
-              placeholder={t("register.password")}
-              className={`w-full px-4 py-2 rounded-xl bg-[var(--colorBody)] border outline-none focus:ring-2
-      ${errors.password || errors.confirmPassword
-                  ? "border-red-400 focus:ring-red-400"
-                  : "border-[var(--SubColor)] focus:ring-[var(--primary)]"}
-    `}
-            />
-
-            <input
-              type="password"
-              name="confirmPassword"
-              onChange={handleChange}
-              placeholder={t("register.confirmPassword")}
-              className={`w-full px-4 py-2 mt-2 rounded-xl bg-[var(--colorBody)] border outline-none focus:ring-2
-      ${errors.password || errors.confirmPassword
-                  ? "border-red-400 focus:ring-red-400"
-                  : "border-[var(--SubColor)] focus:ring-[var(--primary)]"}
-    `}
-            />
-
-            {(errors.password || errors.confirmPassword) && (
-              <div className="text-red-600 text-sm mt-1 space-y-1">
-                {errors.password && <p>{errors.password}</p>}
-                {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
+          <button
+            type="submit"
+            disabled={isLoading}
+            className="w-full mt-2 bg-[var(--primary)] text-white py-3 rounded-xl font-bold shadow-lg cursor-pointer shadow-[var(--primary)]/20 hover:opacity-90 active:scale-[0.98] transition-all disabled:opacity-70 disabled:cursor-not-allowed"
+          >
+            {isLoading ? (
+              <div className="flex items-center justify-center gap-2">
+                <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                {t("register.isLoading")}
               </div>
-            )}
-          </div>
-
-
-
-
-          <button className="w-full bg-[var(--primary)] text-white py-2.5 rounded-xl hover:opacity-90 transition cursor-pointer" disabled={isLoading}>
-            {isLoading ? t("register.isLoading ") : t("register.submit")}
+            ) : t("register.submit")}
           </button>
-
         </form>
       </div>
     </div>
   );
-
 }
