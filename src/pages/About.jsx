@@ -1,6 +1,6 @@
 import Slider from "../components/sections/About/Slider.jsx";
 import ContentAbout from "../components/sections/About/ContentAbout.jsx";
-import MetaTag from "../components/ui/MetaTag.jsx";
+import MetaTag from "../components/UI/MetaTag.jsx";
 
 function About() {
   return (

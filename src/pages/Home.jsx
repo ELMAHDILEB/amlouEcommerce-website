@@ -6,7 +6,7 @@ import Testimonials from '../components/Home/Testimonials.jsx';
 import Newsletter from '../components/Home/News.jsx';
 import Footer from '../components/sections/Footer.jsx';
 import HeroSection from '../components/Home/HeroSection.jsx';
-import MetaTag from '../components/ui/MetaTag.jsx';
+import MetaTag from '../components/UI/MetaTag.jsx';
 
 
 

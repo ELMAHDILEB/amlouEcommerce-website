@@ -7,13 +7,13 @@ import { IoIosSunny } from "react-icons/io";
 import { CgMenuRightAlt } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
 import useDarkMode from '../../hooks/useDarkMode.jsx';
-import SwitcherLang from '../ui/SwitcherLang';
 import { useLabels } from '../../routes/MainRoutes.jsx';
 import { useTranslation } from 'react-i18next';
 import useIsArabic from '../../hooks/useIsArabic.jsx';
 import ShoppingCart from "./ShoppingCart.jsx";
 import { AnimatePresence } from "framer-motion";
 import { useSelector } from 'react-redux';
+import SwitcherLang from "../UI/SwitcherLang.jsx"
 
 
 

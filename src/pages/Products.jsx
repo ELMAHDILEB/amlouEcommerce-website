@@ -3,13 +3,13 @@ import FilterBar from "../components/sections/Products/FilterBar";
 import CardsProducts from "../components/sections/Products/CardsProducts";
 import SearchInput from "../components/sections/Products/SearchInput";
 import { useTranslation } from "react-i18next";
-import MetaTag from "../components/ui/MetaTag";
 import { useOutletContext, useSearchParams } from "react-router-dom";
 import useFetchProducts from "../hooks/useFetchProducts"
 import { filtredProducts } from "../utils/filtredProducts";
 import useDebounced from "../hooks/useDebounced";
 import { HashLoader } from "react-spinners";
 import useFilters from "../hooks/useFilters";
+import MetaTag from "../components/UI/MetaTag";
 
 
 const Products = () => {
