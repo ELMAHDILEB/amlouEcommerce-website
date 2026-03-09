@@ -9,8 +9,8 @@ const initialState = {
 }
 
 const calculateTotals = (state) => {
-    state.totalItems = state.items.reduce((total, item) => total + item.quantity, 0);
-    state.totalPrice = state.items.reduce((total, item) => total + item.price * item.quantity, 0);
+    state.totalItems = state.items.reduce((total, item) => total + Number(item.quantity), 0);
+    state.totalPrice = state.items.reduce((total, item) => total + (Number(item.price) * Number(item.quantity)), 0);
 }
 
 export const cartSlice = createSlice({
@@ -18,7 +18,7 @@ export const cartSlice = createSlice({
     initialState,
     reducers: {
         addToCart: (state, action) => {
-            const existingItem = state.items.find(i => i.id === action.payload.id);
+            const existingItem = state.items.find(i => i._id === action.payload._id);
             if (existingItem) {
                 existingItem.quantity += action.payload.quantity || 1;
             } else {
@@ -31,7 +31,7 @@ export const cartSlice = createSlice({
             localStorage.setItem("cart", JSON.stringify(state.items));
         },
         removeItemFromCart: (state, action) => {
-            state.items = state.items.filter((i) => i.id !== action.payload.id);
+            state.items = state.items.filter((i) => i._id !== action.payload._id);
             calculateTotals(state);
             localStorage.setItem("cart", JSON.stringify(state.items));
         },
@@ -41,17 +41,17 @@ export const cartSlice = createSlice({
             localStorage.setItem("cart", JSON.stringify(state.items));
         },
         increaseItem: (state, action) => {
-            const item = state.items.find(i => i.id === action.payload.id);
+            const item = state.items.find(i => i._id === action.payload._id);
             if (item) item.quantity++;
             calculateTotals(state);
             localStorage.setItem("cart", JSON.stringify(state.items));
         },
         decreaseItem: (state, action) => {
-            const item = state.items.find((i) => i.id === action.payload.id);
+            const item = state.items.find((i) => i._id === action.payload._id);
             if (item && item.quantity > 1) {
                 item.quantity--;
             } else {
-                state.items = state.items.filter((item) => item.id !== action.payload.id);
+                state.items = state.items.filter((item) => item._id !== action.payload._id);
             }
             calculateTotals(state);
             localStorage.setItem("cart", JSON.stringify(state.items));

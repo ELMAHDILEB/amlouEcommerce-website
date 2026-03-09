@@ -4,18 +4,18 @@ import CardsProducts from "../components/sections/Products/CardsProducts";
 import SearchInput from "../components/sections/Products/SearchInput";
 import { useTranslation } from "react-i18next";
 import { useOutletContext, useSearchParams } from "react-router-dom";
-import useFetchProducts from "../hooks/useFetchProducts"
 import { filtredProducts } from "../utils/filtredProducts";
 import useDebounced from "../hooks/useDebounced";
 import { HashLoader } from "react-spinners";
 import useFilters from "../hooks/useFilters";
 import MetaTag from "../components/UI/MetaTag";
+import { useGetProductsQuery } from "../features/products/productsApiSlice";
 
 
 const Products = () => {
   const { t } = useTranslation();
+  const { data: products = [], error, isLoading }  = useGetProductsQuery();
   const [searchParams] = useSearchParams()
-  const { products, isLoading, error } = useFetchProducts();
   const [selectedCategory, setSelectedCategory] = useState(searchParams.get("category") || "All");
   const [selectedSort, setSelectedSort] = useState(searchParams.get("sort") || "All");
   const [priceValue, setPriceValue] = useState(Number(searchParams.get("price") || 200));

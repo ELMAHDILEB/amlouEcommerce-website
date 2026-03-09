@@ -2,12 +2,12 @@ import { useTranslation } from "react-i18next"
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../../features/cart/cartSlice";
 
-const Card = ({ id, nameKey, image, categoryKey, price }) => {
+const Card = ({ _id, nameKey, image, categoryKey, price }) => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
 
 
-  const product = { id, nameKey, image, categoryKey, price }
+  const product = { _id, nameKey, image, categoryKey, price }
   const translateName = t(`dataProducts.${nameKey}`, nameKey)
   const displayname = translateName === nameKey ? translateName.replace(/_/g, " ") : translateName
 
@@ -18,7 +18,7 @@ const Card = ({ id, nameKey, image, categoryKey, price }) => {
   return (
     <div
       className="w-full h-[500px] flex flex-col items-center bg-[var(--cardColor)] rounded-[15px] shadow-md overflow-hidden pb-2"
-      key={id}
+      key={_id}
     >
       <div className="w-full h-[200px] lg:h-[250px] flex items-center justify-center">
         <img src={image || "/placeholder.svg"} alt={displayname} className="w-full h-[70%] lg:h-full object-contain" />

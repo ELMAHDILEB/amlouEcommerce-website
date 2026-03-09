@@ -24,19 +24,19 @@ const ShoppingCart = ({
   const dispatch = useDispatch();
 
   const handleIncrease = async (item) => {
-    dispatch(increaseItem({ id: item.id }));
+    dispatch(increaseItem({ _id: item._id }));
     await addCartToServer({ ...item, quantity: 1 });
   }
 
   const handleDecrease = async (item) => {
-    dispatch(decreaseItem({ id: item.id }));
+    dispatch(decreaseItem({ _id: item._id }));
     if (item.quantity > 1) await addCartToServer({ ...item, quantity: -1 });
-    else await removeItemServer(item.id);
+    else await removeItemServer(item._id);
   }
 
   const handleRemove = async (item) => {
-    dispatch(removeItemFromCart({ id: item.id }));
-    await removeItemServer(item.id);
+    dispatch(removeItemFromCart({ _id: item._id }));
+    await removeItemServer(item._id);
   }
 
   const handleClear = async () => {
@@ -81,11 +81,10 @@ const ShoppingCart = ({
             items.map((item, index) => {
 
 
-              {/* let productName = item.nameKey ? (item.nameKey.startsWith("dataProducts.") || item.nameKey.includes("_") ? t(`dataProducts.${item.nameKey}`, item.nameKey) : item.nameKey) : "Unknown Name"; */ }
-              const productName = item.nameKey ? String(item.nameKey) : "Unknown Name";
+              let productName = item.nameKey ? (item.nameKey.startsWith("dataProducts.") || item.nameKey.includes("_") ? t(`dataProducts.${item.nameKey}`, item.nameKey) : item.nameKey) : "Unknown Name";  
               return (
                 <div
-                  key={item.id || index}
+                  key={item._id || index}
                   className="w-full h-fit flex justify-evenly items-center flex-wrap gap-2 bg-[var(--cardColor)] p-2"
                 >
                   <div className="w-[80px] h-[80px] bg-[var(--blackColor)] rounded-full flex items-center justify-center">

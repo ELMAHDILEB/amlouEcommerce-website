@@ -29,7 +29,7 @@ const CardsProducts = ({ products, isLoading }) => {
           currentProducts.map(({ _id, nameKey, imageUrl, price, categoryKey }) => {
             return (
               <Card
-                id={_id}
+                _id={_id}
                 key={_id}
                 nameKey={nameKey} 
                 image={imageUrl}
