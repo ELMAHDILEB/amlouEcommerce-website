@@ -12,10 +12,10 @@ const GuestRoute = () => {
 
     if(storedToken && user){
         const redirectPath = user.role === "admin"  ? "/dashboard/admin" : "/dashboard/user";
-        return <Navigate to={redirectPath} replace/>;
-    }
-
+        return <Navigate to={redirectPath} replace />;
+  }
+    
   return <Outlet/>
 }
 
-export default GuestRoute
+export default GuestRoute;

@@ -1,7 +1,8 @@
 import { useDispatch } from "react-redux"
 import { useNavigate } from "react-router-dom";
-import { logout } from "../features/auth/authSlice";
-import { authApi } from "../features/auth/authApi.js";
+import { apiSlice } from "../services/apiSlice.js";
+import { logout } from "../features/auth/authSlice.js";
+
 
 const useLogout = () => {
     const dispatch = useDispatch();
@@ -9,7 +10,7 @@ const useLogout = () => {
 
     const handleLogout = ()=>{
         dispatch(logout());
-        dispatch(authApi.util.resetApiState())
+        dispatch(apiSlice.util.resetApiState())
         navigate("/login", {replace: true});
     }
   return handleLogout;

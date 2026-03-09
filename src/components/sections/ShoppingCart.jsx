@@ -3,23 +3,46 @@ import useArabic from "../../hooks/useIsArabic"
 import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import React from "react";
-import { decreaseItem, increaseItem, removeFromCart, removeCart } from "../../features/cart/cartSlice";
-
+import { decreaseItem, increaseItem, removeItemFromCart, clearCart } from "../../features/cart/cartSlice";
+import {
+  useAddCartToServerMutation,
+  useRemoveItemServerMutation,
+  useClearCartServerMutation
+} from "../../features/cart/cartApiSlice";
 
 const ShoppingCart = ({
   onClosePopUp,
 }) => {
   const { t } = useTranslation();
   const isArabic = useArabic();
-  const items = useSelector((state)=> state.cart.items);
+
+  const [addCartToServer] = useAddCartToServerMutation();
+  const [removeItemServer] = useRemoveItemServerMutation();
+  const [clearCartServer] = useClearCartServerMutation();
+
+  const { items, totalPrice, totalItems } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
-  // total price
-  const totalPrice = React.useMemo(() => {
-    return items.reduce((total, item) => {
-      return total + (item.price || 0) * (item.quantity || 0);
-    }, 0);
-  }, [items]);
+  const handleIncrease = async (item) => {
+    dispatch(increaseItem({ id: item.id }));
+    await addCartToServer({ ...item, quantity: 1 });
+  }
+
+  const handleDecrease = async (item) => {
+    dispatch(decreaseItem({ id: item.id }));
+    if (item.quantity > 1) await addCartToServer({ ...item, quantity: -1 });
+    else await removeItemServer(item.id);
+  }
+
+  const handleRemove = async (item) => {
+    dispatch(removeItemFromCart({ id: item.id }));
+    await removeItemServer(item.id);
+  }
+
+  const handleClear = async () => {
+    dispatch(clearCart());
+    await clearCartServer();
+  }
 
   return (
     <motion.section
@@ -31,7 +54,7 @@ const ShoppingCart = ({
     >
       <div className="sm:w-full md:w-[50%] h-full bg-[var(--colorBody)] flex flex-col gap-5">
         <header className="w-full flex justify-between items-center px-2 py-5">
-          <h1 className="capitalize text-2xl">{t("ShoppingCart.title")}</h1>
+          <h1 className="capitalize text-2xl">{t("ShoppingCart.title")} {Number(totalItems)}</h1>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -57,8 +80,9 @@ const ShoppingCart = ({
           ) : (
             items.map((item, index) => {
 
-              let productName = item.nameKey ? (item.nameKey.startsWith("dataProducts.") || item.nameKey.includes("_") ? t(`dataProducts.${item.nameKey}`, item.nameKey) : item.nameKey) : "Unknown Name";
 
+              {/* let productName = item.nameKey ? (item.nameKey.startsWith("dataProducts.") || item.nameKey.includes("_") ? t(`dataProducts.${item.nameKey}`, item.nameKey) : item.nameKey) : "Unknown Name"; */ }
+              const productName = item.nameKey ? String(item.nameKey) : "Unknown Name";
               return (
                 <div
                   key={item.id || index}
@@ -79,14 +103,14 @@ const ShoppingCart = ({
                     <div className="w-full flex justify-between items-center">
                       <button
                         className="border-none outline-none cursor-pointer w-[20px] h-[20px] bg-[--SubColor] rounded-full flex items-center justify-center"
-                        onClick={() => dispatch(decreaseItem({id: item.id}))}
+                        onClick={() => handleDecrease(item)}
                       >
                         -
                       </button>
                       <span>{item.quantity}</span>
                       <button
                         className="border-none outline-none cursor-pointer w-[20px] h-[20px] bg-[--SubColor] rounded-full flex items-center justify-center"
-                        onClick={() => dispatch(increaseItem({id: item.id}))}
+                        onClick={() => handleIncrease(item)}
                       >
                         +
                       </button>
@@ -94,7 +118,7 @@ const ShoppingCart = ({
 
                     <button
                       className="capitalize text-[var(--removeButton)] underline text-[14px] cursor-pointer"
-                      onClick={() => dispatch(removeFromCart({id: item.id}))}
+                      onClick={() => handleRemove(item)}
                     >
                       {t("ShoppingCart.removeItem")}
                     </button>
@@ -108,19 +132,18 @@ const ShoppingCart = ({
         {items.length > 0 && (
           <button
             className="capitalize text-[var(--removeButton)] underline text-[14px] cursor-pointer"
-            onClick={()=> dispatch(removeCart())}
+            onClick={handleClear}
           >
             {t("ShoppingCart.removeCart")}
           </button>
         )}
 
         <div
-          className={`absolute bottom-0 w-full md:w-1/2 flex justify-center items-center text-[var(--blackColor)] text-center ${
-            isArabic ? "right-0" : "left-0"
-          }`}
+          className={`absolute bottom-0 w-full md:w-1/2 flex justify-center items-center text-[var(--blackColor)] text-center ${isArabic ? "right-0" : "left-0"
+            }`}
         >
           <span className="w-[50%] py-7 bg-[var(--cardColor)]">
-            {t("ShoppingCart.total")}: {totalPrice} {t("ShoppingCart.dhs")}
+            {t("ShoppingCart.total")}: {Number(totalPrice)} {t("ShoppingCart.dhs")}
           </span>
           <button className="w-[50%] py-7 bg-[var(--primary)] cursor-pointer">{t("ShoppingCart.checkout")}</button>
         </div>

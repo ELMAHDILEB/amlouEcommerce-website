@@ -1,13 +1,16 @@
 import axios from "axios";
 import { useState } from "react";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
+import { useVerifyEmailMutation } from "../features/auth/authApiSlice";
 
 const VerifyEmail = () => {
     const location = useLocation();
+
+    const [verifyEmail, { isLoading }] = useVerifyEmailMutation();
     const navigate = useNavigate();
     const email = location.state?.email;
 
-    if (!location.state?.fromRegister && !email) {
+    if (!email) {
         return <Navigate to="/register" replace />;
     }
 
@@ -20,40 +23,38 @@ const VerifyEmail = () => {
         e.preventDefault();
         setError("");
         setMessage("");
-        setLoading(true);
 
         try {
-            const res = await axios.post("http://localhost:5000/api/auth/verify", { email, code });
-            setMessage(res.data.message);
-            setTimeout(() => {
-                navigate("/dashboard/user", { replace: true });
-            }, 1000);
-        } catch (error) {
-            setError(error.response?.data?.message || "Verification failed");
-        } finally {
-            setLoading(false);
+            const res = await verifyEmail({ email, code }).unwrap();
+            setMessage(res.message);
+
+            setTimeout(()=>{
+                navigate("login", {replace: true})
+            },1200)
+        } catch (err) {
+               setError(err?.data?.message || "Verification Failed");
         }
     };
 
     return (
-        <div 
-            className="min-h-screen flex items-center justify-center p-4" 
+        <div
+            className="min-h-screen flex items-center justify-center p-4"
             style={{ backgroundColor: 'var(--colorBody)', fontFamily: 'var(--font-poppins)' }}
         >
-            <div 
+            <div
                 className="max-w-md w-full rounded-3xl shadow-2xl p-10 border border-opacity-20 border-black"
                 style={{ backgroundColor: 'var(--cardColor)' }}
             >
                 {/* Header with Lobster Font */}
                 <div className="text-center mb-8">
-                    <h1 
-                        className="text-4xl mb-2" 
+                    <h1
+                        className="text-4xl mb-2"
                         style={{ fontFamily: 'var(--font-lobster)', color: 'var(--blackColor)' }}
                     >
                         Verify Identity
                     </h1>
                     <p style={{ color: 'var(--SubColor)' }} className="text-sm font-medium">
-                        We sent a code to <br/>
+                        We sent a code to <br />
                         <span className="font-bold underline italic opacity-80">{email}</span>
                     </p>
                 </div>
@@ -67,8 +68,8 @@ const VerifyEmail = () => {
                             value={code}
                             onChange={(e) => setCode(e.target.value)}
                             className="w-full px-4 py-4 rounded-xl text-center text-2xl font-bold tracking-widest outline-none border-2 border-transparent focus:border-opacity-50 transition-all placeholder:opacity-30"
-                            style={{ 
-                                backgroundColor: 'var(--colorBody)', 
+                            style={{
+                                backgroundColor: 'var(--colorBody)',
                                 color: 'var(--SubColor)',
                                 borderColor: 'var(--primary)'
                             }}
@@ -90,7 +91,7 @@ const VerifyEmail = () => {
                             {message}
                         </div>
                     )}
-                    
+
                     {error && (
                         <div className="p-3 rounded-lg text-center text-sm font-semibold text-white" style={{ backgroundColor: 'var(--removeButton)' }}>
                             {error}
@@ -98,7 +99,7 @@ const VerifyEmail = () => {
                     )}
                 </form>
 
-                <button 
+                <button
                     onClick={() => navigate(-1)}
                     className="mt-8 w-full text-center text-sm font-semibold hover:underline"
                     style={{ color: 'var(--SubColor)' }}

@@ -1,15 +1,17 @@
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import { useRegisterMutation } from "../../features/auth/authApi";
 import { useAuthForm } from "../../hooks/useAuthForm";
 import AuthInput from "../../components/UI/AuthInput";
+import { toast } from "react-toastify";
+import { useRegisterMutation } from "../../features/auth/authApiSlice";
+import { useDispatch } from "react-redux";
+import { setCredentials } from "../../features/auth/authSlice";
 
 export default function Register() {
   const { t } = useTranslation();
   const [register, { isLoading }] = useRegisterMutation();
   const { errors, serverErrors, setServerErrors, handleChange, handleValidationForm } = useAuthForm();
   const navigate = useNavigate();
-
 
   const handleSubmit = async (e) => {
 
@@ -18,15 +20,19 @@ export default function Register() {
     const data = Object.fromEntries(formData.entries());
     if (!handleValidationForm(data)) return;
 
+    setServerErrors("");
+      
     try {
+      const res = await register(data).unwrap();
 
-      await register(data).unwrap();
-      navigate("/register/verify", {
-        state: { fromRegister: true, email: data.email }
-      });
 
-    } catch (error) {
-      setServerErrors(error.data?.message || "Registration failed");
+    toast.success("Account created successfully!");
+     navigate("/register/verify", {
+      state: { fromRegister:true, email: data.email}
+     })
+    } catch (err) {
+         const errorMessage = err?.data?.message || "Registration Failed";
+         setServerErrors(errorMessage);
     }
   }
 

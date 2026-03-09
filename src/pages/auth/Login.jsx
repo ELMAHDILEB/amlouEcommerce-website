@@ -1,10 +1,11 @@
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { useLoginMutation } from "../../features/auth/authApi";
-import { setCredentials } from "../../features/auth/authSlice";
+// import { useLoginMutation } from "../../features/auth/apiSlice";
+import { useLoginMutation } from "../../features/auth/authApiSlice.js"
 import { useAuthForm } from "../../hooks/useAuthForm";
 import AuthInput from "../../components/UI/AuthInput";
+import { setCredentials } from "../../features/auth/authSlice";
 
 export default function Login() {
   const { t } = useTranslation();
@@ -23,17 +24,18 @@ export default function Login() {
 
     try {
       const res = await login(data).unwrap();
-      localStorage.setItem("token", res.token);
-      localStorage.setItem("user", JSON.stringify(res.user));
-      const action = setCredentials({ user: res.user, token: res.token });
-      dispatch(action);
 
-      const targetPath = res.user.role === "admin" ? "/dashboard/admin" : "/dashboard/user";
-
-      navigate(targetPath, { replace: true });
-    } catch (error) {
-      setServerErrors(error?.data?.message || "Login Failed");
+      dispatch(setCredentials({
+        user: res.user,
+        token: res.token
+      }))
+    } catch (err) {
+      const errorMessage = err?.data?.message || "Login Failed";
+      setServerErrors(errorMessage);
     }
+
+      
+    
 
   };
 

@@ -66,7 +66,7 @@ export const links = [
     ],
   },
   {
-    element: <ProtectedRoute allowedRoles={["user", "admin"]} />,
+    element: <ProtectedRoute allowedRoles={["user"]} />,
     children: [
       { path: "/dashboard/user", element: <UserDashboard /> },
       { path: "/dashboard/user/orders", element: <UserOrders /> },
