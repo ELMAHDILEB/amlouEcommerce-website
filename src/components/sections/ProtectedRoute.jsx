@@ -3,10 +3,11 @@ import { useSelector } from "react-redux"
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 
 export const ProtectedRoute = ({ allowedRoles }) => {
-    const { token: reduxToken, user } = useSelector((state) => state.auth);
+    const { token: reduxToken, user: reduxUser } = useSelector((state) => state.auth);
     const location = useLocation();
 
     const token = reduxToken || localStorage.getItem("token");
+    const user = reduxUser || JSON.parse(localStorage.getItem("user") || "null");
 
     if (!token) {
         return <Navigate to="/login" state={{ from: location }} replace />

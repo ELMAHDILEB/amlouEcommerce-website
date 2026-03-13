@@ -2,16 +2,18 @@ import FilterBar from "../components/sections/Products/FilterBar";
 import CardsProducts from "../components/sections/Products/CardsProducts";
 import SearchInput from "../components/sections/Products/SearchInput";
 import { useTranslation } from "react-i18next";
-import { useOutletContext } from "react-router-dom";
+import { createSearchParams, useNavigate, useOutletContext } from "react-router-dom";
 import useDebounced from "../hooks/useDebounced";
 import { HashLoader } from "react-spinners";
 import MetaTag from "../components/UI/MetaTag";
 import { useGetProductsQuery } from "../features/products/productsApiSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { setSearch, setCategory, setPrice, setSort } from "../features/products/productsSlice";
+import { useEffect } from "react";
 
 
 const Products = () => {
+  const navigate = useNavigate();
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const { search, category, sort, price } = useSelector(state => state.products)
@@ -24,12 +26,26 @@ const Products = () => {
   const { data: products = [], error, isLoading }  = useGetProductsQuery({
      search: debouncedSearch, 
      category: category === "all" ? "" : category, 
-     maxPrice: price, 
+     price: price, 
      sort:sortValue
     });
 
 
   const noDatFounded = !isLoading && products.length === 0;
+
+  useEffect(() => {
+    const params = {};
+    if (search) params.search = search;
+    if (category !== "all") params.category = category;
+    if (sort !== "all") params.sort = sort;
+    if (price) params.price = price;
+
+    navigate({
+      pathname: "/products",
+      search: `?${createSearchParams(params)}`,
+    }, { replace: true });
+
+  }, [search, category, sort, price]);
 
 
   return (

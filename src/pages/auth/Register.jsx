@@ -3,13 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { useAuthForm } from "../../hooks/useAuthForm";
 import AuthInput from "../../components/UI/AuthInput";
 import { toast } from "react-toastify";
-import { useRegisterMutation } from "../../features/auth/authApiSlice";
-import { useDispatch } from "react-redux";
-import { setCredentials } from "../../features/auth/authSlice";
+import { useRegisterUserMutation } from "../../features/auth/authApiSlice";
+
 
 export default function Register() {
   const { t } = useTranslation();
-  const [register, { isLoading }] = useRegisterMutation();
+  const [register, { isLoading }] = useRegisterUserMutation();
   const { errors, serverErrors, setServerErrors, handleChange, handleValidationForm } = useAuthForm();
   const navigate = useNavigate();
 
@@ -23,7 +22,7 @@ export default function Register() {
     setServerErrors("");
       
     try {
-      const res = await register(data).unwrap();
+      await register(data).unwrap();
 
 
     toast.success("Account created successfully!");

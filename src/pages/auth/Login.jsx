@@ -1,8 +1,6 @@
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-// import { useLoginMutation } from "../../features/auth/apiSlice";
-import { useLoginMutation } from "../../features/auth/authApiSlice.js"
+import { useLoginUserMutation } from "../../features/auth/authApiSlice.js"
 import { useAuthForm } from "../../hooks/useAuthForm";
 import AuthInput from "../../components/UI/AuthInput";
 import { setCredentials } from "../../features/auth/authSlice";
@@ -10,9 +8,8 @@ import { setCredentials } from "../../features/auth/authSlice";
 export default function Login() {
   const { t } = useTranslation();
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
-  const [login, { isLoading }] = useLoginMutation();
+  const [login, { isLoading }] = useLoginUserMutation();
   const { errors, serverErrors, setServerErrors, handleChange, handleValidationForm } = useAuthForm();
 
   const handleSubmit = async (e) => {
@@ -25,10 +22,16 @@ export default function Login() {
     try {
       const res = await login(data).unwrap();
 
+      if(!res.token){
+        return setServerErrors("Email or password incorrect");
+      }
+
       dispatch(setCredentials({
         user: res.user,
         token: res.token
-      }))
+      }));
+      localStorage.setItem("token", res.token);
+      localStorage.setItem("user", JSON.stringify(res.user));
     } catch (err) {
       const errorMessage = err?.data?.message || "Login Failed";
       setServerErrors(errorMessage);
