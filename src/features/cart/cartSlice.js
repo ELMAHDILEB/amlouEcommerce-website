@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { apiSlice } from "../../services/apiSlice";
 
 const savedItem = localStorage.getItem("cart");
 const initialState = {
