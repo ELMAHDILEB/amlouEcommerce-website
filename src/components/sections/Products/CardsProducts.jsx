@@ -1,24 +1,24 @@
-import { useState } from "react"
 import Pagination from "./Pagination"
 import "react-loading-skeleton/dist/skeleton.css"
 import Card from "./Card"
 import { useTranslation } from "react-i18next"
 import SkeletonLoader from "./SkeletonLoader"
-import { useSearchParams } from "react-router-dom";
-import useFilters from "../../../hooks/useFilters"
+import { useDispatch, useSelector } from "react-redux"
+import { setPage } from "../../../features/products/productsSlice"
 
 const CardsProducts = ({ products, isLoading }) => {
   const { t } = useTranslation();
-  const [searchParams] = useSearchParams()
-  const [currentPage, setCurrentPage] = useState(Number(searchParams.get("_page")) || 1);
-  const productsPerPage = 5
+  const dispatch = useDispatch();
+  const currentPage = useSelector(state => state.products.page);
+  // const [searchParams] = useSearchParams()
+  // const [currentPage, setCurrentPage] = useState(Number(searchParams.get("_page")) || 1);
+  const productsPerPage = 5;
 
   const endIndex = currentPage * productsPerPage
   const startIndex = endIndex - productsPerPage
   const currentProducts = products.slice(startIndex, endIndex)
-  const totalPages = Math.ceil(products.length / productsPerPage);
+  const totalPages = Math.max(1, Math.ceil(products.length / productsPerPage));
 
-  const { handleFilterChange } = useFilters(undefined, undefined, undefined, undefined, setCurrentPage);
 
   return (
     <section className="w-full flex flex-col">
@@ -40,7 +40,10 @@ const CardsProducts = ({ products, isLoading }) => {
           })
         )}
       </section>
-      <Pagination totalPages={totalPages} currentPage={currentPage} setCurrentPage={(page) => handleFilterChange("_page", page)} />
+      <Pagination 
+      totalPages={totalPages} 
+      currentPage={currentPage} 
+      setCurrentPage={(page) => dispatch(setPage(page))} />
     </section>
   )
 }

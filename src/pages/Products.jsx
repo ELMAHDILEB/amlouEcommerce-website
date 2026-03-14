@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import FilterBar from "../components/sections/Products/FilterBar";
 import CardsProducts from "../components/sections/Products/CardsProducts";
 import SearchInput from "../components/sections/Products/SearchInput";
@@ -9,14 +10,13 @@ import MetaTag from "../components/UI/MetaTag";
 import { useGetProductsQuery } from "../features/products/productsApiSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { setSearch, setCategory, setPrice, setSort } from "../features/products/productsSlice";
-import { useEffect } from "react";
 
 
 const Products = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
   const dispatch = useDispatch();
-  const { search, category, sort, price } = useSelector(state => state.products)
+  const { search, category, sort, price, page } = useSelector(state => state.products);
 
   const { addToCart } = useOutletContext();
   const debouncedSearch = useDebounced(search, 1000);
@@ -24,6 +24,7 @@ const Products = () => {
                  : sort === "Price: Low to High" ? "price-asc"
                  : "";
   const { data: products = [], error, isLoading }  = useGetProductsQuery({
+     page,
      search: debouncedSearch, 
      category: category === "all" ? "" : category, 
      price: price, 
@@ -35,6 +36,7 @@ const Products = () => {
 
   useEffect(() => {
     const params = {};
+    if (page) params.page = page;
     if (search) params.search = search;
     if (category !== "all") params.category = category;
     if (sort !== "all") params.sort = sort;
@@ -45,7 +47,7 @@ const Products = () => {
       search: `?${createSearchParams(params)}`,
     }, { replace: true });
 
-  }, [search, category, sort, price]);
+  }, [page, search, category, sort, price]);
 
 
   return (

@@ -22,37 +22,29 @@ const Pagination = ({ totalPages, currentPage, setCurrentPage }) => {
             </button>
         )
     }
-    // create array have a name pages for push numbers pages
     const pages = [];
 
-    // if totalPages less or equal 5, create buttons from 1 to 5 = totalPages
     if (totalPages <= 5) {
         for (let i = 1; i <= totalPages; i++) {
-            // generate and add a button  for page number i to pages list
             pages.push(currentRenderPage(i))
         }
     } else {
-        // create a button for page have number 1
         pages.push(currentRenderPage(1));
 
-        // if currentPage greater than 3, create 3 dots ... to indicate skipped pages
         if (currentPage > 3) {
             pages.push(<span key="startDots" className="font-bold">...</span>);
         }
  
-        //  if i less than or equal to currentPage - 1 and greater than or equal to currentPage + 1 , create 2 buttons for pages around  currentPage
         for (let i = currentPage - 1; i <= currentPage + 1; i++) {
             if (i > 1 && i < totalPages) {
                 pages.push(currentRenderPage(i));
             }
         }
 
-        // if currentPage less than totalPages - 2, create dots ... to indicate skipped pages
         if (currentPage < totalPages - 2) {
             pages.push(<span key="endDots" className="font-bold">...</span>);
         }
 
-        // finally, push totalPages into function currentRenderPage, which displays the button for the latest page
         pages.push(currentRenderPage(totalPages));
     }
 

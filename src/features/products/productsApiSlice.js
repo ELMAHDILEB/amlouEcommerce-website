@@ -4,8 +4,9 @@ import { apiSlice } from "../../services/apiSlice";
 export const productsApiSlice = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
         getProducts: builder.query({
-            query: ({ search, category, price, sort}) =>{
+            query: ({ page, search, category, price, sort}) =>{
                 const params = new URLSearchParams()
+                if(page) params.append("page", page)
                 if(search) params.append("search", search);
                 if(category && category !== "all") params.append("category", category);
                 if(price) params.append("price", price);
