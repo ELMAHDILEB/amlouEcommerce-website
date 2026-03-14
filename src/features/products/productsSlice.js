@@ -30,8 +30,7 @@ export const productsSlice = createSlice({
             state.page = 1
         },
         setPage: (state, action) => {
-            state.page = action.payload
-            state.page = 1
+            state.page = action.payload;
         }
     },
     extraReducers:(builder)=>{

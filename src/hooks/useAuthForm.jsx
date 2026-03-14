@@ -26,6 +26,7 @@ export const useAuthForm = (validateFunction) => {
             return false;
         }
         setErrors({})
+        return true;
       }
   return {
     errors,

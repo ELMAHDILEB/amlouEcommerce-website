@@ -1,9 +1,19 @@
 import { useTranslation } from "react-i18next";
 import useLogout from "../../../hooks/useLogout";
+import { useGetOrdersCountQuery, useGetProductsCountQuery, useGetUsersCountQuery } from "../../../features/admin/adminApiSlice";
 
 export default function Dashboard() {
   const { t } = useTranslation();
   const logout = useLogout();
+const { data: usersData } = useGetUsersCountQuery();
+  const { data: productsData } = useGetProductsCountQuery();
+  const { data: ordersData } = useGetOrdersCountQuery();
+
+  // Kanqraw l-key "count" li siftna men l-Backend
+  const userCount = usersData?.count || 0;
+  const productsCount = productsData?.count || 0;
+  const ordersCount = ordersData?.count || 0;
+
 
   return (
     <div className="min-h-screen bg-[var(--colorBody)] font-[var(--font-poppins)] p-4 md:p-6">
@@ -21,15 +31,15 @@ export default function Dashboard() {
       <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-6">
         <div className="bg-[var(--cardColor)] p-4 md:p-6 rounded-2xl shadow">
           <h3 className="text-lg font-semibold mb-2">{t("dashboard.users")}</h3>
-          <p className="text-3xl md:text-4xl font-bold text-[var(--primary)]">120</p>
+          <p className="text-3xl md:text-4xl font-bold text-[var(--primary)]">{userCount}</p>
         </div>
         <div className="bg-[var(--cardColor)] p-4 md:p-6 rounded-2xl shadow">
           <h3 className="text-lg font-semibold mb-2">{t("dashboard.orders")}</h3>
-          <p className="text-3xl md:text-4xl font-bold text-[var(--primary)]">45</p>
+          <p className="text-3xl md:text-4xl font-bold text-[var(--primary)]">{ordersCount}</p>
         </div>
         <div className="bg-[var(--cardColor)] p-4 md:p-6 rounded-2xl shadow">
           <h3 className="text-lg font-semibold mb-2">{t("dashboard.products")}</h3>
-          <p className="text-3xl md:text-4xl font-bold text-[var(--primary)]">32</p>
+          <p className="text-3xl md:text-4xl font-bold text-[var(--primary)]">{productsCount}</p>
         </div>
       </main>
 

@@ -5,13 +5,14 @@ import { Navigate, Outlet } from "react-router-dom";
 const GuestRoute = () => {
     const { token, user } = useSelector((state)=> state.auth);
     const storedToken  = token || localStorage.getItem("token");
+    const storedUser = user || JSON.parse(localStorage.getItem("user"));
 
-    if (storedToken && !user) {
-        return <div className="loading-screen"><BiLoader className="animate-spin" /></div>;
-    }
+    // if (!storedUser) {
+    //     return <div className="loading-screen"><BiLoader className="animate-spin" /></div>;
+    // }
 
-    if(storedToken && user){
-        const redirectPath = user.role === "admin"  ? "/dashboard/admin" : "/dashboard/user";
+    if(storedToken && storedUser){
+        const redirectPath = storedUser.role === "admin"  ? "/dashboard/admin" : "/dashboard/user";
         return <Navigate to={redirectPath} replace />;
   }
     

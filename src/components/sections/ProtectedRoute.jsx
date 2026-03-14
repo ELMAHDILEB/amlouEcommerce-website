@@ -9,17 +9,17 @@ export const ProtectedRoute = ({ allowedRoles }) => {
     const token = reduxToken || localStorage.getItem("token");
     const user = reduxUser || JSON.parse(localStorage.getItem("user") || "null");
 
-    if (!token) {
+    if (!token && !user) {
         return <Navigate to="/login" state={{ from: location }} replace />
     }
 
-    if (!user) {
-        return (
-            <div className="flex justify-center items-center h-screen">
-                <BiLoader className="animate-spin text-4xl" />
-            </div>
-        );
-    }
+    // if (!user) {
+    //     return (
+    //         <div className="flex justify-center items-center h-screen">
+    //             <BiLoader className="animate-spin text-4xl" />
+    //         </div>
+    //     );
+    // }
 
     if (allowedRoles && !allowedRoles.includes(user.role)) {
         return <Navigate to="/unauthorized" replace />;

@@ -2,44 +2,46 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { useAuthForm } from "../../hooks/useAuthForm";
 import AuthInput from "../../components/UI/AuthInput";
-import { toast } from "react-toastify";
 import { useRegisterUserMutation } from "../../features/auth/authApiSlice";
-
 
 export default function Register() {
   const { t } = useTranslation();
   const [register, { isLoading }] = useRegisterUserMutation();
-  const { errors, serverErrors, setServerErrors, handleChange, handleValidationForm } = useAuthForm();
+  const {
+    errors,
+    serverErrors,
+    setServerErrors,
+    handleChange,
+    handleValidationForm,
+  } = useAuthForm();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
     if (!handleValidationForm(data)) return;
 
     setServerErrors("");
-      
+
     try {
       await register(data).unwrap();
-
-
-    toast.success("Account created successfully!");
-     navigate("/register/verify", {
-      state: { fromRegister:true, email: data.email}
-     })
+      navigate("/register/verify", {
+        state: { fromRegister: true, email: data.email },
+      });
     } catch (err) {
-         const errorMessage = err?.data?.message || "Registration Failed";
-         setServerErrors(errorMessage);
+      if (err?.data?.errors) {
+        const formatted = err.data.errors.map((e) => e.message).join(",");
+        setServerErrors(formatted);
+      } else {
+        setServerErrors(err?.data?.message || "Registration Failed");
+      }
     }
-  }
+  };
 
   return (
-
     <div className="min-h-screen flex items-center justify-center p-4 bg-[var(--colorBody)] font-[var(--font-poppins)]">
       <div className="w-full max-w-md bg-[var(--cardColor)] p-6 md:p-8 rounded-3xl shadow-xl border border-gray-100/50">
-
         <header className="mb-6 text-center">
           <h2 className="text-2xl md:text-3xl font-extrabold text-[var(--primary)] tracking-tight">
             {t("register.title")}
@@ -49,13 +51,19 @@ export default function Register() {
         {serverErrors && (
           <div className="mb-6 p-4 rounded-2xl bg-red-50/80 border border-red-100 shadow-sm">
             <div className="flex flex-col gap-2.5">
-              {serverErrors.toString().split(',').map((err, index) => (
-                <div key={index} className="flex items-start gap-2 text-red-600 text-[12px] font-semibold leading-tight">
-                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-red-500 shrink-0" />
-
-                  <span className="flex-1 capitalize">{err.trim()}</span>
-                </div>
-              ))}
+              {/* split(',') hit derna join(", ") f l-backend */}
+              {serverErrors
+                .toString()
+                .split(",")
+                .map((err, index) => (
+                  <div
+                    key={index}
+                    className="flex items-start gap-2 text-red-600 text-[12px] font-semibold"
+                  >
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-red-500 shrink-0" />
+                    <span className="flex-1 capitalize">{err.trim()}</span>
+                  </div>
+                ))}
             </div>
           </div>
         )}
@@ -117,7 +125,9 @@ export default function Register() {
                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                 {t("register.isLoading")}
               </div>
-            ) : t("register.submit")}
+            ) : (
+              t("register.submit")
+            )}
           </button>
         </form>
       </div>

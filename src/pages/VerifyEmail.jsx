@@ -1,4 +1,3 @@
-import axios from "axios";
 import { useState } from "react";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import { useVerifyEmailMutation } from "../features/auth/authApiSlice";
@@ -29,7 +28,7 @@ const VerifyEmail = () => {
             setMessage(res.message);
 
             setTimeout(()=>{
-                navigate("login", {replace: true})
+                navigate("/login", {replace: true})
             },1200)
         } catch (err) {
                setError(err?.data?.message || "Verification Failed");
@@ -45,7 +44,6 @@ const VerifyEmail = () => {
                 className="max-w-md w-full rounded-3xl shadow-2xl p-10 border border-opacity-20 border-black"
                 style={{ backgroundColor: 'var(--cardColor)' }}
             >
-                {/* Header with Lobster Font */}
                 <div className="text-center mb-8">
                     <h1
                         className="text-4xl mb-2"
@@ -59,7 +57,6 @@ const VerifyEmail = () => {
                     </p>
                 </div>
 
-                {/* Form */}
                 <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="relative">
                         <input

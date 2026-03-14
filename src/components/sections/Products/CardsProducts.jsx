@@ -6,19 +6,10 @@ import SkeletonLoader from "./SkeletonLoader"
 import { useDispatch, useSelector } from "react-redux"
 import { setPage } from "../../../features/products/productsSlice"
 
-const CardsProducts = ({ products, isLoading }) => {
+const CardsProducts = ({ products, isLoading, totalPages }) => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const currentPage = useSelector(state => state.products.page);
-  // const [searchParams] = useSearchParams()
-  // const [currentPage, setCurrentPage] = useState(Number(searchParams.get("_page")) || 1);
-  const productsPerPage = 5;
-
-  const endIndex = currentPage * productsPerPage
-  const startIndex = endIndex - productsPerPage
-  const currentProducts = products.slice(startIndex, endIndex)
-  const totalPages = Math.max(1, Math.ceil(products.length / productsPerPage));
-
 
   return (
     <section className="w-full flex flex-col">
@@ -26,7 +17,7 @@ const CardsProducts = ({ products, isLoading }) => {
         {isLoading ? (
           <SkeletonLoader count={5} />
         ) : (
-          currentProducts.map(({ _id, nameKey, imageUrl, price, categoryKey }) => {
+          products.map(({ _id, nameKey, imageUrl, price, categoryKey }) => {
             return (
               <Card
                 _id={_id}
