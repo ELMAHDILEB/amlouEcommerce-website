@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { setPage } from "../../../features/products/productsSlice"
 
 const CardsProducts = ({ products, isLoading, totalPages }) => {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
   const dispatch = useDispatch();
   const currentPage = useSelector(state => state.products.page);
 
