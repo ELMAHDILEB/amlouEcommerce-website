@@ -44,7 +44,6 @@ const Products = () => {
     sort: sortValue,
   });
 
-  console.log("Data from API:", data);
 
   const products = data?.products || [];
   const totalPages = data?.totalPages || 1;
