@@ -1,9 +1,12 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const apiSlice = createApi({
-    name: "api",
+    
+    reducerPath: "api",
     baseQuery: fetchBaseQuery({
-        baseUrl: "http://localhost:5000/api",
+        // baseUrl: "http://localhost:5000/api",
+        // baseUrl: import.meta.env.VITE_API_URL,
+        baseUrl: "https://backend-amlou-production.up.railway.app/api",
         credentials: "include",
         prepareHeaders: (headers, { getState }) => {
             const token = getState.auth?.token;
@@ -13,4 +16,5 @@ export const apiSlice = createApi({
     }),
     tagTypes: ["User", "Product", "Cart"],
     endpoints: () => ({}),
+    
 })

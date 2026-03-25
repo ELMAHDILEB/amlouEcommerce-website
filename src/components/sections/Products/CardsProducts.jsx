@@ -17,7 +17,7 @@ const CardsProducts = ({ products, isLoading, totalPages }) => {
         {isLoading ? (
           <SkeletonLoader count={5} />
         ) : (
-          products.map(({ _id, nameKey, imageUrl, price, categoryKey }) => {
+          products?.map(({ _id, nameKey, imageUrl, price, categoryKey }) => {
             return (
               <Card
                 _id={_id}
